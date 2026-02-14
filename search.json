@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mi Libro Científico",
+    "section": "",
+    "text": "1 Bienvenido\nEste es un libro creado con Quarto.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#objetivo",
+    "href": "index.html#objetivo",
+    "title": "Mi Libro Científico",
+    "section": "1.1 Objetivo",
+    "text": "1.1 Objetivo\nAprender conceptos científicos con ejemplos prácticos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introducción",
+    "section": "",
+    "text": "3 Introducción\nEste libro sigue un enfoque práctico.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#qué-aprenderás",
+    "href": "intro.html#qué-aprenderás",
+    "title": "2  Introducción",
+    "section": "3.1 ¿Qué aprenderás?",
+    "text": "3.1 ¿Qué aprenderás?\n\nConceptos teóricos\nEjemplos en Python\nAplicaciones reales",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "capitulo1.html",
+    "href": "capitulo1.html",
+    "title": "3  Lógica y Comparaciones",
+    "section": "",
+    "text": "4 Booleanos en Python\nLos booleanos son valores True o False.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lógica y Comparaciones</span>"
+    ]
+  },
+  {
+    "objectID": "capitulo1.html#ejemplos",
+    "href": "capitulo1.html#ejemplos",
+    "title": "3  Lógica y Comparaciones",
+    "section": "4.1 Ejemplos",
+    "text": "4.1 Ejemplos\n\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse\n\n\n\n\n\n\n\n\nTip\n\n\n\nEste es un consejo importante.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lógica y Comparaciones</span>"
+    ]
+  },
+  {
+    "objectID": "capitulo2.html",
+    "href": "capitulo2.html",
+    "title": "4  Control de flujo",
+    "section": "",
+    "text": "5 Condicionales\n\nx = 10\n\nif x &gt; 5:\n    print(\"Mayor que 5\")\nelse:\n    print(\"Menor o igual a 5\")\n\nMayor que 5",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Control de flujo</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "5  Referencias",
+    "section": "",
+    "text": "6 Referencias\n\nDocumentación oficial de Quarto\nLibros y papers relevantes",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Referencias</span>"
+    ]
+  }
+]
