@@ -22,41 +22,41 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "2  Introducción",
+    "title": "2  Introduction",
     "section": "",
-    "text": "3 Introducción\nEste libro sigue un enfoque práctico.",
+    "text": "2.1 Objetivos",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "intro.html#qué-aprenderás",
-    "href": "intro.html#qué-aprenderás",
-    "title": "2  Introducción",
-    "section": "3.1 ¿Qué aprenderás?",
-    "text": "3.1 ¿Qué aprenderás?\n\nConceptos teóricos\nEjemplos en Python\nAplicaciones reales",
+    "objectID": "intro.html#objetivos",
+    "href": "intro.html#objetivos",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "Conceptos teóricos\nEjemplos en Python\nAplicaciones reales",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducción</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
     "objectID": "capitulo1.html",
     "href": "capitulo1.html",
-    "title": "3  Lógica y Comparaciones",
+    "title": "3  Logics y Comparaciones",
     "section": "",
-    "text": "4 Booleanos en Python\nLos booleanos son valores True o False.",
+    "text": "3.1 Ejemplos\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lógica y Comparaciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
     ]
   },
   {
     "objectID": "capitulo1.html#ejemplos",
     "href": "capitulo1.html#ejemplos",
-    "title": "3  Lógica y Comparaciones",
-    "section": "4.1 Ejemplos",
-    "text": "4.1 Ejemplos\n\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse\n\n\n\n\n\n\n\n\nTip\n\n\n\nEste es un consejo importante.",
+    "title": "3  Logics y Comparaciones",
+    "section": "",
+    "text": "Tip\n\n\n\nEste es un consejo importante.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lógica y Comparaciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
     ]
   },
   {
@@ -64,7 +64,7 @@
     "href": "capitulo2.html",
     "title": "4  Control de flujo",
     "section": "",
-    "text": "5 Condicionales\n\nx = 10\n\nif x &gt; 5:\n    print(\"Mayor que 5\")\nelse:\n    print(\"Menor o igual a 5\")\n\nMayor que 5",
+    "text": "x = 10\n\nif x &gt; 5:\n    print(\"Mayor que 5\")\nelse:\n    print(\"Menor o igual a 5\")\n\nMayor que 5",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Control de flujo</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "references.html",
     "title": "5  Referencias",
     "section": "",
-    "text": "6 Referencias\n\nDocumentación oficial de Quarto\nLibros y papers relevantes",
+    "text": "Documentación oficial de Quarto\nLibros y papers relevantes",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Referencias</span>"
     ]
