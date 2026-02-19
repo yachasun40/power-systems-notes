@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Mi Libro Científico",
+    "title": "Mi Libro Sobre Mercado Eléctrico",
     "section": "",
     "text": "1 Bienvenido\nEste es un libro creado con Quarto.",
     "crumbs": [
@@ -10,11 +10,21 @@
     ]
   },
   {
+    "objectID": "index.html#contenido",
+    "href": "index.html#contenido",
+    "title": "Mi Libro Sobre Mercado Eléctrico",
+    "section": "1.1 Contenido",
+    "text": "1.1 Contenido\n\nIntroduction\n\nObjetivos\n\nLogics y Comparaciones\n\nEjemplos\n\nControl de flujo\nReferencias",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
+    ]
+  },
+  {
     "objectID": "index.html#objetivo",
     "href": "index.html#objetivo",
-    "title": "Mi Libro Científico",
-    "section": "1.1 Objetivo",
-    "text": "1.1 Objetivo\nAprender conceptos científicos con ejemplos prácticos.",
+    "title": "Mi Libro Sobre Mercado Eléctrico",
+    "section": "1.2 Objetivo",
+    "text": "1.2 Objetivo\nAprender conceptos científicos con ejemplos prácticos.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
     ]
@@ -35,6 +45,16 @@
     "title": "2  Introduction",
     "section": "",
     "text": "Conceptos teóricos\nEjemplos en Python\nAplicaciones reales",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#instalación-de-quarto-en-codespaces-github",
+    "href": "intro.html#instalación-de-quarto-en-codespaces-github",
+    "title": "2  Introduction",
+    "section": "2.2 Instalación de quarto en codespaces github",
+    "text": "2.2 Instalación de quarto en codespaces github\nPuedes usar Quarto en GitHub Codespaces de manera excelente, ya que ofrece un entorno preconfigurado basado en VS Code que elimina la instalación local.\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb\n\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ sudo dpkg -i quarto-1.5.57-linux-amd64.deb\n\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ quarto check\n\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ quarto render\n\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ quarto publish gh-pages\nPara guardar los cambios en GitHub:\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ git add .\n@yachasun40 ➜ /workspaces/power-systems-notes (main) $ git commit -m \"update content\"",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
