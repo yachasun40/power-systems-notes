@@ -226,6 +226,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="instalación-de-quarto-en-codespaces-github" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="instalación-de-quarto-en-codespaces-github"><span class="header-section-number">2.2</span> Instalación de quarto en codespaces github</h2>
 <p>Puedes usar Quarto en GitHub Codespaces de manera excelente, ya que ofrece un entorno preconfigurado basado en VS Code que elimina la instalación local.</p>
+<ul>
+<li><p>Lo primero es tener instalada la extensión “Quarto” de quarto-dev en tu VS Code o codespaces (el ícono de cuadrícula en la barra lateral izquierda o Ctrl+Shift+X). Esta extensión es la que provee el soporte de lenguaje, incluyendo el resaltado de sintaxis para los bloques de código de Python, R, Julia y otros</p></li>
+<li><p>Para que el resaltado y la inteligencia de código funcionen perfectamente para Python y Julia, necesitas tener instaladas las extensiones de esos lenguajes</p>
+<ul>
+<li>Para Python: La extensión oficial de Python de Microsoft (ms-python.python).</li>
+<li>Para Julia: La extensión oficial de Julia de julialang (julialang.language-julia).</li>
+</ul></li>
+</ul>
+<p>Ahora es importante instalar quarto (prueba hasta quarto check), cuando ya tengas la estructura básica de tu libro usa los dos últimos comandos del siguiente bloque:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> sudo dpkg <span class="at">-i</span> quarto-1.5.57-linux-amd64.deb</span>
@@ -238,6 +247,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Para guardar los cambios en GitHub:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> git add .</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"update content"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Usualmente python viene instalado por defecto, a menos que te interese instalar versiones actuales como haremos para el caso de Julia:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> wget https://julialang-s3.julialang.org/bin/linux/x64/1.12/julia-1.12.1-linux-x86_64.tar.gz</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> tar <span class="at">-xzf</span> julia-1.12.1-linux-x86_64.tar.gz</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> sudo mv julia-1.12.1 /opt/julia</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> echo <span class="st">'export PATH="/opt/julia/bin:$PATH"'</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> source ~/.bashrc</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">@yachasun40</span> ➜ /workspaces/power-systems-notes <span class="er">(</span><span class="ex">main</span><span class="kw">)</span> <span class="ex">$</span> julia <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
