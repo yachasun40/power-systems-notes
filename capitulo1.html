@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Logics y Comparaciones – Mi Libro Sobre Mercado Eléctrico</title>
+<title>3&nbsp; Regulación de Tensión y Estabilidad en Sistemas Eléctricos – Mi Libro Sobre Mercado Eléctrico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logics y Comparaciones</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -191,7 +191,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./capitulo1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logics y Comparaciones</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -212,32 +212,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link active" data-scroll-target="#ejemplos"><span class="header-section-number">3.1</span> Ejemplos</a></li>
-  <li><a href="#procedimiento-de-operación-1.3-p.o.-1.3-tensiones-admisibles-en-los-nudos-de-la-red-de-transporte" id="toc-procedimiento-de-operación-1.3-p.o.-1.3-tensiones-admisibles-en-los-nudos-de-la-red-de-transporte" class="nav-link" data-scroll-target="#procedimiento-de-operación-1.3-p.o.-1.3-tensiones-admisibles-en-los-nudos-de-la-red-de-transporte"><span class="header-section-number">4</span> Procedimiento de Operación 1.3 (P.O. 1.3): Tensiones admisibles en los nudos de la red de transporte</a>
+  <li><a href="#fundamentos" id="toc-fundamentos" class="nav-link active" data-scroll-target="#fundamentos"><span class="header-section-number">3.1</span> Fundamentos</a></li>
+  <li><a href="#procedimiento-de-operación-1.3" id="toc-procedimiento-de-operación-1.3" class="nav-link" data-scroll-target="#procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</a>
   <ul class="collapse">
-  <li><a href="#objetivo-y-ámbito-de-aplicación" id="toc-objetivo-y-ámbito-de-aplicación" class="nav-link" data-scroll-target="#objetivo-y-ámbito-de-aplicación"><span class="header-section-number">4.1</span> 1. Objetivo y ámbito de aplicación</a></li>
-  <li><a href="#definiciones-clave" id="toc-definiciones-clave" class="nav-link" data-scroll-target="#definiciones-clave"><span class="header-section-number">4.2</span> 2. Definiciones clave</a></li>
-  <li><a href="#valores-de-tensión-admisible" id="toc-valores-de-tensión-admisible" class="nav-link" data-scroll-target="#valores-de-tensión-admisible"><span class="header-section-number">4.3</span> 3. Valores de tensión admisible</a>
-  <ul class="collapse">
-  <li><a href="#en-régimen-permanente-operación-normal" id="toc-en-régimen-permanente-operación-normal" class="nav-link" data-scroll-target="#en-régimen-permanente-operación-normal"><span class="header-section-number">4.3.1</span> 3.1. En régimen permanente (operación normal)</a></li>
-  <li><a href="#en-situaciones-post-perturbación-o-anormales" id="toc-en-situaciones-post-perturbación-o-anormales" class="nav-link" data-scroll-target="#en-situaciones-post-perturbación-o-anormales"><span class="header-section-number">4.3.2</span> 3.2. En situaciones post-perturbación o anormales</a></li>
-  <li><a href="#valores-específicos-para-el-diseño-de-instalaciones-aislamiento" id="toc-valores-específicos-para-el-diseño-de-instalaciones-aislamiento" class="nav-link" data-scroll-target="#valores-específicos-para-el-diseño-de-instalaciones-aislamiento"><span class="header-section-number">4.3.3</span> 3.3. Valores específicos para el diseño de instalaciones (aislamiento)</a></li>
+  <li><a href="#objetivo-y-ámbito-de-aplicación" id="toc-objetivo-y-ámbito-de-aplicación" class="nav-link" data-scroll-target="#objetivo-y-ámbito-de-aplicación"><span class="header-section-number">3.2.1</span> Objetivo y ámbito de aplicación</a></li>
+  <li><a href="#definiciones-clave" id="toc-definiciones-clave" class="nav-link" data-scroll-target="#definiciones-clave"><span class="header-section-number">3.2.2</span> Definiciones clave</a></li>
+  <li><a href="#valores-de-tensión-admisible" id="toc-valores-de-tensión-admisible" class="nav-link" data-scroll-target="#valores-de-tensión-admisible"><span class="header-section-number">3.2.3</span> Valores de tensión admisible</a></li>
+  <li><a href="#responsabilidades-y-actuaciones" id="toc-responsabilidades-y-actuaciones" class="nav-link" data-scroll-target="#responsabilidades-y-actuaciones"><span class="header-section-number">3.2.4</span> Responsabilidades y actuaciones</a></li>
+  <li><a href="#interacción-con-otros-procedimientos-de-operación" id="toc-interacción-con-otros-procedimientos-de-operación" class="nav-link" data-scroll-target="#interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">3.2.5</span> Interacción con otros procedimientos de operación</a></li>
+  <li><a href="#aplicación-práctica-para-un-energy-quant" id="toc-aplicación-práctica-para-un-energy-quant" class="nav-link" data-scroll-target="#aplicación-práctica-para-un-energy-quant"><span class="header-section-number">3.2.6</span> Aplicación práctica para un “energy quant”</a></li>
+  <li><a href="#ejemplo-numérico-de-aplicación" id="toc-ejemplo-numérico-de-aplicación" class="nav-link" data-scroll-target="#ejemplo-numérico-de-aplicación"><span class="header-section-number">3.2.7</span> Ejemplo numérico de aplicación</a></li>
+  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión"><span class="header-section-number">3.2.8</span> Conclusión</a></li>
   </ul></li>
-  <li><a href="#responsabilidades-y-actuaciones" id="toc-responsabilidades-y-actuaciones" class="nav-link" data-scroll-target="#responsabilidades-y-actuaciones"><span class="header-section-number">4.4</span> 4. Responsabilidades y actuaciones</a>
-  <ul class="collapse">
-  <li><a href="#del-operador-del-sistema-ree" id="toc-del-operador-del-sistema-ree" class="nav-link" data-scroll-target="#del-operador-del-sistema-ree"><span class="header-section-number">4.4.1</span> 4.1. Del Operador del Sistema (REE)</a></li>
-  <li><a href="#de-los-titulares-de-red-generadores-consumidores-distribuidores" id="toc-de-los-titulares-de-red-generadores-consumidores-distribuidores" class="nav-link" data-scroll-target="#de-los-titulares-de-red-generadores-consumidores-distribuidores"><span class="header-section-number">4.4.2</span> 4.2. De los titulares de red (generadores, consumidores, distribuidores)</a></li>
-  </ul></li>
-  <li><a href="#interacción-con-otros-procedimientos-de-operación" id="toc-interacción-con-otros-procedimientos-de-operación" class="nav-link" data-scroll-target="#interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">4.5</span> 5. Interacción con otros procedimientos de operación</a></li>
-  <li><a href="#aplicación-práctica-para-un-energy-quant" id="toc-aplicación-práctica-para-un-energy-quant" class="nav-link" data-scroll-target="#aplicación-práctica-para-un-energy-quant"><span class="header-section-number">4.6</span> 6. Aplicación práctica para un “energy quant”</a>
-  <ul class="collapse">
-  <li><a href="#en-generación-renovable-solareólica" id="toc-en-generación-renovable-solareólica" class="nav-link" data-scroll-target="#en-generación-renovable-solareólica"><span class="header-section-number">4.6.1</span> 6.1. En generación renovable (solar/eólica)</a></li>
-  <li><a href="#en-baterías-bess" id="toc-en-baterías-bess" class="nav-link" data-scroll-target="#en-baterías-bess"><span class="header-section-number">4.6.2</span> 6.2. En baterías (BESS)</a></li>
-  <li><a href="#en-ciclos-combinados-gas" id="toc-en-ciclos-combinados-gas" class="nav-link" data-scroll-target="#en-ciclos-combinados-gas"><span class="header-section-number">4.6.3</span> 6.3. En ciclos combinados (gas)</a></li>
-  </ul></li>
-  <li><a href="#ejemplo-numérico-de-aplicación" id="toc-ejemplo-numérico-de-aplicación" class="nav-link" data-scroll-target="#ejemplo-numérico-de-aplicación"><span class="header-section-number">4.7</span> 7. Ejemplo numérico de aplicación</a></li>
-  <li><a href="#conclusión-estratégica" id="toc-conclusión-estratégica" class="nav-link" data-scroll-target="#conclusión-estratégica"><span class="header-section-number">4.8</span> 8. Conclusión estratégica</a></li>
-  </ul></li>
+  <li><a href="#logics-y-comparaciones" id="toc-logics-y-comparaciones" class="nav-link" data-scroll-target="#logics-y-comparaciones"><span class="header-section-number">3.3</span> Logics y Comparaciones</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos"><span class="header-section-number">3.4</span> Ejemplos</a></li>
   </ul>
 </nav>
 </nav>
@@ -250,7 +238,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logics y Comparaciones</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></h1>
 </div>
 
 
@@ -267,39 +255,14 @@ window.Quarto = {
 </header>
 
 
-<p>Los booleanos son valores <code>True</code> o <code>False</code>.</p>
-<section id="ejemplos" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">3.1</span> Ejemplos</h2>
-<div id="ef41e2a5" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">&gt;=</span> <span class="dv">50</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">==</span> <span class="dv">50</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">!=</span> <span class="dv">50</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"harry"</span> <span class="op">==</span> <span class="st">"hermoine"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>True
-False
-True
-False</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Este es un consejo importante.</p>
-</div>
-</div>
+<section id="fundamentos" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="fundamentos"><span class="header-section-number">3.1</span> Fundamentos</h2>
 </section>
-<section id="procedimiento-de-operación-1.3-p.o.-1.3-tensiones-admisibles-en-los-nudos-de-la-red-de-transporte" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Procedimiento de Operación 1.3 (P.O. 1.3): Tensiones admisibles en los nudos de la red de transporte</h1>
-<section id="objetivo-y-ámbito-de-aplicación" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="objetivo-y-ámbito-de-aplicación"><span class="header-section-number">4.1</span> 1. Objetivo y ámbito de aplicación</h2>
+<section id="procedimiento-de-operación-1.3" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</h2>
+<p>Sobre el Procedimiento de Operación 1.3 de REE (P.O. 1.3): <strong>Tensiones admisibles en los nudos de la red de transporte</strong></p>
+<section id="objetivo-y-ámbito-de-aplicación" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="objetivo-y-ámbito-de-aplicación"><span class="header-section-number">3.2.1</span> Objetivo y ámbito de aplicación</h3>
 <p>El objetivo fundamental del P.O. 1.3 es <strong>establecer los criterios y valores de tensión que deben cumplirse en condiciones normales y anormales de explotación</strong> en la red de transporte, para:</p>
 <ul>
 <li>Asegurar la <strong>calidad de onda</strong> (tensión dentro de márgenes) en el punto de conexión de los usuarios (generadores y consumidores).</li>
@@ -308,8 +271,8 @@ Tip
 </ul>
 <p><strong>Ámbito de aplicación:</strong> Afecta a todos los <strong>nudos de la red de transporte</strong> (tensión nominal ≥ 220 kV, incluyendo 400 kV, 220 kV y, en algunos casos, redes de 132 kV con función de transporte) y a las instalaciones de los <strong>usuarios conectados a dicha red</strong> (generadores, consumidores directos, distribuidores).</p>
 </section>
-<section id="definiciones-clave" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="definiciones-clave"><span class="header-section-number">4.2</span> 2. Definiciones clave</h2>
+<section id="definiciones-clave" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="definiciones-clave"><span class="header-section-number">3.2.2</span> Definiciones clave</h3>
 <p>Para interpretar correctamente los valores, el P.O. 1.3 define los siguientes conceptos:</p>
 <ul>
 <li><strong>Tensión nominal (<span class="math inline">\(U_n\)</span>):</strong> Valor eficaz de la tensión fase-fase con que se designa una red o instalación (ej: 400 kV, 220 kV).</li>
@@ -318,11 +281,11 @@ Tip
 <li><strong>Perturbación:</strong> Incidente que provoca una desviación significativa de la tensión (ej: cortocircuito, pérdida de generación, desconexión de línea).</li>
 </ul>
 </section>
-<section id="valores-de-tensión-admisible" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="valores-de-tensión-admisible"><span class="header-section-number">4.3</span> 3. Valores de tensión admisible</h2>
+<section id="valores-de-tensión-admisible" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="valores-de-tensión-admisible"><span class="header-section-number">3.2.3</span> Valores de tensión admisible</h3>
 <p>El procedimiento distingue entre <strong>régimen permanente</strong> (operación normal) y <strong>régimen transitorio</strong> (post-perturbación). Los valores se expresan en tanto por uno (p.u.) respecto a la tensión nominal (<span class="math inline">\(U_n\)</span>).</p>
-<section id="en-régimen-permanente-operación-normal" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="en-régimen-permanente-operación-normal"><span class="header-section-number">4.3.1</span> 3.1. En régimen permanente (operación normal)</h3>
+<section id="en-régimen-permanente-operación-normal" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="en-régimen-permanente-operación-normal"><span class="header-section-number">3.2.3.1</span> En régimen permanente (operación normal)</h4>
 <p>Son los límites que deben cumplirse en todo momento, salvo durante un tiempo muy limitado tras una incidencia.</p>
 <table class="caption-top table">
 <colgroup>
@@ -362,8 +325,8 @@ Tip
 </table>
 <p><strong>Nota:</strong> En operación normal, el Operador del Sistema (REE) intenta mantener la tensión lo más cerca posible de 1,0 p.u. (valores centrales), dejando los extremos como margen de seguridad.</p>
 </section>
-<section id="en-situaciones-post-perturbación-o-anormales" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="en-situaciones-post-perturbación-o-anormales"><span class="header-section-number">4.3.2</span> 3.2. En situaciones post-perturbación o anormales</h3>
+<section id="en-situaciones-post-perturbación-o-anormales" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="en-situaciones-post-perturbación-o-anormales"><span class="header-section-number">3.2.3.2</span> En situaciones post-perturbación o anormales</h4>
 <p>Tras una falta, se permiten desviaciones mayores durante un tiempo limitado, hasta que los sistemas de control restablecen los valores normales.</p>
 <table class="caption-top table">
 <colgroup>
@@ -393,20 +356,11 @@ Tip
 </table>
 <p><strong>Excepción importante:</strong> En redes de 400 kV, durante maniobras o tras la pérdida de una línea muy cargada, pueden aceptarse sobretensiones de hasta <strong>1,20 p.u.</strong> durante <strong>unos segundos o minutos</strong> (tiempo de actuación de los sistemas de control de tensión como los reguladores en vacío de los transformadores - OLTC).</p>
 </section>
-<section id="valores-específicos-para-el-diseño-de-instalaciones-aislamiento" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="valores-específicos-para-el-diseño-de-instalaciones-aislamiento"><span class="header-section-number">4.3.3</span> 3.3. Valores específicos para el diseño de instalaciones (aislamiento)</h3>
-<p>Aunque el procedimiento regula la explotación, también recuerda los valores para los que deben estar diseñados los equipos (según IEC 60038/60071), que son más amplios para soportar transitorios:</p>
-<ul>
-<li><strong>Máxima tensión soportada a frecuencia industrial (1 min):</strong> 1,3 p.u. - 1,5 p.u.</li>
-<li><strong>Tensión soportada a impulsos tipo rayo:</strong> &gt; 2,0 p.u.</li>
-</ul>
-<p><em>(Esto no es operación, pero es útil para entender por qué los márgenes de operación son más estrechos).</em></p>
 </section>
-</section>
-<section id="responsabilidades-y-actuaciones" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="responsabilidades-y-actuaciones"><span class="header-section-number">4.4</span> 4. Responsabilidades y actuaciones</h2>
-<section id="del-operador-del-sistema-ree" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="del-operador-del-sistema-ree"><span class="header-section-number">4.4.1</span> 4.1. Del Operador del Sistema (REE)</h3>
+<section id="responsabilidades-y-actuaciones" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="responsabilidades-y-actuaciones"><span class="header-section-number">3.2.4</span> Responsabilidades y actuaciones</h3>
+<section id="del-operador-del-sistema-ree" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="del-operador-del-sistema-ree"><span class="header-section-number">3.2.4.1</span> Del Operador del Sistema (REE)</h4>
 <ul>
 <li><strong>Planificar la operación:</strong> Realizar estudios de flujos de cargas para prever que las tensiones se mantendrán en los rangos admisibles.</li>
 <li><strong>Operar en tiempo real:</strong> Modificar la consigna de tensión de los generadores (a través del control de tensión), conectar/reactivar bancos de condensadores/reactancias, o cambiar la configuración de la red para mantener la tensión dentro de los límites del <strong>Artículo 3.1</strong>.</li>
@@ -414,8 +368,8 @@ Tip
 <li><strong>Coordinar con los titulares de red:</strong> Informar de las necesidades de consignas de tensión.</li>
 </ul>
 </section>
-<section id="de-los-titulares-de-red-generadores-consumidores-distribuidores" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="de-los-titulares-de-red-generadores-consumidores-distribuidores"><span class="header-section-number">4.4.2</span> 4.2. De los titulares de red (generadores, consumidores, distribuidores)</h3>
+<section id="de-los-titulares-de-red-generadores-consumidores-distribuidores" class="level4" data-number="3.2.4.2">
+<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="de-los-titulares-de-red-generadores-consumidores-distribuidores"><span class="header-section-number">3.2.4.2</span> De los titulares de red (generadores, consumidores, distribuidores)</h4>
 <ul>
 <li><strong>Mantener la tensión en el punto de conexión</strong> dentro de los límites del P.O. 1.3, siempre que sea técnicamente posible y sin perjuicio de su seguridad.</li>
 <li><strong>Disponer de equipos de regulación de tensión</strong> (ej: AVR en generadores, cambiadores de tomas en transformadores) y ponerlos a disposición del sistema.</li>
@@ -423,8 +377,8 @@ Tip
 </ul>
 </section>
 </section>
-<section id="interacción-con-otros-procedimientos-de-operación" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">4.5</span> 5. Interacción con otros procedimientos de operación</h2>
+<section id="interacción-con-otros-procedimientos-de-operación" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">3.2.5</span> Interacción con otros procedimientos de operación</h3>
 <p>El P.O. 1.3 no actúa solo. Para un experto en mercados, es vital entender su interconexión:</p>
 <ul>
 <li><strong>P.O. 7.2 (Control de Tensión de la Red de Transporte):</strong> Desarrolla <em>cómo</em> se controla la tensión (mediante la consigna de los generadores, el mantenimiento de la reserva de reactiva, etc.). Mientras el P.O. 1.3 dice <em>cuánto</em> es admisible, el P.O. 7.2 dice <em>cómo se consigue</em>.</li>
@@ -432,32 +386,32 @@ Tip
 <li><strong>P.O. 9.0 (Servicios de Balance):</strong> La regulación de tensión (potencia reactiva) es un servicio de balance no frecuencial. Los generadores son remunerados por ello.</li>
 </ul>
 </section>
-<section id="aplicación-práctica-para-un-energy-quant" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="aplicación-práctica-para-un-energy-quant"><span class="header-section-number">4.6</span> 6. Aplicación práctica para un “energy quant”</h2>
+<section id="aplicación-práctica-para-un-energy-quant" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="aplicación-práctica-para-un-energy-quant"><span class="header-section-number">3.2.6</span> Aplicación práctica para un “energy quant”</h3>
 <p>¿Cómo impacta esto en la optimización de activos y en el mercado?</p>
-<section id="en-generación-renovable-solareólica" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="en-generación-renovable-solareólica"><span class="header-section-number">4.6.1</span> 6.1. En generación renovable (solar/eólica)</h3>
+<section id="en-generación-renovable-solareólica" class="level4" data-number="3.2.6.1">
+<h4 data-number="3.2.6.1" class="anchored" data-anchor-id="en-generación-renovable-solareólica"><span class="header-section-number">3.2.6.1</span> En generación renovable (solar/eólica)</h4>
 <ul>
 <li><strong>Obligación de hueco de tensión (FRT):</strong> Aunque no está en este procedimiento (está en P.O. 12.2 y P.O. 12.3), el P.O. 1.3 define los límites. Si una planta no puede soportar una bajada de tensión a 0,9 p.u. durante 1 hora (o a 0,0 durante unos instantes), debe desconectarse. Un <em>quant</em> debe modelar el riesgo de <em>curtailment</em> por tensión.</li>
 <li><strong>Potencia reactiva:</strong> Los inversores modernos pueden generar/consumir reactiva. Un <em>quant</em> puede optimizar la consigna de reactiva no solo para cumplir el P.O. 1.3, sino para maximizar la vida útil del inversor o incluso ofrecer servicios de control de tensión (si se abren mercados de reactiva).</li>
 </ul>
 </section>
-<section id="en-baterías-bess" class="level3" data-number="4.6.2">
-<h3 data-number="4.6.2" class="anchored" data-anchor-id="en-baterías-bess"><span class="header-section-number">4.6.2</span> 6.2. En baterías (BESS)</h3>
+<section id="en-baterías-bess" class="level4" data-number="3.2.6.2">
+<h4 data-number="3.2.6.2" class="anchored" data-anchor-id="en-baterías-bess"><span class="header-section-number">3.2.6.2</span> En baterías (BESS)</h4>
 <ul>
 <li><strong>Soporte a la red:</strong> Las baterías, por su velocidad, son ideales para inyectar o absorber reactiva casi instantáneamente y ayudar a mantener la tensión dentro de los rangos del P.O. 1.3 (especialmente en redes con mucha solar, donde la tensión tiende a subir al mediodía).</li>
 <li><strong>Nuevo flujo de ingresos:</strong> En el futuro, el control de tensión podría ser un servicio remunerado. Un <em>quant</em> que entienda los límites del P.O. 1.3 puede valorar esa opción.</li>
 </ul>
 </section>
-<section id="en-ciclos-combinados-gas" class="level3" data-number="4.6.3">
-<h3 data-number="4.6.3" class="anchored" data-anchor-id="en-ciclos-combinados-gas"><span class="header-section-number">4.6.3</span> 6.3. En ciclos combinados (gas)</h3>
+<section id="en-ciclos-combinados-gas" class="level4" data-number="3.2.6.3">
+<h4 data-number="3.2.6.3" class="anchored" data-anchor-id="en-ciclos-combinados-gas"><span class="header-section-number">3.2.6.3</span> En ciclos combinados (gas)</h4>
 <ul>
 <li>Deben mantener su tensión en bornes dentro de los límites. Si la red está muy cargada (baja tensión), deberán generar más reactiva, lo que puede limitar su capacidad de generar activa (potencia aparente constante). Esto afecta a su oferta en el mercado.</li>
 </ul>
 </section>
 </section>
-<section id="ejemplo-numérico-de-aplicación" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="ejemplo-numérico-de-aplicación"><span class="header-section-number">4.7</span> 7. Ejemplo numérico de aplicación</h2>
+<section id="ejemplo-numérico-de-aplicación" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="ejemplo-numérico-de-aplicación"><span class="header-section-number">3.2.7</span> Ejemplo numérico de aplicación</h3>
 <p><strong>Escenario:</strong> Una planta solar conectada a un nudo de 220 kV. A mediodía, con alta generación y poca demanda local, la tensión en el nudo sube a <strong>1,06 p.u.</strong> (233,2 kV).</p>
 <ul>
 <li><strong>Diagnóstico:</strong> Se supera el límite superior de 1,05 p.u. en régimen permanente (Art. 3.1).</li>
@@ -465,17 +419,48 @@ Tip
 <li><strong>Actuación del generador:</strong> Deberá ajustar su modo de control de tensión (pasar de control de <em>cos phi</em> constante a control de <em>tensión constante</em>) para absorber el exceso de reactiva y bajar la tensión a 1,05 p.u.</li>
 </ul>
 </section>
-<section id="conclusión-estratégica" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="conclusión-estratégica"><span class="header-section-number">4.8</span> 8. Conclusión estratégica</h2>
-<p>El <strong>P.O. 1.3</strong> es, aparentemente, una simple tabla de números, pero es la <strong>restricción física más inmediata</strong> que condiciona la operación del sistema. Para un <em>Energy Quant</em> del nivel de Stanford/MIT, este procedimiento no es un documento legal lejano, sino una <strong>restricción de desigualdad (inequality constraint)</strong> en su modelo de optimización.</p>
+<section id="conclusión" class="level3" data-number="3.2.8">
+<h3 data-number="3.2.8" class="anchored" data-anchor-id="conclusión"><span class="header-section-number">3.2.8</span> Conclusión</h3>
+<p>El <strong>P.O. 1.3</strong> es, aparentemente, una simple tabla de números, pero es la <strong>restricción física más inmediata</strong> que condiciona la operación del sistema. Para un <em>Energy Quant</em>, este procedimiento no es un documento legal lejano, sino una <strong>restricción de desigualdad (inequality constraint)</strong> en su modelo de optimización.</p>
 <ul>
-<li>Si tu modelo de batería propone cargar a plena potencia en un nudo donde la tensión está en 1,05 p.u., el modelo debe saber que esa operación es inviable porque el aumento de reactiva (o el efecto en el flujo) podría disparar las protecciones.</li>
-<li>Si tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.</li>
+<li>Por ejemplo, si tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.</li>
 </ul>
 <p><strong>Dominar el P.O. 1.3 es dominar la primera capa de realidad física que subyace a los precios del mercado eléctrico.</strong></p>
-
-
 </section>
+</section>
+<section id="logics-y-comparaciones" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="logics-y-comparaciones"><span class="header-section-number">3.3</span> Logics y Comparaciones</h2>
+<p>Los booleanos son valores <code>True</code> o <code>False</code>.</p>
+</section>
+<section id="ejemplos" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">3.4</span> Ejemplos</h2>
+<div id="51fe2163" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">&gt;=</span> <span class="dv">50</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">==</span> <span class="dv">50</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">!=</span> <span class="dv">50</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"harry"</span> <span class="op">==</span> <span class="st">"hermoine"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True
+False
+True
+False</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este es un consejo importante.</p>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

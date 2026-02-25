@@ -14,7 +14,7 @@
     "href": "index.html#contenido",
     "title": "Mi Libro Sobre Mercado Eléctrico",
     "section": "1.1 Contenido",
-    "text": "1.1 Contenido\n\nIntroduction\n\nObjetivos\n\nLogics y Comparaciones\n\nEjemplos\n\nControl de flujo\nReferencias",
+    "text": "1.1 Contenido\n\nIntroduction\n\nObjetivos\n\nRegulación de Tensión y Estabilidad en Sistemas Eléctricos\n\nProcedimiento de Operación 1.3\n\nControl de flujo\nReferencias",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
     ]
@@ -62,101 +62,41 @@
   {
     "objectID": "capitulo1.html",
     "href": "capitulo1.html",
-    "title": "3  Logics y Comparaciones",
+    "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
     "section": "",
-    "text": "3.1 Ejemplos\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse",
+    "text": "3.1 Fundamentos",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulo1.html#procedimiento-de-operación-1.3",
+    "href": "capitulo1.html#procedimiento-de-operación-1.3",
+    "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
+    "section": "3.2 Procedimiento de Operación 1.3",
+    "text": "3.2 Procedimiento de Operación 1.3\nSobre el Procedimiento de Operación 1.3 de REE (P.O. 1.3): Tensiones admisibles en los nudos de la red de transporte\n\n3.2.1 Objetivo y ámbito de aplicación\nEl objetivo fundamental del P.O. 1.3 es establecer los criterios y valores de tensión que deben cumplirse en condiciones normales y anormales de explotación en la red de transporte, para:\n\nAsegurar la calidad de onda (tensión dentro de márgenes) en el punto de conexión de los usuarios (generadores y consumidores).\nGarantizar la estabilidad del sistema (evitar colapsos de tensión).\nProteger los equipos de los usuarios y de la propia red contra sobretensiones o subtensiones.\n\nÁmbito de aplicación: Afecta a todos los nudos de la red de transporte (tensión nominal ≥ 220 kV, incluyendo 400 kV, 220 kV y, en algunos casos, redes de 132 kV con función de transporte) y a las instalaciones de los usuarios conectados a dicha red (generadores, consumidores directos, distribuidores).\n\n\n3.2.2 Definiciones clave\nPara interpretar correctamente los valores, el P.O. 1.3 define los siguientes conceptos:\n\nTensión nominal (\\(U_n\\)): Valor eficaz de la tensión fase-fase con que se designa una red o instalación (ej: 400 kV, 220 kV).\nTensión más elevada de la red (\\(U_m\\)): Valor máximo de la tensión fase-fase para el que está diseñado el equipo. (\\(U_m &gt; U_n\\) para dar margen).\nTensión de funcionamiento (\\(U_f\\)): Valor eficaz de la tensión fase-fase en un instante dado. Es la variable que se controla.\nPerturbación: Incidente que provoca una desviación significativa de la tensión (ej: cortocircuito, pérdida de generación, desconexión de línea).\n\n\n\n3.2.3 Valores de tensión admisible\nEl procedimiento distingue entre régimen permanente (operación normal) y régimen transitorio (post-perturbación). Los valores se expresan en tanto por uno (p.u.) respecto a la tensión nominal (\\(U_n\\)).\n\n3.2.3.1 En régimen permanente (operación normal)\nSon los límites que deben cumplirse en todo momento, salvo durante un tiempo muy limitado tras una incidencia.\n\n\n\n\n\n\n\n\n\nNivel de Tensión (\\(U_n\\))\nLímite Inferior (\\(U_{min}\\))\nLímite Superior (\\(U_{max}\\))\nObservaciones\n\n\n\n\n400 kV\n0,95 p.u. (380 kV)\n1,05 p.u. (420 kV)\nMargen simétrico. La tensión más elevada de la red (\\(U_m\\)) es 420 kV, por lo que 1,05 p.u. es el límite físico del aislamiento.\n\n\n220 kV\n0,95 p.u. (209 kV)\n1,05 p.u. (231 kV)\nIdem.\n\n\n132 kV (y redes inferiores con función de transporte)\n0,95 p.u.\n1,05 p.u.\nSalvo que existan acuerdos específicos con los titulares.\n\n\n\nNota: En operación normal, el Operador del Sistema (REE) intenta mantener la tensión lo más cerca posible de 1,0 p.u. (valores centrales), dejando los extremos como margen de seguridad.\n\n\n3.2.3.2 En situaciones post-perturbación o anormales\nTras una falta, se permiten desviaciones mayores durante un tiempo limitado, hasta que los sistemas de control restablecen los valores normales.\n\n\n\n\n\n\n\n\nConcepto\nValor\nTiempo Máximo Permitido\n\n\n\n\nSobretensión temporal máxima\n1,10 p.u.\n&lt; 1 hora (hasta que el operador pueda actuar).\n\n\nSubtensión temporal máxima\n0,90 p.u.\n&lt; 1 hora (en función de la seguridad del sistema y riesgo de colapso).\n\n\n\nExcepción importante: En redes de 400 kV, durante maniobras o tras la pérdida de una línea muy cargada, pueden aceptarse sobretensiones de hasta 1,20 p.u. durante unos segundos o minutos (tiempo de actuación de los sistemas de control de tensión como los reguladores en vacío de los transformadores - OLTC).\n\n\n\n3.2.4 Responsabilidades y actuaciones\n\n3.2.4.1 Del Operador del Sistema (REE)\n\nPlanificar la operación: Realizar estudios de flujos de cargas para prever que las tensiones se mantendrán en los rangos admisibles.\nOperar en tiempo real: Modificar la consigna de tensión de los generadores (a través del control de tensión), conectar/reactivar bancos de condensadores/reactancias, o cambiar la configuración de la red para mantener la tensión dentro de los límites del Artículo 3.1.\nGestionar la potencia reactiva: La tensión está intrínsecamente ligada al balance de energía reactiva. Si la tensión sube, hay exceso de reactiva; si baja, hay déficit.\nCoordinar con los titulares de red: Informar de las necesidades de consignas de tensión.\n\n\n\n3.2.4.2 De los titulares de red (generadores, consumidores, distribuidores)\n\nMantener la tensión en el punto de conexión dentro de los límites del P.O. 1.3, siempre que sea técnicamente posible y sin perjuicio de su seguridad.\nDisponer de equipos de regulación de tensión (ej: AVR en generadores, cambiadores de tomas en transformadores) y ponerlos a disposición del sistema.\nComunicar incidencias: Si su instalación no puede mantener la tensión dentro de los márgenes, deben comunicarlo a REE.\n\n\n\n\n3.2.5 Interacción con otros procedimientos de operación\nEl P.O. 1.3 no actúa solo. Para un experto en mercados, es vital entender su interconexión:\n\nP.O. 7.2 (Control de Tensión de la Red de Transporte): Desarrolla cómo se controla la tensión (mediante la consigna de los generadores, el mantenimiento de la reserva de reactiva, etc.). Mientras el P.O. 1.3 dice cuánto es admisible, el P.O. 7.2 dice cómo se consigue.\nP.O. 3.1 (Programación de la Generación): La necesidad de mantener la tensión puede forzar a ciertas unidades a estar acopladas (generando o consumiendo reactiva) aunque no sean económicas en el mercado diario. Esto genera restricciones técnicas por tensión (servicios complementarios).\nP.O. 9.0 (Servicios de Balance): La regulación de tensión (potencia reactiva) es un servicio de balance no frecuencial. Los generadores son remunerados por ello.\n\n\n\n3.2.6 Aplicación práctica para un “energy quant”\n¿Cómo impacta esto en la optimización de activos y en el mercado?\n\n3.2.6.1 En generación renovable (solar/eólica)\n\nObligación de hueco de tensión (FRT): Aunque no está en este procedimiento (está en P.O. 12.2 y P.O. 12.3), el P.O. 1.3 define los límites. Si una planta no puede soportar una bajada de tensión a 0,9 p.u. durante 1 hora (o a 0,0 durante unos instantes), debe desconectarse. Un quant debe modelar el riesgo de curtailment por tensión.\nPotencia reactiva: Los inversores modernos pueden generar/consumir reactiva. Un quant puede optimizar la consigna de reactiva no solo para cumplir el P.O. 1.3, sino para maximizar la vida útil del inversor o incluso ofrecer servicios de control de tensión (si se abren mercados de reactiva).\n\n\n\n3.2.6.2 En baterías (BESS)\n\nSoporte a la red: Las baterías, por su velocidad, son ideales para inyectar o absorber reactiva casi instantáneamente y ayudar a mantener la tensión dentro de los rangos del P.O. 1.3 (especialmente en redes con mucha solar, donde la tensión tiende a subir al mediodía).\nNuevo flujo de ingresos: En el futuro, el control de tensión podría ser un servicio remunerado. Un quant que entienda los límites del P.O. 1.3 puede valorar esa opción.\n\n\n\n3.2.6.3 En ciclos combinados (gas)\n\nDeben mantener su tensión en bornes dentro de los límites. Si la red está muy cargada (baja tensión), deberán generar más reactiva, lo que puede limitar su capacidad de generar activa (potencia aparente constante). Esto afecta a su oferta en el mercado.\n\n\n\n\n3.2.7 Ejemplo numérico de aplicación\nEscenario: Una planta solar conectada a un nudo de 220 kV. A mediodía, con alta generación y poca demanda local, la tensión en el nudo sube a 1,06 p.u. (233,2 kV).\n\nDiagnóstico: Se supera el límite superior de 1,05 p.u. en régimen permanente (Art. 3.1).\nActuación de REE: Ordenará a la planta solar reducir su generación de reactiva (si está inyectando) o incluso a consumir reactiva. Si no es suficiente, podría ordenar la desconexión de alguna línea o la reducción de potencia activa (curtailment por tensión) para aliviar el efecto Ferranti en la línea.\nActuación del generador: Deberá ajustar su modo de control de tensión (pasar de control de cos phi constante a control de tensión constante) para absorber el exceso de reactiva y bajar la tensión a 1,05 p.u.\n\n\n\n3.2.8 Conclusión\nEl P.O. 1.3 es, aparentemente, una simple tabla de números, pero es la restricción física más inmediata que condiciona la operación del sistema. Para un Energy Quant, este procedimiento no es un documento legal lejano, sino una restricción de desigualdad (inequality constraint) en su modelo de optimización.\n\nPor ejemplo, si tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.\n\nDominar el P.O. 1.3 es dominar la primera capa de realidad física que subyace a los precios del mercado eléctrico.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
+    ]
+  },
+  {
+    "objectID": "capitulo1.html#logics-y-comparaciones",
+    "href": "capitulo1.html#logics-y-comparaciones",
+    "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
+    "section": "3.3 Logics y Comparaciones",
+    "text": "3.3 Logics y Comparaciones\nLos booleanos son valores True o False.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
     ]
   },
   {
     "objectID": "capitulo1.html#ejemplos",
     "href": "capitulo1.html#ejemplos",
-    "title": "3  Logics y Comparaciones",
-    "section": "",
-    "text": "Tip\n\n\n\nEste es un consejo importante.",
+    "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
+    "section": "3.4 Ejemplos",
+    "text": "3.4 Ejemplos\n\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse\n\n\n\n\n\n\n\n\nTip\n\n\n\nEste es un consejo importante.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#objetivo-y-ámbito-de-aplicación",
-    "href": "capitulo1.html#objetivo-y-ámbito-de-aplicación",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.1 1. Objetivo y ámbito de aplicación",
-    "text": "4.1 1. Objetivo y ámbito de aplicación\nEl objetivo fundamental del P.O. 1.3 es establecer los criterios y valores de tensión que deben cumplirse en condiciones normales y anormales de explotación en la red de transporte, para:\n\nAsegurar la calidad de onda (tensión dentro de márgenes) en el punto de conexión de los usuarios (generadores y consumidores).\nGarantizar la estabilidad del sistema (evitar colapsos de tensión).\nProteger los equipos de los usuarios y de la propia red contra sobretensiones o subtensiones.\n\nÁmbito de aplicación: Afecta a todos los nudos de la red de transporte (tensión nominal ≥ 220 kV, incluyendo 400 kV, 220 kV y, en algunos casos, redes de 132 kV con función de transporte) y a las instalaciones de los usuarios conectados a dicha red (generadores, consumidores directos, distribuidores).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#definiciones-clave",
-    "href": "capitulo1.html#definiciones-clave",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.2 2. Definiciones clave",
-    "text": "4.2 2. Definiciones clave\nPara interpretar correctamente los valores, el P.O. 1.3 define los siguientes conceptos:\n\nTensión nominal (\\(U_n\\)): Valor eficaz de la tensión fase-fase con que se designa una red o instalación (ej: 400 kV, 220 kV).\nTensión más elevada de la red (\\(U_m\\)): Valor máximo de la tensión fase-fase para el que está diseñado el equipo. (\\(U_m &gt; U_n\\) para dar margen).\nTensión de funcionamiento (\\(U_f\\)): Valor eficaz de la tensión fase-fase en un instante dado. Es la variable que se controla.\nPerturbación: Incidente que provoca una desviación significativa de la tensión (ej: cortocircuito, pérdida de generación, desconexión de línea).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#valores-de-tensión-admisible",
-    "href": "capitulo1.html#valores-de-tensión-admisible",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.3 3. Valores de tensión admisible",
-    "text": "4.3 3. Valores de tensión admisible\nEl procedimiento distingue entre régimen permanente (operación normal) y régimen transitorio (post-perturbación). Los valores se expresan en tanto por uno (p.u.) respecto a la tensión nominal (\\(U_n\\)).\n\n4.3.1 3.1. En régimen permanente (operación normal)\nSon los límites que deben cumplirse en todo momento, salvo durante un tiempo muy limitado tras una incidencia.\n\n\n\n\n\n\n\n\n\nNivel de Tensión (\\(U_n\\))\nLímite Inferior (\\(U_{min}\\))\nLímite Superior (\\(U_{max}\\))\nObservaciones\n\n\n\n\n400 kV\n0,95 p.u. (380 kV)\n1,05 p.u. (420 kV)\nMargen simétrico. La tensión más elevada de la red (\\(U_m\\)) es 420 kV, por lo que 1,05 p.u. es el límite físico del aislamiento.\n\n\n220 kV\n0,95 p.u. (209 kV)\n1,05 p.u. (231 kV)\nIdem.\n\n\n132 kV (y redes inferiores con función de transporte)\n0,95 p.u.\n1,05 p.u.\nSalvo que existan acuerdos específicos con los titulares.\n\n\n\nNota: En operación normal, el Operador del Sistema (REE) intenta mantener la tensión lo más cerca posible de 1,0 p.u. (valores centrales), dejando los extremos como margen de seguridad.\n\n\n4.3.2 3.2. En situaciones post-perturbación o anormales\nTras una falta, se permiten desviaciones mayores durante un tiempo limitado, hasta que los sistemas de control restablecen los valores normales.\n\n\n\n\n\n\n\n\nConcepto\nValor\nTiempo Máximo Permitido\n\n\n\n\nSobretensión temporal máxima\n1,10 p.u.\n&lt; 1 hora (hasta que el operador pueda actuar).\n\n\nSubtensión temporal máxima\n0,90 p.u.\n&lt; 1 hora (en función de la seguridad del sistema y riesgo de colapso).\n\n\n\nExcepción importante: En redes de 400 kV, durante maniobras o tras la pérdida de una línea muy cargada, pueden aceptarse sobretensiones de hasta 1,20 p.u. durante unos segundos o minutos (tiempo de actuación de los sistemas de control de tensión como los reguladores en vacío de los transformadores - OLTC).\n\n\n4.3.3 3.3. Valores específicos para el diseño de instalaciones (aislamiento)\nAunque el procedimiento regula la explotación, también recuerda los valores para los que deben estar diseñados los equipos (según IEC 60038/60071), que son más amplios para soportar transitorios:\n\nMáxima tensión soportada a frecuencia industrial (1 min): 1,3 p.u. - 1,5 p.u.\nTensión soportada a impulsos tipo rayo: &gt; 2,0 p.u.\n\n(Esto no es operación, pero es útil para entender por qué los márgenes de operación son más estrechos).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#responsabilidades-y-actuaciones",
-    "href": "capitulo1.html#responsabilidades-y-actuaciones",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.4 4. Responsabilidades y actuaciones",
-    "text": "4.4 4. Responsabilidades y actuaciones\n\n4.4.1 4.1. Del Operador del Sistema (REE)\n\nPlanificar la operación: Realizar estudios de flujos de cargas para prever que las tensiones se mantendrán en los rangos admisibles.\nOperar en tiempo real: Modificar la consigna de tensión de los generadores (a través del control de tensión), conectar/reactivar bancos de condensadores/reactancias, o cambiar la configuración de la red para mantener la tensión dentro de los límites del Artículo 3.1.\nGestionar la potencia reactiva: La tensión está intrínsecamente ligada al balance de energía reactiva. Si la tensión sube, hay exceso de reactiva; si baja, hay déficit.\nCoordinar con los titulares de red: Informar de las necesidades de consignas de tensión.\n\n\n\n4.4.2 4.2. De los titulares de red (generadores, consumidores, distribuidores)\n\nMantener la tensión en el punto de conexión dentro de los límites del P.O. 1.3, siempre que sea técnicamente posible y sin perjuicio de su seguridad.\nDisponer de equipos de regulación de tensión (ej: AVR en generadores, cambiadores de tomas en transformadores) y ponerlos a disposición del sistema.\nComunicar incidencias: Si su instalación no puede mantener la tensión dentro de los márgenes, deben comunicarlo a REE.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#interacción-con-otros-procedimientos-de-operación",
-    "href": "capitulo1.html#interacción-con-otros-procedimientos-de-operación",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.5 5. Interacción con otros procedimientos de operación",
-    "text": "4.5 5. Interacción con otros procedimientos de operación\nEl P.O. 1.3 no actúa solo. Para un experto en mercados, es vital entender su interconexión:\n\nP.O. 7.2 (Control de Tensión de la Red de Transporte): Desarrolla cómo se controla la tensión (mediante la consigna de los generadores, el mantenimiento de la reserva de reactiva, etc.). Mientras el P.O. 1.3 dice cuánto es admisible, el P.O. 7.2 dice cómo se consigue.\nP.O. 3.1 (Programación de la Generación): La necesidad de mantener la tensión puede forzar a ciertas unidades a estar acopladas (generando o consumiendo reactiva) aunque no sean económicas en el mercado diario. Esto genera restricciones técnicas por tensión (servicios complementarios).\nP.O. 9.0 (Servicios de Balance): La regulación de tensión (potencia reactiva) es un servicio de balance no frecuencial. Los generadores son remunerados por ello.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#aplicación-práctica-para-un-energy-quant",
-    "href": "capitulo1.html#aplicación-práctica-para-un-energy-quant",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.6 6. Aplicación práctica para un “energy quant”",
-    "text": "4.6 6. Aplicación práctica para un “energy quant”\n¿Cómo impacta esto en la optimización de activos y en el mercado?\n\n4.6.1 6.1. En generación renovable (solar/eólica)\n\nObligación de hueco de tensión (FRT): Aunque no está en este procedimiento (está en P.O. 12.2 y P.O. 12.3), el P.O. 1.3 define los límites. Si una planta no puede soportar una bajada de tensión a 0,9 p.u. durante 1 hora (o a 0,0 durante unos instantes), debe desconectarse. Un quant debe modelar el riesgo de curtailment por tensión.\nPotencia reactiva: Los inversores modernos pueden generar/consumir reactiva. Un quant puede optimizar la consigna de reactiva no solo para cumplir el P.O. 1.3, sino para maximizar la vida útil del inversor o incluso ofrecer servicios de control de tensión (si se abren mercados de reactiva).\n\n\n\n4.6.2 6.2. En baterías (BESS)\n\nSoporte a la red: Las baterías, por su velocidad, son ideales para inyectar o absorber reactiva casi instantáneamente y ayudar a mantener la tensión dentro de los rangos del P.O. 1.3 (especialmente en redes con mucha solar, donde la tensión tiende a subir al mediodía).\nNuevo flujo de ingresos: En el futuro, el control de tensión podría ser un servicio remunerado. Un quant que entienda los límites del P.O. 1.3 puede valorar esa opción.\n\n\n\n4.6.3 6.3. En ciclos combinados (gas)\n\nDeben mantener su tensión en bornes dentro de los límites. Si la red está muy cargada (baja tensión), deberán generar más reactiva, lo que puede limitar su capacidad de generar activa (potencia aparente constante). Esto afecta a su oferta en el mercado.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#ejemplo-numérico-de-aplicación",
-    "href": "capitulo1.html#ejemplo-numérico-de-aplicación",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.7 7. Ejemplo numérico de aplicación",
-    "text": "4.7 7. Ejemplo numérico de aplicación\nEscenario: Una planta solar conectada a un nudo de 220 kV. A mediodía, con alta generación y poca demanda local, la tensión en el nudo sube a 1,06 p.u. (233,2 kV).\n\nDiagnóstico: Se supera el límite superior de 1,05 p.u. en régimen permanente (Art. 3.1).\nActuación de REE: Ordenará a la planta solar reducir su generación de reactiva (si está inyectando) o incluso a consumir reactiva. Si no es suficiente, podría ordenar la desconexión de alguna línea o la reducción de potencia activa (curtailment por tensión) para aliviar el efecto Ferranti en la línea.\nActuación del generador: Deberá ajustar su modo de control de tensión (pasar de control de cos phi constante a control de tensión constante) para absorber el exceso de reactiva y bajar la tensión a 1,05 p.u.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#conclusión-estratégica",
-    "href": "capitulo1.html#conclusión-estratégica",
-    "title": "3  Logics y Comparaciones",
-    "section": "4.8 8. Conclusión estratégica",
-    "text": "4.8 8. Conclusión estratégica\nEl P.O. 1.3 es, aparentemente, una simple tabla de números, pero es la restricción física más inmediata que condiciona la operación del sistema. Para un Energy Quant del nivel de Stanford/MIT, este procedimiento no es un documento legal lejano, sino una restricción de desigualdad (inequality constraint) en su modelo de optimización.\n\nSi tu modelo de batería propone cargar a plena potencia en un nudo donde la tensión está en 1,05 p.u., el modelo debe saber que esa operación es inviable porque el aumento de reactiva (o el efecto en el flujo) podría disparar las protecciones.\nSi tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.\n\nDominar el P.O. 1.3 es dominar la primera capa de realidad física que subyace a los precios del mercado eléctrico.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Logics y Comparaciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
     ]
   },
   {
