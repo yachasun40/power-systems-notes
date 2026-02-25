@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Regulación de Tensión y Estabilidad en Sistemas Eléctricos – Mi Libro Sobre Mercado Eléctrico</title>
+<title>3&nbsp; Estabilidad en Sistemas Eléctricos de Potencia – Mi Libro Sobre Mercado Eléctrico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estabilidad en Sistemas Eléctricos de Potencia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -191,7 +191,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./capitulo1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estabilidad en Sistemas Eléctricos de Potencia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -244,7 +244,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estabilidad en Sistemas Eléctricos de Potencia</span></h1>
 </div>
 
 
@@ -268,7 +268,7 @@ window.Quarto = {
 <section id="estabilidad-de-frecuencia" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="estabilidad-de-frecuencia"><span class="header-section-number">3.1.1</span> Estabilidad de Frecuencia</h3>
 <p>La <strong>estabilidad de frecuencia</strong> se refiere a la capacidad de un sistema de potencia para mantener la <strong>frecuencia del sistema</strong> dentro de límites operativos nominales, tanto en condiciones de operación normal como después de haber sido sometido a una perturbación severa que cause un desequilibrio significativo entre la generación y la demanda (carga). Se basa en el control de potencia activa a través de reguladores de velocidad (gobernadores) y sistemas de inercia para evitar apagones por sobrefrecuencia o baja frecuencia.</p>
-<p>La frecuencia del sistema es un indicador global del equilibrio entre la potencia activa generada y la consumida (incluyendo las pérdidas). Una frecuencia constante (por ejemplo, 50 Hz o 60 Hz) indica que el equilibrio se mantiene. Cualquier desviación de la frecuencia nominal es una señal de un desequilibrio entre la potencia mecánica de entrada a los generadores y la potencia eléctrica de salida.</p>
+<p>La frecuencia del sistema es un indicador global del equilibrio entre la potencia activa generada y la consumida (incluyendo las pérdidas). Una frecuencia constante (por ejemplo, 50 Hz o 60 Hz) indica que el equilibrio se mantiene. Cualquier desviación de la frecuencia nominal es una señal de un desequilibrio entre la potencia mecánica de entrada al sistema y la potencia eléctrica de salida.</p>
 <ul>
 <li><strong>Sobre-frecuencia:</strong> Ocurre cuando la generación total supera a la demanda total (más las pérdidas). Los generadores aceleran.</li>
 <li><strong>Sub-frecuencia:</strong> Ocurre cuando la demanda total supera a la generación total. Los generadores desaceleran (se frenan).</li>
@@ -282,33 +282,25 @@ window.Quarto = {
 </ul>
 <section id="por-qué-se-frenan-los-generadores" class="level4" data-number="3.1.1.1">
 <h4 data-number="3.1.1.1" class="anchored" data-anchor-id="por-qué-se-frenan-los-generadores"><span class="header-section-number">3.1.1.1</span> ¿Por qué se frenan los generadores?</h4>
-<p>Cuando la demanda eléctrica supera la producción:</p>
-<ul>
-<li>Aumenta la corriente en el estator.</li>
-<li>Se incrementa el campo magnético opuesto.</li>
-<li>Aparece mayor torque resistente.</li>
-<li>El rotor se desacelera.</li>
-</ul>
-<p>⚠ Nota: Esto aplica principalmente a <strong>generadores síncronos</strong>.<br>
-Muchos aerogeneradores modernos utilizan electrónica de potencia y no reaccionan igual ante perturbaciones.</p>
-<hr>
 <ol type="1">
 <li>Mayor demanda = Mayor resistencia magnética</li>
 </ol>
-<p>Al conectarse más carga:</p>
+<p>Cuando la demanda eléctrica supera la producción:</p>
 <ul>
 <li>Aumenta la corriente.</li>
-<li>Se refuerza el campo magnético del estator.</li>
-<li>Se incrementa el torque opuesto al rotor.</li>
+<li>Aumenta la corriente en el estator.</li>
+<li>Se incrementa el campo magnético opuesto del estator.</li>
+<li>Aparece mayor torque resistente (opuesto al rotor).</li>
+<li>El rotor se desacelera.</li>
 </ul>
-<p>Es equivalente a pedalear cuesta arriba:<br>
-más resistencia → más esfuerzo necesario.</p>
-<hr>
+<p>Es equivalente a pedalear cuesta arriba (más resistencia → más esfuerzo necesario.)</p>
+<p>⚠ Nota: Esto aplica principalmente a <strong>generadores síncronos</strong>.<br>
+Muchos aerogeneradores modernos utilizan electrónica de potencia y no reaccionan igual ante perturbaciones.</p>
 <ol start="2" type="1">
 <li>Caída de frecuencia</li>
 </ol>
 <p>La frecuencia eléctrica está directamente relacionada con la velocidad de giro:</p>
-<p>[ f = ]</p>
+<p><span class="math display">\[ f = \frac{p \cdot n}{120}\]</span></p>
 <p>Donde:</p>
 <ul>
 <li>( f ) = frecuencia</li>
@@ -316,25 +308,26 @@ más resistencia → más esfuerzo necesario.</p>
 <li>( n ) = velocidad en RPM</li>
 </ul>
 <p>Si baja la velocidad → baja la frecuencia.</p>
-<hr>
-<ol start="3" type="1">
-<li>Capacidad del motor primario</li>
-</ol>
-<p>El motor que impulsa el generador (vapor, hidráulico, diésel):</p>
-<ul>
-<li>Intenta aportar más potencia mecánica.</li>
-<li>Si no puede compensar el aumento de carga,</li>
-<li>La máquina se desacelera.</li>
-</ul>
-<hr>
 </section>
 <section id="la-frecuencia-como-indicador-del-equilibrio-de-potencia-activa" class="level4" data-number="3.1.1.2">
 <h4 data-number="3.1.1.2" class="anchored" data-anchor-id="la-frecuencia-como-indicador-del-equilibrio-de-potencia-activa"><span class="header-section-number">3.1.1.2</span> La Frecuencia como Indicador del Equilibrio de Potencia Activa</h4>
 <p>La relación fundamental que gobierna la dinámica de la frecuencia se deriva de la ecuación de oscilación de una máquina síncrona, aplicada a todo el sistema.</p>
 <p>Considerando un sistema equivalente con una inercia total <span class="math inline">\(H_{sist}\)</span>, la ecuación que describe la evolución de la frecuencia <span class="math inline">\(f\)</span> (en pu) es:</p>
 <p><span class="math display">\[ 2H_{sist} \frac{df}{dt} = P_m - P_e = \Delta P \]</span></p>
-<p>Donde: - <span class="math inline">\(H_{sist}\)</span> es la constante de inercia del sistema (en segundos, referida a la potencia base del sistema). - <span class="math inline">\(f\)</span> es la frecuencia del sistema (en por unidad o Hz). - <span class="math inline">\(P_m\)</span> es la potencia mecánica total de entrada de los generadores (pu). - <span class="math inline">\(P_e\)</span> es la potencia eléctrica total de salida de los generadores (pu), que es igual a la demanda más las pérdidas. - <span class="math inline">\(\Delta P\)</span> es el desequilibrio de potencia activa.</p>
-<p><strong>Interpretación:</strong> - Si <span class="math inline">\(\Delta P &gt; 0\)</span> (exceso de generación), la derivada <span class="math inline">\(df/dt &gt; 0\)</span>, la frecuencia <strong>aumenta</strong>. - Si <span class="math inline">\(\Delta P &lt; 0\)</span> (déficit de generación), la derivada <span class="math inline">\(df/dt &lt; 0\)</span>, la frecuencia <strong>disminuye</strong>. - La velocidad de cambio de la frecuencia (RoCoF - Rate of Change of Frequency) es inversamente proporcional a la inercia total del sistema. Un sistema con poca inercia (como aquellos con alta penetración de fuentes renovables basadas en electrónica de potencia) experimentará cambios de frecuencia mucho más rápidos y pronunciados ante un mismo desequilibrio.</p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(H_{sist}\)</span> es la constante de inercia del sistema (en segundos, referida a la potencia base del sistema).</p></li>
+<li><p><span class="math inline">\(f\)</span> es la frecuencia del sistema (en por unidad o Hz).</p></li>
+<li><p><span class="math inline">\(P_m\)</span> es la potencia mecánica total de entrada de los generadores (pu).</p></li>
+<li><p><span class="math inline">\(P_e\)</span> es la potencia eléctrica total de salida de los generadores (pu), que es igual a la demanda más las pérdidas.</p></li>
+<li><p><span class="math inline">\(\Delta P\)</span> es el desequilibrio de potencia activa.</p></li>
+</ul>
+<p><strong>Interpretación:</strong></p>
+<ul>
+<li><p>Si <span class="math inline">\(\Delta P &gt; 0\)</span> (exceso de generación), la derivada <span class="math inline">\(df/dt &gt; 0\)</span>, la frecuencia <strong>aumenta</strong>.</p></li>
+<li><p>Si <span class="math inline">\(\Delta P &lt; 0\)</span> (déficit de generación), la derivada <span class="math inline">\(df/dt &lt; 0\)</span>, la frecuencia <strong>disminuye</strong>.</p></li>
+<li><p>La velocidad de cambio de la frecuencia (RoCoF - Rate of Change of Frequency) es inversamente proporcional a la inercia total del sistema. Un sistema con poca inercia (como aquellos con alta penetración de fuentes renovables basadas en electrónica de potencia) experimentará cambios de frecuencia mucho más rápidos y pronunciados ante un mismo desequilibrio.</p></li>
+</ul>
 </section>
 <section id="dinámica-de-la-frecuencia-ante-un-desequilibrio" class="level4" data-number="3.1.1.3">
 <h4 data-number="3.1.1.3" class="anchored" data-anchor-id="dinámica-de-la-frecuencia-ante-un-desequilibrio"><span class="header-section-number">3.1.1.3</span> Dinámica de la Frecuencia ante un Desequilibrio</h4>
@@ -717,7 +710,7 @@ más resistencia → más esfuerzo necesario.</p>
 <p>Los booleanos son valores <code>True</code> o <code>False</code>.</p>
 <section id="ejemplos" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">3.3.1</span> Ejemplos</h3>
-<div id="d43e1322" class="cell" data-execution_count="1">
+<div id="e8e3f4f9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">&gt;=</span> <span class="dv">50</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">==</span> <span class="dv">50</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">!=</span> <span class="dv">50</span>)</span>
