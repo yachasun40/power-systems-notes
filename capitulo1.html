@@ -212,7 +212,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#fundamentos" id="toc-fundamentos" class="nav-link active" data-scroll-target="#fundamentos"><span class="header-section-number">3.1</span> Fundamentos</a></li>
+  <li><a href="#fundamentos" id="toc-fundamentos" class="nav-link active" data-scroll-target="#fundamentos"><span class="header-section-number">3.1</span> Fundamentos</a>
+  <ul class="collapse">
+  <li><a href="#estabilidad-de-frecuencia" id="toc-estabilidad-de-frecuencia" class="nav-link" data-scroll-target="#estabilidad-de-frecuencia"><span class="header-section-number">3.1.1</span> Estabilidad de Frecuencia</a></li>
+  <li><a href="#estabilidad-de-tensión" id="toc-estabilidad-de-tensión" class="nav-link" data-scroll-target="#estabilidad-de-tensión"><span class="header-section-number">3.1.2</span> Estabilidad de Tensión</a></li>
+  </ul></li>
   <li><a href="#procedimiento-de-operación-1.3" id="toc-procedimiento-de-operación-1.3" class="nav-link" data-scroll-target="#procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</a>
   <ul class="collapse">
   <li><a href="#objetivo-y-ámbito-de-aplicación" id="toc-objetivo-y-ámbito-de-aplicación" class="nav-link" data-scroll-target="#objetivo-y-ámbito-de-aplicación"><span class="header-section-number">3.2.1</span> Objetivo y ámbito de aplicación</a></li>
@@ -259,6 +263,284 @@ window.Quarto = {
 
 <section id="fundamentos" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="fundamentos"><span class="header-section-number">3.1</span> Fundamentos</h2>
+<p>Los apagones (blackouts) son una de las manifestaciones más críticas de la inestabilidad en un sistema eléctrico.</p>
+<p>La estabilidad de un sistema de potencia es la capacidad del sistema eléctrico para mantener un funcionamiento en equilibrio (sincronismo, voltaje y frecuencia constantes) bajo condiciones normales y recuperar un estado operativo aceptable tras una perturbación, como fallas, cortocircuitos o variaciones rápidas en la carga. Es fundamental para garantizar un suministro eléctrico continuo y evitar apagones.</p>
+<section id="estabilidad-de-frecuencia" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="estabilidad-de-frecuencia"><span class="header-section-number">3.1.1</span> Estabilidad de Frecuencia</h3>
+<p>La <strong>estabilidad de frecuencia</strong> se refiere a la capacidad de un sistema de potencia para mantener la <strong>frecuencia del sistema</strong> dentro de límites operativos nominales, tanto en condiciones de operación normal como después de haber sido sometido a una perturbación severa que cause un desequilibrio significativo entre la generación y la demanda (carga). Se basa en el control de potencia activa a través de reguladores de velocidad (gobernadores) y sistemas de inercia para evitar apagones por sobrefrecuencia o baja frecuencia.</p>
+<p>La frecuencia del sistema es un indicador global del equilibrio entre la potencia activa generada y la consumida (incluyendo las pérdidas). Una frecuencia constante (por ejemplo, 50 Hz o 60 Hz) indica que el equilibrio se mantiene. Cualquier desviación de la frecuencia nominal es una señal de un desequilibrio entre la potencia mecánica de entrada a los generadores y la potencia eléctrica de salida.</p>
+<ul>
+<li><strong>Sobre-frecuencia:</strong> Ocurre cuando la generación total supera a la demanda total (más las pérdidas). Los generadores aceleran.</li>
+<li><strong>Sub-frecuencia:</strong> Ocurre cuando la demanda total supera a la generación total. Los generadores desaceleran (se frenan).</li>
+</ul>
+<p><strong>Aspectos clave de la estabilidad de frecuencia:</strong></p>
+<ul>
+<li><p>Balance Generación-Carga: La frecuencia depende directamente del equilibrio entre la potencia activa generada y la demandada. Si la carga supera a la generación, la frecuencia disminuye; si la generación supera a la carga, la frecuencia aumenta.</p></li>
+<li><p>Respuesta Inercial: La inercia del rotor en los generadores síncronos limita la velocidad de cambio inicial de la frecuencia (<span class="math inline">\(df/dt\)</span>) tras una perturbación.</p></li>
+<li><p>Regulación Primaria: Los gobernadores ajustan automáticamente las válvulas de las turbinas para cambiar la potencia activa y estabilizar la frecuencia en segundos.</p></li>
+<li><p>Deslastre de Carga (Load Shedding): Mecanismo de defensa crítico que desconecta cargas automáticamente cuando la frecuencia cae por debajo de umbrales críticos para evitar el colapso del sistema</p></li>
+</ul>
+<section id="por-qué-se-frenan-los-generadores" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="por-qué-se-frenan-los-generadores"><span class="header-section-number">3.1.1.1</span> ¿Por qué se frenan los generadores?</h4>
+<p>Cuando la demanda eléctrica supera la producción:</p>
+<ul>
+<li>Aumenta la corriente en el estator.</li>
+<li>Se incrementa el campo magnético opuesto.</li>
+<li>Aparece mayor torque resistente.</li>
+<li>El rotor se desacelera.</li>
+</ul>
+<p>⚠ Nota: Esto aplica principalmente a <strong>generadores síncronos</strong>.<br>
+Muchos aerogeneradores modernos utilizan electrónica de potencia y no reaccionan igual ante perturbaciones.</p>
+<hr>
+<ol type="1">
+<li>Mayor demanda = Mayor resistencia magnética</li>
+</ol>
+<p>Al conectarse más carga:</p>
+<ul>
+<li>Aumenta la corriente.</li>
+<li>Se refuerza el campo magnético del estator.</li>
+<li>Se incrementa el torque opuesto al rotor.</li>
+</ul>
+<p>Es equivalente a pedalear cuesta arriba:<br>
+más resistencia → más esfuerzo necesario.</p>
+<hr>
+<ol start="2" type="1">
+<li>Caída de frecuencia</li>
+</ol>
+<p>La frecuencia eléctrica está directamente relacionada con la velocidad de giro:</p>
+<p>[ f = ]</p>
+<p>Donde:</p>
+<ul>
+<li>( f ) = frecuencia</li>
+<li>( p ) = número de polos</li>
+<li>( n ) = velocidad en RPM</li>
+</ul>
+<p>Si baja la velocidad → baja la frecuencia.</p>
+<hr>
+<ol start="3" type="1">
+<li>Capacidad del motor primario</li>
+</ol>
+<p>El motor que impulsa el generador (vapor, hidráulico, diésel):</p>
+<ul>
+<li>Intenta aportar más potencia mecánica.</li>
+<li>Si no puede compensar el aumento de carga,</li>
+<li>La máquina se desacelera.</li>
+</ul>
+<hr>
+</section>
+<section id="la-frecuencia-como-indicador-del-equilibrio-de-potencia-activa" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="la-frecuencia-como-indicador-del-equilibrio-de-potencia-activa"><span class="header-section-number">3.1.1.2</span> La Frecuencia como Indicador del Equilibrio de Potencia Activa</h4>
+<p>La relación fundamental que gobierna la dinámica de la frecuencia se deriva de la ecuación de oscilación de una máquina síncrona, aplicada a todo el sistema.</p>
+<p>Considerando un sistema equivalente con una inercia total <span class="math inline">\(H_{sist}\)</span>, la ecuación que describe la evolución de la frecuencia <span class="math inline">\(f\)</span> (en pu) es:</p>
+<p><span class="math display">\[ 2H_{sist} \frac{df}{dt} = P_m - P_e = \Delta P \]</span></p>
+<p>Donde: - <span class="math inline">\(H_{sist}\)</span> es la constante de inercia del sistema (en segundos, referida a la potencia base del sistema). - <span class="math inline">\(f\)</span> es la frecuencia del sistema (en por unidad o Hz). - <span class="math inline">\(P_m\)</span> es la potencia mecánica total de entrada de los generadores (pu). - <span class="math inline">\(P_e\)</span> es la potencia eléctrica total de salida de los generadores (pu), que es igual a la demanda más las pérdidas. - <span class="math inline">\(\Delta P\)</span> es el desequilibrio de potencia activa.</p>
+<p><strong>Interpretación:</strong> - Si <span class="math inline">\(\Delta P &gt; 0\)</span> (exceso de generación), la derivada <span class="math inline">\(df/dt &gt; 0\)</span>, la frecuencia <strong>aumenta</strong>. - Si <span class="math inline">\(\Delta P &lt; 0\)</span> (déficit de generación), la derivada <span class="math inline">\(df/dt &lt; 0\)</span>, la frecuencia <strong>disminuye</strong>. - La velocidad de cambio de la frecuencia (RoCoF - Rate of Change of Frequency) es inversamente proporcional a la inercia total del sistema. Un sistema con poca inercia (como aquellos con alta penetración de fuentes renovables basadas en electrónica de potencia) experimentará cambios de frecuencia mucho más rápidos y pronunciados ante un mismo desequilibrio.</p>
+</section>
+<section id="dinámica-de-la-frecuencia-ante-un-desequilibrio" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="dinámica-de-la-frecuencia-ante-un-desequilibrio"><span class="header-section-number">3.1.1.3</span> Dinámica de la Frecuencia ante un Desequilibrio</h4>
+<p>Ante un evento que cause un déficit de generación (por ejemplo, la pérdida de una unidad generadora o de una interconexión), la frecuencia del sistema experimenta una dinámica característica que puede dividirse en varias etapas:</p>
+<ol type="1">
+<li><strong>Fase Inercial (0-2 segundos):</strong>
+<ul>
+<li>Inmediatamente después del evento, la energía cinética almacenada en las masas rotatorias de los generadores síncronos (y motores) es liberada para compensar el déficit inicial. Esta es la <strong>respuesta inercial</strong>.</li>
+<li>La frecuencia comienza a caer a una velocidad inicial (RoCoF) determinada por la inercia del sistema y la magnitud del desequilibrio <span class="math inline">\(\Delta P\)</span>. En este punto, los reguladores de velocidad aún no han actuado significativamente.</li>
+</ul></li>
+<li><strong>Respuesta Primaria (2-30 segundos):</strong>
+<ul>
+<li>Los <strong>reguladores de velocidad (gobernadores)</strong> de los generadores detectan la caída de velocidad/frecuencia y aumentan la admisión de vapor, agua o combustible para incrementar la potencia mecánica.</li>
+<li>Esta acción estabiliza la frecuencia en un valor de <strong>régimen permanente</strong>, pero por debajo de la frecuencia nominal (generalmente dentro de una banda regulada). Este nuevo valor de frecuencia se conoce como <strong>frecuencia de asentamiento primario</strong>. Si la frecuencia cae por debajo de ciertos umbrales, se pueden activar esquemas de <strong>alivio de carga por baja frecuencia (LFSM-O o UFLS)</strong> para evitar un colapso total.</li>
+</ul></li>
+<li><strong>Respuesta Secundaria (30 segundos - 15 minutos):</strong>
+<ul>
+<li>Una vez que la frecuencia se ha estabilizado (aunque sea a un valor por debajo del nominal), entra en acción el control secundario (o <strong>Control Automático de Generación - AGC</strong>).</li>
+<li>El AGC envía señales a los generadores seleccionados para modificar sus puntos de consigna, con el objetivo de:
+<ul>
+<li>Restaurar la frecuencia a su valor nominal (50 o 60 Hz).</li>
+<li>Restablecer los intercambios de potencia programados con áreas vecinas al valor deseado.</li>
+</ul></li>
+</ul></li>
+<li><strong>Respuesta Terciaria (&gt; 15 minutos):</strong>
+<ul>
+<li>Consiste en acciones manuales o automáticas para reemplazar las reservas primarias y secundarias utilizadas, reconfigurar la red y preparar el sistema para una futura contingencia. Incluye el arranque de unidades adicionales, cambios en la programación de la generación, etc.</li>
+</ul></li>
+</ol>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>Un desequilibrio significativo sin una respuesta rápida puede llevar a la desconexión de generadores, inestabilidad de voltaje y, finalmente, un apagón (https://www.youtube.com/watch?v=52KpNIXK2bg&amp;t=78s)</p>
+</blockquote>
+</blockquote>
+</section>
+</section>
+<section id="estabilidad-de-tensión" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="estabilidad-de-tensión"><span class="header-section-number">3.1.2</span> Estabilidad de Tensión</h3>
+<p>Esta frase resume el principio fundamental de la regulación de tensión en redes eléctricas de corriente alterna:</p>
+<blockquote class="blockquote">
+<p><strong>La potencia reactiva (Q) no realiza trabajo útil (como mover un motor o encender una luz), pero es esencial para mantener el nivel de tensión (V) necesario para transportar la potencia activa (P).</strong></p>
+</blockquote>
+<p>En sistemas eléctricos:</p>
+<ul>
+<li><strong>Potencia activa (P)</strong> → realiza trabajo útil.</li>
+<li><strong>Potencia reactiva (Q)</strong> → sostiene los campos eléctricos y magnéticos necesarios para que el sistema funcione.</li>
+<li><strong>Tensión (V)</strong> → depende fuertemente del balance local de potencia reactiva.</li>
+</ul>
+<p>La <strong>estabilidad de voltaje</strong> (o estabilidad de tensión) se define como la capacidad de un sistema de potencia para mantener <strong>voltajes aceptables y estables</strong> en todos los nodos de la red, tanto en condiciones normales de operación como después de haber sido sometido a una perturbación.</p>
+<p>A diferencia de la estabilidad de frecuencia, que es un fenómeno global del sistema, la estabilidad de voltaje es un fenómeno predominantemente <strong>local o regional</strong>, aunque sus consecuencias pueden extenderse y provocar un colapso generalizado.</p>
+<p>Un sistema es estable en voltaje si, ante un aumento de la demanda de potencia reactiva en un nodo, los mecanismos de control del sistema (como los reguladores automáticos de tensión) son capaces de restaurar un equilibrio entre la generación y el consumo de potencia reactiva. La <strong>inestabilidad de voltaje</strong> se manifiesta como una caída progresiva e incontrolada de la tensión en uno o más nodos de la red, pudiendo llevar a un <strong>colapso de voltaje</strong>.</p>
+<p>El voltaje (o tensión) está relacionado con el equilibrio de potencia reactiva en un punto específico de la red.</p>
+<ul>
+<li><p>La Física: La potencia reactiva es necesaria para mantener los campos magnéticos en motores y transformadores. Si no se inyecta suficiente potencia reactiva en una zona, el voltaje cae. Es decir, si la potencia reactiva Q en un nodo específico es menor que la demanda de potencia reactiva en ese nodo, entonces el voltaje de ese nodo caerá.</p></li>
+<li><p>El Problema: La caída de voltaje hace que los motores de inducción (como los de aire acondicionado) consuman más corriente para mantener su par, lo que aumenta la demanda de potencia reactiva, lo que hace bajar más el voltaje. Este círculo vicioso puede llevar a un colapso de voltaje .</p></li>
+<li><p>Ejemplo típico: Un aumento súbito de carga en una zona débil de la red, o la pérdida de una línea de transmisión que limitaba la transferencia de potencia reactiva.</p></li>
+</ul>
+<section id="naturaleza-del-problema-la-potencia-reactiva" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="naturaleza-del-problema-la-potencia-reactiva"><span class="header-section-number">3.1.2.1</span> Naturaleza del Problema: La Potencia Reactiva</h4>
+<p>La estabilidad de voltaje está intrínsecamente ligada al flujo de <strong>potencia reactiva (Q)</strong> . Mientras que la frecuencia está asociada al equilibrio de potencia activa (P), el perfil de voltaje en un nodo está determinado por el balance local de potencia reactiva.</p>
+<p><strong>Conceptos clave:</strong> - La potencia reactiva <strong>no puede transmitirse a largas distancias</strong> de manera eficiente, ya que provoca caídas de tensión significativas y aumenta las pérdidas. Por ello, debe generarse (o compensarse) cerca de los centros de consumo. - Los elementos del sistema (líneas de transmisión, transformadores, cargas) consumen o generan potencia reactiva. Las líneas, por ejemplo, generan reactiva en derivación (efecto capacitivo a baja carga) y la consumen en serie (efecto inductivo a alta carga). - La relación entre el voltaje (V), la potencia reactiva (Q) y la reactancia de la red (X) en un sistema simplificado se puede aproximar como:</p>
+<p><span class="math display">\[ \Delta V \approx \frac{X \cdot Q}{V} \]</span></p>
+<ul>
+<li><strong>Q controla V</strong>.</li>
+<li>La potencia reactiva determina el nivel de tensión en los nudos (buses).</li>
+</ul>
+<p>Esto significa que para mantener el voltaje dentro de límites, es necesario inyectar potencia reactiva en los nodos donde se consume (cargas inductivas) y absorberla donde se genera en exceso (líneas poco cargadas).</p>
+<ol type="1">
+<li><strong>Si la tensión sube → Hay exceso de reactiva (Sobrevoltaje)</strong></li>
+</ol>
+<p><strong>Qué significa:</strong></p>
+<ul>
+<li>La tensión en la red es mayor que su valor nominal (por ejemplo, por encima de 230 V / 400 V en baja tensión).</li>
+</ul>
+<p><strong>Por qué ocurre:</strong></p>
+<ul>
+<li>Baja demanda de potencia activa (por ejemplo, de noche).</li>
+<li>Líneas largas con comportamiento capacitivo.</li>
+<li>Bancos de condensadores conectados.</li>
+<li>Exceso de generación distribuida.</li>
+</ul>
+<p>Estos elementos <strong>inyectan potencia reactiva capacitiva</strong> al sistema.</p>
+<p><strong>Efecto:</strong></p>
+<ul>
+<li>Incremento del voltaje.</li>
+<li>Riesgo de sobrecalentamiento de equipos.</li>
+<li>Deterioro del aislamiento.</li>
+<li>Desconexión automática de instalaciones.</li>
+</ul>
+<p><strong>¿Qué se debe hacer para bajar la tensión (exceso de reactiva)?:</strong></p>
+<ul>
+<li>Reducir generación de reactiva.</li>
+<li>Desconectar bancos de condensadores.</li>
+<li>Conectar reactancias inductivas.</li>
+<li>Ajustar consignas de tensión en generadores.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Si la tensión baja → Hay déficit de reactiva (Subvoltaje)</strong></li>
+</ol>
+<p><strong>Qué significa:</strong></p>
+<ul>
+<li>La tensión en la red es menor que el valor nominal.</li>
+</ul>
+<p><strong>Por qué ocurre:</strong></p>
+<ul>
+<li>Motores eléctricos.</li>
+<li>Transformadores.</li>
+<li>Bobinas e inductancias.</li>
+</ul>
+<p>Estos equipos <strong>consumen potencia reactiva inductiva</strong>. Si el sistema no puede suministrarla, aparece un déficit.</p>
+<p><strong>Efecto:</strong></p>
+<ul>
+<li>Caídas de tensión.</li>
+<li>Pérdida de rendimiento en motores.</li>
+<li>Riesgo de colapso de tensión.</li>
+<li>Posibles apagones en casos extremos.</li>
+</ul>
+<p><strong>¿Qué se debe hacer Para subir la tensión (déficit de reactiva)?:</strong></p>
+<ul>
+<li>Conectar bancos de condensadores.</li>
+<li>Utilizar compensadores síncronos.</li>
+<li>Aumentar inyección de reactiva desde generadores.</li>
+</ul>
+<p><strong>Resumen de la relación V–Q</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 45%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tensión (V)</th>
+<th>Potencia Reactiva (Q)</th>
+<th>Causa / Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>↑ Sube</td>
+<td>Exceso / Sobra</td>
+<td>Sobretensión: exceso de reactiva (capacitiva)</td>
+</tr>
+<tr class="even">
+<td>↓ Baja</td>
+<td>Déficit / Falta</td>
+<td>Subtensión: falta de reactiva (inductiva)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="curva-pv-potencia-voltaje-y-nariz-de-la-curva" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="curva-pv-potencia-voltaje-y-nariz-de-la-curva"><span class="header-section-number">3.1.2.2</span> Curva PV (Potencia-Voltaje) y Nariz de la Curva</h4>
+<p>La herramienta conceptual más importante para entender la estabilidad de voltaje es la <strong>curva PV</strong> (o curva de nariz). Esta curva representa la relación entre el voltaje en un nodo de carga y la potencia activa (P) que se entrega a través de una línea o sistema de transmisión.</p>
+</section>
+<section id="importancia-de-la-compensación-de-reactiva" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="importancia-de-la-compensación-de-reactiva"><span class="header-section-number">3.1.2.3</span> Importancia de la compensación de reactiva</h4>
+<p>La potencia reactiva debe ser compensada para:</p>
+<ul>
+<li>Evitar pérdidas innecesarias.</li>
+<li>Reducir penalizaciones económicas.</li>
+<li>Mantener perfiles de tensión adecuados.</li>
+<li>Garantizar la estabilidad del sistema eléctrico.</li>
+</ul>
+<hr>
+</section>
+<section id="blackout-cómo-colapsa-un-sistema-eléctrico" class="level4" data-number="3.1.2.4">
+<h4 data-number="3.1.2.4" class="anchored" data-anchor-id="blackout-cómo-colapsa-un-sistema-eléctrico"><span class="header-section-number">3.1.2.4</span> Blackout: Cómo colapsa un sistema eléctrico</h4>
+<p>Un <strong>blackout o apagón generalizado</strong> no ocurre por una única causa, sino por un <strong>colapso en cadena</strong> resultado de:</p>
+<ul>
+<li>Desequilibrio entre generación y demanda.</li>
+<li>Pérdida de estabilidad de tensión.</li>
+<li>Pérdida de estabilidad de frecuencia.</li>
+</ul>
+<p><strong>Interdependencia entre tensión y frecuencia</strong></p>
+<p>El blackout ocurre cuando ambas inestabilidades se retroalimentan, aquí algunos casos:</p>
+<ol type="1">
+<li><p>Alta carga / baja generación</p>
+<ul>
+<li>Falta reactiva → caída de tensión.</li>
+<li>Baja tensión → dificultad para suministrar potencia activa.</li>
+<li>Baja potencia activa → caída de frecuencia.</li>
+</ul></li>
+<li><p>Alta penetración renovable</p>
+<ul>
+<li>Menor inercia síncrona.</li>
+<li>Mayor sensibilidad ante perturbaciones.</li>
+<li>Desconexiones rápidas ante desviaciones de frecuencia.</li>
+</ul></li>
+<li><p>Fallos de protección o control</p>
+<ul>
+<li>Sobretensiones o subtensiones.</li>
+<li>Fluctuaciones extremas de frecuencia.</li>
+<li>Desconexión masiva automática.</li>
+</ul></li>
+</ol>
+<p><strong>Resumen conceptual del blackout</strong></p>
+<p>Un blackout es el resultado de:</p>
+<ul>
+<li>Pérdida de control de potencia reactiva → colapso de tensión.</li>
+<li>Desequilibrio de potencia activa → colapso de frecuencia.</li>
+<li>Desconexión progresiva de líneas y generadores.</li>
+<li>Falta de capacidad de respuesta en tiempo real.</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="procedimiento-de-operación-1.3" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</h2>
@@ -435,7 +717,7 @@ window.Quarto = {
 <p>Los booleanos son valores <code>True</code> o <code>False</code>.</p>
 <section id="ejemplos" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">3.3.1</span> Ejemplos</h3>
-<div id="fa9801ad" class="cell" data-execution_count="1">
+<div id="d43e1322" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">&gt;=</span> <span class="dv">50</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">==</span> <span class="dv">50</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">!=</span> <span class="dv">50</span>)</span>
