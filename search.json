@@ -14,7 +14,7 @@
     "href": "index.html#contenido",
     "title": "Mi Libro Sobre Mercado Eléctrico",
     "section": "1.1 Contenido",
-    "text": "1.1 Contenido\n\nIntroduction\n\nObjetivos\n\nRegulación de Tensión y Estabilidad en Sistemas Eléctricos\n\nProcedimiento de Operación 1.3\n\nControl de flujo\nReferencias",
+    "text": "1.1 Contenido\n\nIntroduction\n\nObjetivos\n\nRegulación de Tensión y Estabilidad en Sistemas Eléctricos\n\nFundamentos\nProcedimiento de Operación 1.3\nLogics y Comparaciones\n\nControl de flujo\nReferencias",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Inicio</span>"
     ]
@@ -84,17 +84,7 @@
     "href": "capitulo1.html#logics-y-comparaciones",
     "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
     "section": "3.3 Logics y Comparaciones",
-    "text": "3.3 Logics y Comparaciones\nLos booleanos son valores True o False.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
-    ]
-  },
-  {
-    "objectID": "capitulo1.html#ejemplos",
-    "href": "capitulo1.html#ejemplos",
-    "title": "3  Regulación de Tensión y Estabilidad en Sistemas Eléctricos",
-    "section": "3.4 Ejemplos",
-    "text": "3.4 Ejemplos\n\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse\n\n\n\n\n\n\n\n\nTip\n\n\n\nEste es un consejo importante.",
+    "text": "3.3 Logics y Comparaciones\nLos booleanos son valores True o False.\n\n3.3.1 Ejemplos\n\nprint(100 &gt;= 50)\nprint(100 == 50)\nprint(100 != 50)\nprint(\"harry\" == \"hermoine\")\n\nTrue\nFalse\nTrue\nFalse\n\n\n\n\n\n\n\n\nTip\n\n\n\nEste es un consejo importante.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Regulación de Tensión y Estabilidad en Sistemas Eléctricos</span>"
     ]
