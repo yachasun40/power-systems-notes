@@ -215,22 +215,6 @@ window.Quarto = {
   <li><a href="#fundamentos" id="toc-fundamentos" class="nav-link active" data-scroll-target="#fundamentos"><span class="header-section-number">3.1</span> Fundamentos</a>
   <ul class="collapse">
   <li><a href="#estabilidad-de-frecuencia" id="toc-estabilidad-de-frecuencia" class="nav-link" data-scroll-target="#estabilidad-de-frecuencia"><span class="header-section-number">3.1.1</span> Estabilidad de Frecuencia</a></li>
-  <li><a href="#estabilidad-de-tensión" id="toc-estabilidad-de-tensión" class="nav-link" data-scroll-target="#estabilidad-de-tensión"><span class="header-section-number">3.1.2</span> Estabilidad de Tensión</a></li>
-  </ul></li>
-  <li><a href="#procedimiento-de-operación-1.3" id="toc-procedimiento-de-operación-1.3" class="nav-link" data-scroll-target="#procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</a>
-  <ul class="collapse">
-  <li><a href="#objetivo-y-ámbito-de-aplicación" id="toc-objetivo-y-ámbito-de-aplicación" class="nav-link" data-scroll-target="#objetivo-y-ámbito-de-aplicación"><span class="header-section-number">3.2.1</span> Objetivo y ámbito de aplicación</a></li>
-  <li><a href="#definiciones-clave" id="toc-definiciones-clave" class="nav-link" data-scroll-target="#definiciones-clave"><span class="header-section-number">3.2.2</span> Definiciones clave</a></li>
-  <li><a href="#valores-de-tensión-admisible" id="toc-valores-de-tensión-admisible" class="nav-link" data-scroll-target="#valores-de-tensión-admisible"><span class="header-section-number">3.2.3</span> Valores de tensión admisible</a></li>
-  <li><a href="#responsabilidades-y-actuaciones" id="toc-responsabilidades-y-actuaciones" class="nav-link" data-scroll-target="#responsabilidades-y-actuaciones"><span class="header-section-number">3.2.4</span> Responsabilidades y actuaciones</a></li>
-  <li><a href="#interacción-con-otros-procedimientos-de-operación" id="toc-interacción-con-otros-procedimientos-de-operación" class="nav-link" data-scroll-target="#interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">3.2.5</span> Interacción con otros procedimientos de operación</a></li>
-  <li><a href="#aplicación-práctica-para-un-energy-quant" id="toc-aplicación-práctica-para-un-energy-quant" class="nav-link" data-scroll-target="#aplicación-práctica-para-un-energy-quant"><span class="header-section-number">3.2.6</span> Aplicación práctica para un “energy quant”</a></li>
-  <li><a href="#ejemplo-numérico-de-aplicación" id="toc-ejemplo-numérico-de-aplicación" class="nav-link" data-scroll-target="#ejemplo-numérico-de-aplicación"><span class="header-section-number">3.2.7</span> Ejemplo numérico de aplicación</a></li>
-  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión"><span class="header-section-number">3.2.8</span> Conclusión</a></li>
-  </ul></li>
-  <li><a href="#logics-y-comparaciones" id="toc-logics-y-comparaciones" class="nav-link" data-scroll-target="#logics-y-comparaciones"><span class="header-section-number">3.3</span> Logics y Comparaciones</a>
-  <ul class="collapse">
-  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos"><span class="header-section-number">3.3.1</span> Ejemplos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -333,26 +317,26 @@ Muchos aerogeneradores modernos utilizan electrónica de potencia y no reacciona
 <h4 data-number="3.1.1.3" class="anchored" data-anchor-id="dinámica-de-la-frecuencia-ante-un-desequilibrio"><span class="header-section-number">3.1.1.3</span> Dinámica de la Frecuencia ante un Desequilibrio</h4>
 <p>Ante un evento que cause un déficit de generación (por ejemplo, la pérdida de una unidad generadora o de una interconexión), la frecuencia del sistema experimenta una dinámica característica que puede dividirse en varias etapas:</p>
 <ol type="1">
-<li><strong>Fase Inercial (0-2 segundos):</strong>
+<li><p><strong>Fase Inercial (0-2 segundos):</strong></p>
 <ul>
-<li>Inmediatamente después del evento, la energía cinética almacenada en las masas rotatorias de los generadores síncronos (y motores) es liberada para compensar el déficit inicial. Esta es la <strong>respuesta inercial</strong>.</li>
-<li>La frecuencia comienza a caer a una velocidad inicial (RoCoF) determinada por la inercia del sistema y la magnitud del desequilibrio <span class="math inline">\(\Delta P\)</span>. En este punto, los reguladores de velocidad aún no han actuado significativamente.</li>
+<li><p>Inmediatamente después del evento, la energía cinética almacenada en las masas rotatorias de los generadores síncronos (y motores) es liberada para compensar el déficit inicial. Esta es la <strong>respuesta inercial</strong>.</p></li>
+<li><p>La frecuencia comienza a caer a una velocidad inicial (RoCoF) determinada por la inercia del sistema y la magnitud del desequilibrio <span class="math inline">\(\Delta P\)</span>. En este punto, los reguladores de velocidad aún no han actuado significativamente.</p></li>
 </ul></li>
-<li><strong>Respuesta Primaria (2-30 segundos):</strong>
+<li><p><strong>Respuesta Primaria (2-30 segundos):</strong></p>
 <ul>
-<li>Los <strong>reguladores de velocidad (gobernadores)</strong> de los generadores detectan la caída de velocidad/frecuencia y aumentan la admisión de vapor, agua o combustible para incrementar la potencia mecánica.</li>
-<li>Esta acción estabiliza la frecuencia en un valor de <strong>régimen permanente</strong>, pero por debajo de la frecuencia nominal (generalmente dentro de una banda regulada). Este nuevo valor de frecuencia se conoce como <strong>frecuencia de asentamiento primario</strong>. Si la frecuencia cae por debajo de ciertos umbrales, se pueden activar esquemas de <strong>alivio de carga por baja frecuencia (LFSM-O o UFLS)</strong> para evitar un colapso total.</li>
+<li><p>Los <strong>reguladores de velocidad (gobernadores)</strong> de los generadores detectan la caída de velocidad/frecuencia y aumentan la admisión de vapor, agua o combustible para incrementar la potencia mecánica.</p></li>
+<li><p>Esta acción estabiliza la frecuencia en un valor de <strong>régimen permanente</strong>, pero por debajo de la frecuencia nominal (generalmente dentro de una banda regulada). Este nuevo valor de frecuencia se conoce como <strong>frecuencia de asentamiento primario</strong>. Si la frecuencia cae por debajo de ciertos umbrales, se pueden activar esquemas de <strong>alivio de carga por baja frecuencia (LFSM-O o UFLS)</strong> para evitar un colapso total.</p></li>
 </ul></li>
-<li><strong>Respuesta Secundaria (30 segundos - 15 minutos):</strong>
+<li><p><strong>Respuesta Secundaria (30 segundos - 15 minutos):</strong></p>
 <ul>
-<li>Una vez que la frecuencia se ha estabilizado (aunque sea a un valor por debajo del nominal), entra en acción el control secundario (o <strong>Control Automático de Generación - AGC</strong>).</li>
-<li>El AGC envía señales a los generadores seleccionados para modificar sus puntos de consigna, con el objetivo de:
+<li><p>Una vez que la frecuencia se ha estabilizado (aunque sea a un valor por debajo del nominal), entra en acción el control secundario (o <strong>Control Automático de Generación - AGC</strong>).</p></li>
+<li><p>El AGC envía señales a los generadores seleccionados para modificar sus puntos de consigna, con el objetivo de:</p>
 <ul>
 <li>Restaurar la frecuencia a su valor nominal (50 o 60 Hz).</li>
 <li>Restablecer los intercambios de potencia programados con áreas vecinas al valor deseado.</li>
 </ul></li>
 </ul></li>
-<li><strong>Respuesta Terciaria (&gt; 15 minutos):</strong>
+<li><p><strong>Respuesta Terciaria (&gt; 15 minutos):</strong></p>
 <ul>
 <li>Consiste en acciones manuales o automáticas para reemplazar las reservas primarias y secundarias utilizadas, reconfigurar la red y preparar el sistema para una futura contingencia. Incluye el arranque de unidades adicionales, cambios en la programación de la generación, etc.</li>
 </ul></li>
@@ -363,365 +347,406 @@ Muchos aerogeneradores modernos utilizan electrónica de potencia y no reacciona
 </blockquote>
 </blockquote>
 </section>
-</section>
-<section id="estabilidad-de-tensión" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="estabilidad-de-tensión"><span class="header-section-number">3.1.2</span> Estabilidad de Tensión</h3>
-<p>Esta frase resume el principio fundamental de la regulación de tensión en redes eléctricas de corriente alterna:</p>
-<blockquote class="blockquote">
-<p><strong>La potencia reactiva (Q) no realiza trabajo útil (como mover un motor o encender una luz), pero es esencial para mantener el nivel de tensión (V) necesario para transportar la potencia activa (P).</strong></p>
-</blockquote>
-<p>En sistemas eléctricos:</p>
+<section id="modelamiento-relación-potencia-activa-y-frecuencia" class="level4" data-number="3.1.1.4">
+<h4 data-number="3.1.1.4" class="anchored" data-anchor-id="modelamiento-relación-potencia-activa-y-frecuencia"><span class="header-section-number">3.1.1.4</span> Modelamiento (Relación Potencia Activa y Frecuencia)</h4>
+<p>Usaremos un sistema mínimo conocido como Modelo agregado (single-machine infinite bus simplificado - Sistema de Una Máquina contra Bus Infinito):</p>
 <ul>
-<li><strong>Potencia activa (P)</strong> → realiza trabajo útil.</li>
-<li><strong>Potencia reactiva (Q)</strong> → sostiene los campos eléctricos y magnéticos necesarios para que el sistema funcione.</li>
-<li><strong>Tensión (V)</strong> → depende fuertemente del balance local de potencia reactiva.</li>
+<li><p>1 generador síncrono</p></li>
+<li><p>1 barra de carga</p></li>
+<li><p>1 línea equivalente</p></li>
 </ul>
-<p>La <strong>estabilidad de voltaje</strong> (o estabilidad de tensión) se define como la capacidad de un sistema de potencia para mantener <strong>voltajes aceptables y estables</strong> en todos los nodos de la red, tanto en condiciones normales de operación como después de haber sido sometido a una perturbación.</p>
-<p>A diferencia de la estabilidad de frecuencia, que es un fenómeno global del sistema, la estabilidad de voltaje es un fenómeno predominantemente <strong>local o regional</strong>, aunque sus consecuencias pueden extenderse y provocar un colapso generalizado.</p>
-<p>Un sistema es estable en voltaje si, ante un aumento de la demanda de potencia reactiva en un nodo, los mecanismos de control del sistema (como los reguladores automáticos de tensión) son capaces de restaurar un equilibrio entre la generación y el consumo de potencia reactiva. La <strong>inestabilidad de voltaje</strong> se manifiesta como una caída progresiva e incontrolada de la tensión en uno o más nodos de la red, pudiendo llevar a un <strong>colapso de voltaje</strong>.</p>
-<p>El voltaje (o tensión) está relacionado con el equilibrio de potencia reactiva en un punto específico de la red.</p>
+<p>La frecuencia (<span class="math inline">\(f\)</span>) depende del balance entre la generación y la carga. Si la carga aumenta y la generación no, los generadores se frenan físicamente.</p>
 <ul>
-<li><p>La Física: La potencia reactiva es necesaria para mantener los campos magnéticos en motores y transformadores. Si no se inyecta suficiente potencia reactiva en una zona, el voltaje cae. Es decir, si la potencia reactiva Q en un nodo específico es menor que la demanda de potencia reactiva en ese nodo, entonces el voltaje de ese nodo caerá.</p></li>
-<li><p>El Problema: La caída de voltaje hace que los motores de inducción (como los de aire acondicionado) consuman más corriente para mantener su par, lo que aumenta la demanda de potencia reactiva, lo que hace bajar más el voltaje. Este círculo vicioso puede llevar a un colapso de voltaje .</p></li>
-<li><p>Ejemplo típico: Un aumento súbito de carga en una zona débil de la red, o la pérdida de una línea de transmisión que limitaba la transferencia de potencia reactiva.</p></li>
+<li>Si <span class="math inline">\(P_{gen} = P_{load}\)</span> o de otra manera <span class="math inline">\(P_{mec} = P_{elec}\)</span> –&gt; frecuencia estable</li>
+<li>Si <span class="math inline">\(P_{gen} &lt; P_{load}\)</span> o de otra manera <span class="math inline">\(P_{mec} = P_{elec}\)</span> –&gt; frecuencia cae</li>
+<li>Si <span class="math inline">\(P_{gen} &gt; P_{load}\)</span> o de otra manera <span class="math inline">\(P_{mec} = P_{elec}\)</span> –&gt; frecuencia sube</li>
 </ul>
-<section id="naturaleza-del-problema-la-potencia-reactiva" class="level4" data-number="3.1.2.1">
-<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="naturaleza-del-problema-la-potencia-reactiva"><span class="header-section-number">3.1.2.1</span> Naturaleza del Problema: La Potencia Reactiva</h4>
-<p>La estabilidad de voltaje está intrínsecamente ligada al flujo de <strong>potencia reactiva (Q)</strong> . Mientras que la frecuencia está asociada al equilibrio de potencia activa (P), el perfil de voltaje en un nodo está determinado por el balance local de potencia reactiva.</p>
-<p><strong>Conceptos clave:</strong> - La potencia reactiva <strong>no puede transmitirse a largas distancias</strong> de manera eficiente, ya que provoca caídas de tensión significativas y aumenta las pérdidas. Por ello, debe generarse (o compensarse) cerca de los centros de consumo. - Los elementos del sistema (líneas de transmisión, transformadores, cargas) consumen o generan potencia reactiva. Las líneas, por ejemplo, generan reactiva en derivación (efecto capacitivo a baja carga) y la consumen en serie (efecto inductivo a alta carga). - La relación entre el voltaje (V), la potencia reactiva (Q) y la reactancia de la red (X) en un sistema simplificado se puede aproximar como:</p>
-<p><span class="math display">\[ \Delta V \approx \frac{X \cdot Q}{V} \]</span></p>
-<ul>
-<li><strong>Q controla V</strong>.</li>
-<li>La potencia reactiva determina el nivel de tensión en los nudos (buses).</li>
-</ul>
-<p>Esto significa que para mantener el voltaje dentro de límites, es necesario inyectar potencia reactiva en los nodos donde se consume (cargas inductivas) y absorberla donde se genera en exceso (líneas poco cargadas).</p>
-<ol type="1">
-<li><strong>Si la tensión sube → Hay exceso de reactiva (Sobrevoltaje)</strong></li>
-</ol>
-<p><strong>Qué significa:</strong></p>
-<ul>
-<li>La tensión en la red es mayor que su valor nominal (por ejemplo, por encima de 230 V / 400 V en baja tensión).</li>
-</ul>
-<p><strong>Por qué ocurre:</strong></p>
-<ul>
-<li>Baja demanda de potencia activa (por ejemplo, de noche).</li>
-<li>Líneas largas con comportamiento capacitivo.</li>
-<li>Bancos de condensadores conectados.</li>
-<li>Exceso de generación distribuida.</li>
-</ul>
-<p>Estos elementos <strong>inyectan potencia reactiva capacitiva</strong> al sistema.</p>
-<p><strong>Efecto:</strong></p>
-<ul>
-<li>Incremento del voltaje.</li>
-<li>Riesgo de sobrecalentamiento de equipos.</li>
-<li>Deterioro del aislamiento.</li>
-<li>Desconexión automática de instalaciones.</li>
-</ul>
-<p><strong>¿Qué se debe hacer para bajar la tensión (exceso de reactiva)?:</strong></p>
-<ul>
-<li>Reducir generación de reactiva.</li>
-<li>Desconectar bancos de condensadores.</li>
-<li>Conectar reactancias inductivas.</li>
-<li>Ajustar consignas de tensión en generadores.</li>
-</ul>
-<ol start="2" type="1">
-<li><strong>Si la tensión baja → Hay déficit de reactiva (Subvoltaje)</strong></li>
-</ol>
-<p><strong>Qué significa:</strong></p>
-<ul>
-<li>La tensión en la red es menor que el valor nominal.</li>
-</ul>
-<p><strong>Por qué ocurre:</strong></p>
-<ul>
-<li>Motores eléctricos.</li>
-<li>Transformadores.</li>
-<li>Bobinas e inductancias.</li>
-</ul>
-<p>Estos equipos <strong>consumen potencia reactiva inductiva</strong>. Si el sistema no puede suministrarla, aparece un déficit.</p>
-<p><strong>Efecto:</strong></p>
-<ul>
-<li>Caídas de tensión.</li>
-<li>Pérdida de rendimiento en motores.</li>
-<li>Riesgo de colapso de tensión.</li>
-<li>Posibles apagones en casos extremos.</li>
-</ul>
-<p><strong>¿Qué se debe hacer Para subir la tensión (déficit de reactiva)?:</strong></p>
-<ul>
-<li>Conectar bancos de condensadores.</li>
-<li>Utilizar compensadores síncronos.</li>
-<li>Aumentar inyección de reactiva desde generadores.</li>
-</ul>
-<p><strong>Resumen de la relación V–Q</strong></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 45%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tensión (V)</th>
-<th>Potencia Reactiva (Q)</th>
-<th>Causa / Efecto</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>↑ Sube</td>
-<td>Exceso / Sobra</td>
-<td>Sobretensión: exceso de reactiva (capacitiva)</td>
-</tr>
-<tr class="even">
-<td>↓ Baja</td>
-<td>Déficit / Falta</td>
-<td>Subtensión: falta de reactiva (inductiva)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="curva-pv-potencia-voltaje-y-nariz-de-la-curva" class="level4" data-number="3.1.2.2">
-<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="curva-pv-potencia-voltaje-y-nariz-de-la-curva"><span class="header-section-number">3.1.2.2</span> Curva PV (Potencia-Voltaje) y Nariz de la Curva</h4>
-<p>La herramienta conceptual más importante para entender la estabilidad de voltaje es la <strong>curva PV</strong> (o curva de nariz). Esta curva representa la relación entre el voltaje en un nodo de carga y la potencia activa (P) que se entrega a través de una línea o sistema de transmisión.</p>
-</section>
-<section id="importancia-de-la-compensación-de-reactiva" class="level4" data-number="3.1.2.3">
-<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="importancia-de-la-compensación-de-reactiva"><span class="header-section-number">3.1.2.3</span> Importancia de la compensación de reactiva</h4>
-<p>La potencia reactiva debe ser compensada para:</p>
-<ul>
-<li>Evitar pérdidas innecesarias.</li>
-<li>Reducir penalizaciones económicas.</li>
-<li>Mantener perfiles de tensión adecuados.</li>
-<li>Garantizar la estabilidad del sistema eléctrico.</li>
-</ul>
-<hr>
-</section>
-<section id="blackout-cómo-colapsa-un-sistema-eléctrico" class="level4" data-number="3.1.2.4">
-<h4 data-number="3.1.2.4" class="anchored" data-anchor-id="blackout-cómo-colapsa-un-sistema-eléctrico"><span class="header-section-number">3.1.2.4</span> Blackout: Cómo colapsa un sistema eléctrico</h4>
-<p>Un <strong>blackout o apagón generalizado</strong> no ocurre por una única causa, sino por un <strong>colapso en cadena</strong> resultado de:</p>
-<ul>
-<li>Desequilibrio entre generación y demanda.</li>
-<li>Pérdida de estabilidad de tensión.</li>
-<li>Pérdida de estabilidad de frecuencia.</li>
-</ul>
-<p><strong>Interdependencia entre tensión y frecuencia</strong></p>
-<p>El blackout ocurre cuando ambas inestabilidades se retroalimentan, aquí algunos casos:</p>
-<ol type="1">
-<li><p>Alta carga / baja generación</p>
-<ul>
-<li>Falta reactiva → caída de tensión.</li>
-<li>Baja tensión → dificultad para suministrar potencia activa.</li>
-<li>Baja potencia activa → caída de frecuencia.</li>
-</ul></li>
-<li><p>Alta penetración renovable</p>
-<ul>
-<li>Menor inercia síncrona.</li>
-<li>Mayor sensibilidad ante perturbaciones.</li>
-<li>Desconexiones rápidas ante desviaciones de frecuencia.</li>
-</ul></li>
-<li><p>Fallos de protección o control</p>
-<ul>
-<li>Sobretensiones o subtensiones.</li>
-<li>Fluctuaciones extremas de frecuencia.</li>
-<li>Desconexión masiva automática.</li>
-</ul></li>
-</ol>
-<p><strong>Resumen conceptual del blackout</strong></p>
-<p>Un blackout es el resultado de:</p>
-<ul>
-<li>Pérdida de control de potencia reactiva → colapso de tensión.</li>
-<li>Desequilibrio de potencia activa → colapso de frecuencia.</li>
-<li>Desconexión progresiva de líneas y generadores.</li>
-<li>Falta de capacidad de respuesta en tiempo real.</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="procedimiento-de-operación-1.3" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="procedimiento-de-operación-1.3"><span class="header-section-number">3.2</span> Procedimiento de Operación 1.3</h2>
-<p>Sobre el Procedimiento de Operación 1.3 de REE (P.O. 1.3): <strong>Tensiones admisibles en los nudos de la red de transporte</strong></p>
-<section id="objetivo-y-ámbito-de-aplicación" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="objetivo-y-ámbito-de-aplicación"><span class="header-section-number">3.2.1</span> Objetivo y ámbito de aplicación</h3>
-<p>El objetivo fundamental del P.O. 1.3 es <strong>establecer los criterios y valores de tensión que deben cumplirse en condiciones normales y anormales de explotación</strong> en la red de transporte, para:</p>
-<ul>
-<li>Asegurar la <strong>calidad de onda</strong> (tensión dentro de márgenes) en el punto de conexión de los usuarios (generadores y consumidores).</li>
-<li>Garantizar la <strong>estabilidad del sistema</strong> (evitar colapsos de tensión).</li>
-<li>Proteger los equipos de los usuarios y de la propia red contra sobretensiones o subtensiones.</li>
-</ul>
-<p><strong>Ámbito de aplicación:</strong> Afecta a todos los <strong>nudos de la red de transporte</strong> (tensión nominal ≥ 220 kV, incluyendo 400 kV, 220 kV y, en algunos casos, redes de 132 kV con función de transporte) y a las instalaciones de los <strong>usuarios conectados a dicha red</strong> (generadores, consumidores directos, distribuidores).</p>
-</section>
-<section id="definiciones-clave" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="definiciones-clave"><span class="header-section-number">3.2.2</span> Definiciones clave</h3>
-<p>Para interpretar correctamente los valores, el P.O. 1.3 define los siguientes conceptos:</p>
-<ul>
-<li><strong>Tensión nominal (<span class="math inline">\(U_n\)</span>):</strong> Valor eficaz de la tensión fase-fase con que se designa una red o instalación (ej: 400 kV, 220 kV).</li>
-<li><strong>Tensión más elevada de la red (<span class="math inline">\(U_m\)</span>):</strong> Valor máximo de la tensión fase-fase para el que está diseñado el equipo. (<span class="math inline">\(U_m &gt; U_n\)</span> para dar margen).</li>
-<li><strong>Tensión de funcionamiento (<span class="math inline">\(U_f\)</span>):</strong> Valor eficaz de la tensión fase-fase en un instante dado. Es la variable que se controla.</li>
-<li><strong>Perturbación:</strong> Incidente que provoca una desviación significativa de la tensión (ej: cortocircuito, pérdida de generación, desconexión de línea).</li>
-</ul>
-</section>
-<section id="valores-de-tensión-admisible" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="valores-de-tensión-admisible"><span class="header-section-number">3.2.3</span> Valores de tensión admisible</h3>
-<p>El procedimiento distingue entre <strong>régimen permanente</strong> (operación normal) y <strong>régimen transitorio</strong> (post-perturbación). Los valores se expresan en tanto por uno (p.u.) respecto a la tensión nominal (<span class="math inline">\(U_n\)</span>).</p>
-<section id="en-régimen-permanente-operación-normal" class="level4" data-number="3.2.3.1">
-<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="en-régimen-permanente-operación-normal"><span class="header-section-number">3.2.3.1</span> En régimen permanente (operación normal)</h4>
-<p>Son los límites que deben cumplirse en todo momento, salvo durante un tiempo muy limitado tras una incidencia.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Nivel de Tensión (<span class="math inline">\(U_n\)</span>)</th>
-<th style="text-align: left;">Límite Inferior (<span class="math inline">\(U_{min}\)</span>)</th>
-<th style="text-align: left;">Límite Superior (<span class="math inline">\(U_{max}\)</span>)</th>
-<th style="text-align: left;">Observaciones</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>400 kV</strong></td>
-<td style="text-align: left;"><strong>0,95 p.u.</strong> (380 kV)</td>
-<td style="text-align: left;"><strong>1,05 p.u.</strong> (420 kV)</td>
-<td style="text-align: left;">Margen simétrico. La tensión más elevada de la red (<span class="math inline">\(U_m\)</span>) es 420 kV, por lo que 1,05 p.u. es el límite físico del aislamiento.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>220 kV</strong></td>
-<td style="text-align: left;"><strong>0,95 p.u.</strong> (209 kV)</td>
-<td style="text-align: left;"><strong>1,05 p.u.</strong> (231 kV)</td>
-<td style="text-align: left;">Idem.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>132 kV</strong> (y redes inferiores con función de transporte)</td>
-<td style="text-align: left;"><strong>0,95 p.u.</strong></td>
-<td style="text-align: left;"><strong>1,05 p.u.</strong></td>
-<td style="text-align: left;">Salvo que existan acuerdos específicos con los titulares.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Nota:</strong> En operación normal, el Operador del Sistema (REE) intenta mantener la tensión lo más cerca posible de 1,0 p.u. (valores centrales), dejando los extremos como margen de seguridad.</p>
-</section>
-<section id="en-situaciones-post-perturbación-o-anormales" class="level4" data-number="3.2.3.2">
-<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="en-situaciones-post-perturbación-o-anormales"><span class="header-section-number">3.2.3.2</span> En situaciones post-perturbación o anormales</h4>
-<p>Tras una falta, se permiten desviaciones mayores durante un tiempo limitado, hasta que los sistemas de control restablecen los valores normales.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Concepto</th>
-<th style="text-align: left;">Valor</th>
-<th style="text-align: left;">Tiempo Máximo Permitido</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Sobretensión temporal máxima</strong></td>
-<td style="text-align: left;"><strong>1,10 p.u.</strong></td>
-<td style="text-align: left;">&lt; 1 hora (hasta que el operador pueda actuar).</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Subtensión temporal máxima</strong></td>
-<td style="text-align: left;"><strong>0,90 p.u.</strong></td>
-<td style="text-align: left;">&lt; 1 hora (en función de la seguridad del sistema y riesgo de colapso).</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Excepción importante:</strong> En redes de 400 kV, durante maniobras o tras la pérdida de una línea muy cargada, pueden aceptarse sobretensiones de hasta <strong>1,20 p.u.</strong> durante <strong>unos segundos o minutos</strong> (tiempo de actuación de los sistemas de control de tensión como los reguladores en vacío de los transformadores - OLTC).</p>
-</section>
-</section>
-<section id="responsabilidades-y-actuaciones" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="responsabilidades-y-actuaciones"><span class="header-section-number">3.2.4</span> Responsabilidades y actuaciones</h3>
-<section id="del-operador-del-sistema-ree" class="level4" data-number="3.2.4.1">
-<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="del-operador-del-sistema-ree"><span class="header-section-number">3.2.4.1</span> Del Operador del Sistema (REE)</h4>
-<ul>
-<li><strong>Planificar la operación:</strong> Realizar estudios de flujos de cargas para prever que las tensiones se mantendrán en los rangos admisibles.</li>
-<li><strong>Operar en tiempo real:</strong> Modificar la consigna de tensión de los generadores (a través del control de tensión), conectar/reactivar bancos de condensadores/reactancias, o cambiar la configuración de la red para mantener la tensión dentro de los límites del <strong>Artículo 3.1</strong>.</li>
-<li><strong>Gestionar la potencia reactiva:</strong> La tensión está intrínsecamente ligada al balance de energía reactiva. Si la tensión sube, hay exceso de reactiva; si baja, hay déficit.</li>
-<li><strong>Coordinar con los titulares de red:</strong> Informar de las necesidades de consignas de tensión.</li>
-</ul>
-</section>
-<section id="de-los-titulares-de-red-generadores-consumidores-distribuidores" class="level4" data-number="3.2.4.2">
-<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="de-los-titulares-de-red-generadores-consumidores-distribuidores"><span class="header-section-number">3.2.4.2</span> De los titulares de red (generadores, consumidores, distribuidores)</h4>
-<ul>
-<li><strong>Mantener la tensión en el punto de conexión</strong> dentro de los límites del P.O. 1.3, siempre que sea técnicamente posible y sin perjuicio de su seguridad.</li>
-<li><strong>Disponer de equipos de regulación de tensión</strong> (ej: AVR en generadores, cambiadores de tomas en transformadores) y ponerlos a disposición del sistema.</li>
-<li><strong>Comunicar incidencias:</strong> Si su instalación no puede mantener la tensión dentro de los márgenes, deben comunicarlo a REE.</li>
-</ul>
-</section>
-</section>
-<section id="interacción-con-otros-procedimientos-de-operación" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">3.2.5</span> Interacción con otros procedimientos de operación</h3>
-<p>El P.O. 1.3 no actúa solo. Para un experto en mercados, es vital entender su interconexión:</p>
-<ul>
-<li><strong>P.O. 7.2 (Control de Tensión de la Red de Transporte):</strong> Desarrolla <em>cómo</em> se controla la tensión (mediante la consigna de los generadores, el mantenimiento de la reserva de reactiva, etc.). Mientras el P.O. 1.3 dice <em>cuánto</em> es admisible, el P.O. 7.2 dice <em>cómo se consigue</em>.</li>
-<li><strong>P.O. 3.1 (Programación de la Generación):</strong> La necesidad de mantener la tensión puede forzar a ciertas unidades a estar acopladas (generando o consumiendo reactiva) aunque no sean económicas en el mercado diario. Esto genera <strong>restricciones técnicas por tensión</strong> (servicios complementarios).</li>
-<li><strong>P.O. 9.0 (Servicios de Balance):</strong> La regulación de tensión (potencia reactiva) es un servicio de balance no frecuencial. Los generadores son remunerados por ello.</li>
-</ul>
-</section>
-<section id="aplicación-práctica-para-un-energy-quant" class="level3" data-number="3.2.6">
-<h3 data-number="3.2.6" class="anchored" data-anchor-id="aplicación-práctica-para-un-energy-quant"><span class="header-section-number">3.2.6</span> Aplicación práctica para un “energy quant”</h3>
-<p>¿Cómo impacta esto en la optimización de activos y en el mercado?</p>
-<section id="en-generación-renovable-solareólica" class="level4" data-number="3.2.6.1">
-<h4 data-number="3.2.6.1" class="anchored" data-anchor-id="en-generación-renovable-solareólica"><span class="header-section-number">3.2.6.1</span> En generación renovable (solar/eólica)</h4>
-<ul>
-<li><strong>Obligación de hueco de tensión (FRT):</strong> Aunque no está en este procedimiento (está en P.O. 12.2 y P.O. 12.3), el P.O. 1.3 define los límites. Si una planta no puede soportar una bajada de tensión a 0,9 p.u. durante 1 hora (o a 0,0 durante unos instantes), debe desconectarse. Un <em>quant</em> debe modelar el riesgo de <em>curtailment</em> por tensión.</li>
-<li><strong>Potencia reactiva:</strong> Los inversores modernos pueden generar/consumir reactiva. Un <em>quant</em> puede optimizar la consigna de reactiva no solo para cumplir el P.O. 1.3, sino para maximizar la vida útil del inversor o incluso ofrecer servicios de control de tensión (si se abren mercados de reactiva).</li>
-</ul>
-</section>
-<section id="en-baterías-bess" class="level4" data-number="3.2.6.2">
-<h4 data-number="3.2.6.2" class="anchored" data-anchor-id="en-baterías-bess"><span class="header-section-number">3.2.6.2</span> En baterías (BESS)</h4>
-<ul>
-<li><strong>Soporte a la red:</strong> Las baterías, por su velocidad, son ideales para inyectar o absorber reactiva casi instantáneamente y ayudar a mantener la tensión dentro de los rangos del P.O. 1.3 (especialmente en redes con mucha solar, donde la tensión tiende a subir al mediodía).</li>
-<li><strong>Nuevo flujo de ingresos:</strong> En el futuro, el control de tensión podría ser un servicio remunerado. Un <em>quant</em> que entienda los límites del P.O. 1.3 puede valorar esa opción.</li>
-</ul>
-</section>
-<section id="en-ciclos-combinados-gas" class="level4" data-number="3.2.6.3">
-<h4 data-number="3.2.6.3" class="anchored" data-anchor-id="en-ciclos-combinados-gas"><span class="header-section-number">3.2.6.3</span> En ciclos combinados (gas)</h4>
-<ul>
-<li>Deben mantener su tensión en bornes dentro de los límites. Si la red está muy cargada (baja tensión), deberán generar más reactiva, lo que puede limitar su capacidad de generar activa (potencia aparente constante). Esto afecta a su oferta en el mercado.</li>
-</ul>
-</section>
-</section>
-<section id="ejemplo-numérico-de-aplicación" class="level3" data-number="3.2.7">
-<h3 data-number="3.2.7" class="anchored" data-anchor-id="ejemplo-numérico-de-aplicación"><span class="header-section-number">3.2.7</span> Ejemplo numérico de aplicación</h3>
-<p><strong>Escenario:</strong> Una planta solar conectada a un nudo de 220 kV. A mediodía, con alta generación y poca demanda local, la tensión en el nudo sube a <strong>1,06 p.u.</strong> (233,2 kV).</p>
-<ul>
-<li><strong>Diagnóstico:</strong> Se supera el límite superior de 1,05 p.u. en régimen permanente (Art. 3.1).</li>
-<li><strong>Actuación de REE:</strong> Ordenará a la planta solar reducir su generación de reactiva (si está inyectando) o incluso a consumir reactiva. Si no es suficiente, podría ordenar la desconexión de alguna línea o la reducción de potencia activa (curtailment por tensión) para aliviar el efecto Ferranti en la línea.</li>
-<li><strong>Actuación del generador:</strong> Deberá ajustar su modo de control de tensión (pasar de control de <em>cos phi</em> constante a control de <em>tensión constante</em>) para absorber el exceso de reactiva y bajar la tensión a 1,05 p.u.</li>
-</ul>
-</section>
-<section id="conclusión" class="level3" data-number="3.2.8">
-<h3 data-number="3.2.8" class="anchored" data-anchor-id="conclusión"><span class="header-section-number">3.2.8</span> Conclusión</h3>
-<p>El <strong>P.O. 1.3</strong> es, aparentemente, una simple tabla de números, pero es la <strong>restricción física más inmediata</strong> que condiciona la operación del sistema. Para un <em>Energy Quant</em>, este procedimiento no es un documento legal lejano, sino una <strong>restricción de desigualdad (inequality constraint)</strong> en su modelo de optimización.</p>
-<ul>
-<li>Por ejemplo, si tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.</li>
-</ul>
-<p><strong>Dominar el P.O. 1.3 es dominar la primera capa de realidad física que subyace a los precios del mercado eléctrico.</strong></p>
-</section>
-</section>
-<section id="logics-y-comparaciones" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="logics-y-comparaciones"><span class="header-section-number">3.3</span> Logics y Comparaciones</h2>
-<p>Los booleanos son valores <code>True</code> o <code>False</code>.</p>
-<section id="ejemplos" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="ejemplos"><span class="header-section-number">3.3.1</span> Ejemplos</h3>
-<div id="e8e3f4f9" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">&gt;=</span> <span class="dv">50</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">==</span> <span class="dv">50</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">100</span> <span class="op">!=</span> <span class="dv">50</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"harry"</span> <span class="op">==</span> <span class="st">"hermoine"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fórmula base (Ecuación del Swing):</p>
+<p><span class="math display">\[P_{gen} - P_{load} = \frac{2H}{\omega_s} \frac{d^2 \delta}{dt^2}\]</span></p>
+<p>Donde <span class="math inline">\(H\)</span> es la constante de inercia, <span class="math inline">\(\omega_s\)</span> es la velocidad sincrona, <span class="math inline">\(\delta\)</span> es el ángulo del rotor.</p>
+<p>En términos de frecuencia (<span class="math inline">\(f = \frac{d \delta}{dt}\)</span>)</p>
+<p><span class="math display">\[P_{gen} - P_{load} = M \frac{df}{dt}\]</span></p>
+<p>Usando python:</p>
+<div id="996cd4b5" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> odeint</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros del sistema (valores por unidad)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="fl">5.0</span>  <span class="co"># Constante de inercia (segundos)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>f_nominal <span class="op">=</span> <span class="fl">50.0</span>  <span class="co"># Hz</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>P_m <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># Potencia mecánica (esperada)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>P_e_inicial <span class="op">=</span> <span class="fl">1.0</span>  <span class="co"># Potencia eléctrica inicial (equilibrio)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulación de una perturbación: pérdida del 20% de generación en t=1s</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> frecuencia_perturbada(y, t, H, f_nom):</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    delta_w <span class="op">=</span> y[<span class="dv">0</span>]  <span class="co"># Desviación de velocidad en p.u.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perturbación: La generación cae, por lo que P_m &lt; P_e</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> t <span class="op">&lt;</span> <span class="fl">1.0</span>:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        P_m_efectiva <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        P_m_efectiva <span class="op">=</span> <span class="fl">0.8</span>  <span class="co"># La generación cae a 0.8 p.u.</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Asumimos que la carga (P_e) no cambia instantáneamente</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    P_e <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ecuación de swing simplificada para velocidad</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># d(delta_w)/dt = (P_m - P_e) / (2H)  (en p.u. de torque)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ddelta_w_dt <span class="op">=</span> (P_m_efectiva <span class="op">-</span> P_e) <span class="op">/</span> (<span class="dv">2</span><span class="op">*</span>H)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [ddelta_w_dt]</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Condición inicial: frecuencia nominal (delta_w = 0)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> [<span class="fl">0.0</span>]</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">1000</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Resolver</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> odeint(frecuencia_perturbada, y0, t, args<span class="op">=</span>(H, f_nominal))</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>desviacion_vel <span class="op">=</span> sol[:, <span class="dv">0</span>]</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>frecuencia_hz <span class="op">=</span> f_nominal <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> desviacion_vel)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Graficar</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>plt.plot(t, frecuencia_hz, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="fl">49.5</span>, color<span class="op">=</span><span class="st">'r'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Umbral de alarma (49.5 Hz)'</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="fl">49.0</span>, color<span class="op">=</span><span class="st">'r'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, label<span class="op">=</span><span class="st">'Umbral de desconexión (49.0 Hz)'</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Tiempo (s)'</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frecuencia (Hz)'</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Caída de Frecuencia por Pérdida de Generación'</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="capitulo1_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Usando Julia:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">DifferentialEquations</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Plots</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros del sistema</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> H <span class="op">=</span> <span class="fl">5.0</span>        <span class="co"># Constante de inercia</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> D <span class="op">=</span> <span class="fl">2.0</span>        <span class="co"># Amortiguamiento</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> f0 <span class="op">=</span> <span class="fl">60.0</span>      <span class="co"># Frecuencia nominal (Hz)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> Ωs <span class="op">=</span> <span class="fl">2</span>pi <span class="op">*</span> f0  <span class="co"># Velocidad angular síncrona</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo de la ecuación de oscilación (Swing Equation)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">power_system!</span>(du, u, p, t)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    δ, ω <span class="op">=</span> u          <span class="co"># Ángulo del rotor y desviación de velocidad</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    Pm, Pe, D, M <span class="op">=</span> p  <span class="co"># Potencia mecánica, eléctrica, amortiguamiento e inercia</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    du[<span class="fl">1</span>] <span class="op">=</span> ω <span class="op">-</span> Ωs</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    du[<span class="fl">2</span>] <span class="op">=</span> (<span class="fl">1</span><span class="op">/</span>(<span class="fl">2</span><span class="op">*</span>H)) <span class="op">*</span> (Pm <span class="op">-</span> <span class="fu">Pe*sin</span>(δ) <span class="op">-</span> <span class="fu">D*</span>(ω <span class="op">-</span> Ωs)<span class="op">/</span>Ωs)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Escenario: Aumento súbito de carga (Perturbación)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>δ<span class="fl">0</span> <span class="op">=</span> <span class="fu">asin</span>(<span class="fl">0.5</span>)       <span class="co"># Ángulo inicial para Pe = 0.5 pu</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ω<span class="fl">0</span> <span class="op">=</span> Ωs</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>u0 <span class="op">=</span> [δ<span class="fl">0</span>, ω<span class="fl">0</span>]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>tspan <span class="op">=</span> (<span class="fl">0.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> [<span class="fl">0.8</span>, <span class="fl">0.9</span>, D, H] <span class="co"># Pm = 0.8, Pe_max = 0.9 (Sistema estresado)</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>prob <span class="op">=</span> <span class="fu">ODEProblem</span>(power_system!, u0, tspan, p)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> <span class="fu">solve</span>(prob, <span class="fu">ImplicitRK</span>())</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sol, vars<span class="op">=</span>(<span class="fl">0</span>, <span class="fl">2</span>), title<span class="op">=</span><span class="st">"Respuesta de Frecuencia"</span>, ylabel<span class="op">=</span><span class="st">"ω (rad/s)"</span>, xlabel<span class="op">=</span><span class="st">"Tiempo (s)"</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">``</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">### Estabilidad de Tensión</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>Esta frase resume el principio fundamental de la regulación de tensión en redes eléctricas de corriente alterna<span class="op">:</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">**</span>La potencia reactiva (Q) no realiza trabajo útil (como mover un motor o encender una luz), pero es esencial para mantener el nivel de tensión (V) necesario para transportar la potencia activa (P)<span class="op">.**</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>En sistemas eléctricos<span class="op">:</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Potencia activa (P)<span class="op">**</span> <span class="op">→</span> realiza trabajo útil.</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Potencia reactiva (Q)<span class="op">**</span> <span class="op">→</span> sostiene los campos eléctricos y magnéticos necesarios para que el sistema funcione.</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Tensión (V)<span class="op">**</span> <span class="op">→</span> depende fuertemente del balance <span class="kw">local</span> de potencia reactiva.</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>La <span class="op">**</span>estabilidad de voltaje<span class="op">**</span> (o estabilidad de tensión) se define como la capacidad de un sistema de potencia para mantener <span class="op">**</span>voltajes aceptables y estables<span class="op">**</span> en todos los nodos de la red, tanto en condiciones normales de operación como después de haber sido sometido a una perturbación.</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>A diferencia de la estabilidad de frecuencia, que es un fenómeno <span class="kw">global</span> del sistema, la estabilidad de voltaje es un fenómeno predominantemente <span class="op">**</span><span class="kw">local</span> o regional<span class="op">**</span>, aunque sus consecuencias pueden extenderse y provocar un colapso generalizado.</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>Un sistema es estable en voltaje si, ante un aumento de la demanda de potencia reactiva en un nodo, los mecanismos de control del sistema (como los reguladores automáticos de tensión) son capaces de restaurar un equilibrio entre la generación y el consumo de potencia reactiva. La <span class="op">**</span>inestabilidad de voltaje<span class="op">**</span> se manifiesta como una caída progresiva <span class="cn">e</span> incontrolada de la tensión en uno o más nodos de la red, pudiendo llevar a un <span class="op">**</span>colapso de voltaje<span class="op">**</span>.</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>El voltaje (o tensión) está relacionado con el equilibrio de potencia reactiva en un punto específico de la red.</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La Física<span class="op">:</span> La potencia reactiva es necesaria para mantener los campos magnéticos en motores y transformadores. Si no se inyecta suficiente potencia reactiva en una zona, el voltaje cae. Es decir, si la potencia reactiva Q en un nodo específico es menor que la demanda de potencia reactiva en ese nodo, entonces el voltaje de ese nodo caerá.</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> El Problema<span class="op">:</span> La caída de voltaje hace que los motores de inducción (como los de aire acondicionado) consuman más corriente para mantener su par, lo que aumenta la demanda de potencia reactiva, lo que hace bajar más el voltaje. Este círculo vicioso puede llevar a un colapso de voltaje .</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Ejemplo típico<span class="op">:</span> Un aumento súbito de carga en una zona débil de la red, o la pérdida de una línea de transmisión que limitaba la transferencia de potencia reactiva.</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="co">#### Naturaleza del Problema: La Potencia Reactiva</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>La estabilidad de voltaje está intrínsecamente ligada al flujo de <span class="op">**</span>potencia reactiva (Q)<span class="op">**</span> . Mientras que la frecuencia está asociada al equilibrio de potencia activa (P), el perfil de voltaje en un nodo está determinado por el balance <span class="kw">local</span> de potencia reactiva.</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Conceptos clave<span class="op">:**</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La potencia reactiva <span class="op">**</span>no puede transmitirse a largas distancias<span class="op">**</span> de manera eficiente, ya que provoca caídas de tensión significativas y aumenta las pérdidas. Por ello, debe generarse (o compensarse) cerca de los centros de consumo.</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Los elementos del sistema (líneas de transmisión, transformadores, cargas) consumen o generan potencia reactiva. Las líneas, por ejemplo, generan reactiva en derivación (efecto capacitivo a baja carga) y la consumen en serie (efecto inductivo a alta carga).</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La relación entre el voltaje (V), la potencia reactiva (Q) y la reactancia de la red (X) en un sistema simplificado se puede aproximar como<span class="op">:</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="op">$$</span> <span class="op">\</span>Delta V <span class="op">\</span>approx <span class="op">\</span>frac{X <span class="op">\</span>cdot Q}{V} <span class="op">$$</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Q controla V<span class="op">**</span>.</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La potencia reactiva determina el nivel de tensión en los nudos (buses).</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>Esto significa que para mantener el voltaje dentro de límites, es necesario inyectar potencia reactiva en los nodos donde se consume (cargas inductivas) y absorberla donde se genera en exceso (líneas poco cargadas).</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span>. <span class="op">**</span>Si la tensión sube <span class="op">→</span> Hay exceso de reactiva (Sobrevoltaje)<span class="op">**</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Qué significa<span class="op">:**</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La tensión en la red es mayor que su valor nominal (por ejemplo, por encima de <span class="fl">230</span> V <span class="op">/</span> <span class="fl">400</span> V en baja tensión).</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Por qué ocurre<span class="op">:**</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Baja demanda de potencia activa (por ejemplo, de noche).</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Líneas largas con comportamiento capacitivo.</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Bancos de condensadores conectados.</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Exceso de generación distribuida.</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>Estos elementos <span class="op">**</span>inyectan potencia reactiva capacitiva<span class="op">**</span> al sistema.</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Efecto<span class="op">:**</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Incremento del voltaje.</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Riesgo de sobrecalentamiento de equipos.</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Deterioro del aislamiento.</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Desconexión automática de instalaciones.</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>¿Qué se debe hacer para bajar la tensión (exceso de reactiva)?<span class="op">:**</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Reducir generación de reactiva.</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Desconectar bancos de condensadores.</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Conectar reactancias inductivas.</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Ajustar consignas de tensión en generadores.</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span>. <span class="op">**</span>Si la tensión baja <span class="op">→</span> Hay déficit de reactiva (Subvoltaje)<span class="op">**</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Qué significa<span class="op">:**</span>  </span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> La tensión en la red es menor que el valor nominal.</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Por qué ocurre<span class="op">:**</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Motores eléctricos.</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Transformadores.</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Bobinas <span class="cn">e</span> inductancias.</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>Estos equipos <span class="op">**</span>consumen potencia reactiva inductiva<span class="op">**</span>. Si el sistema no puede suministrarla, aparece un déficit.</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Efecto<span class="op">:**</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Caídas de tensión.</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Pérdida de rendimiento en motores.</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Riesgo de colapso de tensión.</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Posibles apagones en casos extremos.</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>¿Qué se debe hacer Para subir la tensión (déficit de reactiva)?<span class="op">:**</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Conectar bancos de condensadores.</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Utilizar compensadores síncronos.</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Aumentar inyección de reactiva desde generadores.</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Resumen de la relación V–Q<span class="op">**</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Tensión (V) <span class="op">|</span> Potencia Reactiva (Q) <span class="op">|</span> Causa <span class="op">/</span> Efecto <span class="op">|</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="op">|-------------|------------------------|----------------|</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">↑</span> Sube      <span class="op">|</span> Exceso <span class="op">/</span> Sobra         <span class="op">|</span> Sobretensión<span class="op">:</span> exceso de reactiva (capacitiva) <span class="op">|</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">↓</span> Baja      <span class="op">|</span> Déficit <span class="op">/</span> Falta        <span class="op">|</span> Subtensión<span class="op">:</span> falta de reactiva (inductiva) <span class="op">|</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="co">#### Curva PV (Potencia-Voltaje) y Nariz de la Curva</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>La herramienta conceptual más importante para entender la estabilidad de voltaje es la <span class="op">**</span>curva PV<span class="op">**</span> (o curva de nariz). Esta curva representa la relación entre el voltaje en un nodo de carga y la potencia activa (P) que se entrega a través de una línea o sistema de transmisión.</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="co">#### Importancia de la compensación de reactiva</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>La potencia reactiva debe ser compensada para<span class="op">:</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Evitar pérdidas innecesarias.</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Reducir penalizaciones económicas.</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Mantener perfiles de tensión adecuados.</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Garantizar la estabilidad del sistema eléctrico.</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="co">#### Blackout: Cómo colapsa un sistema eléctrico</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>Un <span class="op">**</span>blackout o apagón generalizado<span class="op">**</span> no ocurre por una única causa, sino por un <span class="op">**</span>colapso en cadena<span class="op">**</span> resultado de<span class="op">:</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Desequilibrio entre generación y demanda.</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Pérdida de estabilidad de tensión.</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Pérdida de estabilidad de frecuencia.</span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Interdependencia entre tensión y frecuencia<span class="op">**</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>El blackout ocurre cuando ambas inestabilidades se retroalimentan, aquí algunos casos<span class="op">:</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span>. Alta carga <span class="op">/</span> baja generación</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Falta reactiva <span class="op">→</span> caída de tensión.</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Baja tensión <span class="op">→</span> dificultad para suministrar potencia activa.</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Baja potencia activa <span class="op">→</span> caída de frecuencia.</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span>. Alta penetración renovable</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Menor inercia síncrona.</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Mayor sensibilidad ante perturbaciones.</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Desconexiones rápidas ante desviaciones de frecuencia.</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span>. Fallos de protección o control</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Sobretensiones o subtensiones.</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Fluctuaciones extremas de frecuencia.</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> Desconexión masiva automática.</span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Resumen conceptual del blackout<span class="op">**</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>Un blackout es el resultado de<span class="op">:</span></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Pérdida de control de potencia reactiva <span class="op">→</span> colapso de tensión.</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Desequilibrio de potencia activa <span class="op">→</span> colapso de frecuencia.</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Desconexión progresiva de líneas y generadores.</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Falta de capacidad de respuesta en tiempo real.</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="co">## Procedimiento de Operación 1.3 </span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>Sobre el Procedimiento de Operación <span class="fl">1.3</span> de REE (P.O. <span class="fl">1.3</span>)<span class="op">:</span> <span class="op">**</span>Tensiones admisibles en los nudos de la red de transporte<span class="op">**</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a><span class="co">### Objetivo y ámbito de aplicación</span></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>El objetivo fundamental del P.O. <span class="fl">1.3</span> es <span class="op">**</span>establecer los criterios y valores de tensión que deben cumplirse en condiciones normales y anormales de explotación<span class="op">**</span> en la red de transporte, para<span class="op">:</span></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Asegurar la <span class="op">**</span>calidad de onda<span class="op">**</span> (tensión dentro de márgenes) en el punto de conexión de los usuarios (generadores y consumidores).</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Garantizar la <span class="op">**</span>estabilidad del sistema<span class="op">**</span> (evitar colapsos de tensión).</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Proteger los equipos de los usuarios y de la propia red contra sobretensiones o subtensiones.</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Ámbito de aplicación<span class="op">:**</span> Afecta a todos los <span class="op">**</span>nudos de la red de transporte<span class="op">**</span> (tensión nominal <span class="op">≥</span> <span class="fl">220</span> kV, incluyendo <span class="fl">400</span> kV, <span class="fl">220</span> kV y, en algunos casos, redes de <span class="fl">132</span> kV con función de transporte) y a las instalaciones de los <span class="op">**</span>usuarios conectados a dicha red<span class="op">**</span> (generadores, consumidores directos, distribuidores).</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="co">### Definiciones clave</span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>Para interpretar correctamente los valores, el P.O. <span class="fl">1.3</span> define los siguientes conceptos<span class="op">:</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Tensión nominal (<span class="op">$</span>U_n<span class="op">$</span>)<span class="op">:**</span> Valor eficaz de la tensión fase<span class="op">-</span>fase con que se designa una red o instalación (ej<span class="op">:</span> <span class="fl">400</span> kV, <span class="fl">220</span> kV).</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Tensión más elevada de la red (<span class="op">$</span>U_m<span class="op">$</span>)<span class="op">:**</span> Valor máximo de la tensión fase<span class="op">-</span>fase para el que está diseñado el equipo. (<span class="op">$</span>U_m <span class="op">&gt;</span> U_n<span class="op">$</span> para dar margen).</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Tensión de funcionamiento (<span class="op">$</span>U_f<span class="op">$</span>)<span class="op">:**</span> Valor eficaz de la tensión fase<span class="op">-</span>fase en un instante dado. Es la variable que se controla.</span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Perturbación<span class="op">:**</span> Incidente que provoca una desviación significativa de la tensión (ej<span class="op">:</span> cortocircuito, pérdida de generación, desconexión de línea).</span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="co">### Valores de tensión admisible</span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>El procedimiento distingue entre <span class="op">**</span>régimen permanente<span class="op">**</span> (operación normal) y <span class="op">**</span>régimen transitorio<span class="op">**</span> (post<span class="op">-</span>perturbación). Los valores se expresan en tanto por uno (p.u.) respecto a la tensión nominal (<span class="op">$</span>U_n<span class="op">$</span>).</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a><span class="co">#### En régimen permanente (operación normal)</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>Son los límites que deben cumplirse en todo momento, salvo durante un tiempo muy limitado tras una incidencia.</span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Nivel de Tensión (<span class="op">$</span>U_n<span class="op">$</span>) <span class="op">|</span> Límite Inferior (<span class="op">$</span>U_{min}<span class="op">$</span>) <span class="op">|</span> Límite Superior (<span class="op">$</span>U_{max}<span class="op">$</span>) <span class="op">|</span> Observaciones <span class="op">|</span></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a><span class="op">|:---|:---|:---|:---|</span></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">**</span><span class="fl">400</span> kV<span class="op">**</span> <span class="op">|</span> <span class="op">**</span><span class="fl">0</span>,<span class="fl">95</span> p.u<span class="op">.**</span> (<span class="fl">380</span> kV) <span class="op">|</span> <span class="op">**</span><span class="fl">1</span>,<span class="fl">05</span> p.u<span class="op">.**</span> (<span class="fl">420</span> kV) <span class="op">|</span> Margen simétrico. La tensión más elevada de la red (<span class="op">$</span>U_m<span class="op">$</span>) es <span class="fl">420</span> kV, por lo que <span class="fl">1</span>,<span class="fl">05</span> p.u. es el límite físico del aislamiento. <span class="op">|</span></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">**</span><span class="fl">220</span> kV<span class="op">**</span> <span class="op">|</span> <span class="op">**</span><span class="fl">0</span>,<span class="fl">95</span> p.u<span class="op">.**</span> (<span class="fl">209</span> kV) <span class="op">|</span> <span class="op">**</span><span class="fl">1</span>,<span class="fl">05</span> p.u<span class="op">.**</span> (<span class="fl">231</span> kV) <span class="op">|</span> Idem. <span class="op">|</span></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">**</span><span class="fl">132</span> kV<span class="op">**</span> (y redes inferiores con función de transporte) <span class="op">|</span> <span class="op">**</span><span class="fl">0</span>,<span class="fl">95</span> p.u<span class="op">.**</span> <span class="op">|</span> <span class="op">**</span><span class="fl">1</span>,<span class="fl">05</span> p.u<span class="op">.**</span> <span class="op">|</span> Salvo que existan acuerdos específicos con los titulares. <span class="op">|</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Nota<span class="op">:**</span> En operación normal, el Operador del Sistema (REE) intenta mantener la tensión lo más cerca posible de <span class="fl">1</span>,<span class="fl">0</span> p.u. (valores centrales), dejando los extremos como margen de seguridad.</span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a><span class="co">#### En situaciones post-perturbación o anormales</span></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>Tras una falta, se permiten desviaciones mayores durante un tiempo limitado, hasta que los sistemas de control restablecen los valores normales.</span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> Concepto <span class="op">|</span> Valor <span class="op">|</span> Tiempo Máximo Permitido <span class="op">|</span></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a><span class="op">|:---|:---|:---|</span></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">**</span>Sobretensión temporal máxima<span class="op">**</span> <span class="op">|</span> <span class="op">**</span><span class="fl">1</span>,<span class="fl">10</span> p.u<span class="op">.**</span> <span class="op">|</span> <span class="op">&lt;</span> <span class="fl">1</span> hora (hasta que el operador pueda actuar). <span class="op">|</span></span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a><span class="op">|</span> <span class="op">**</span>Subtensión temporal máxima<span class="op">**</span> <span class="op">|</span> <span class="op">**</span><span class="fl">0</span>,<span class="fl">90</span> p.u<span class="op">.**</span> <span class="op">|</span> <span class="op">&lt;</span> <span class="fl">1</span> hora (en función de la seguridad del sistema y riesgo de colapso). <span class="op">|</span></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Excepción importante<span class="op">:**</span> En redes de <span class="fl">400</span> kV, durante maniobras o tras la pérdida de una línea muy cargada, pueden aceptarse sobretensiones de hasta <span class="op">**</span><span class="fl">1</span>,<span class="fl">20</span> p.u<span class="op">.**</span> durante <span class="op">**</span>unos segundos o minutos<span class="op">**</span> (tiempo de actuación de los sistemas de control de tensión como los reguladores en vacío de los transformadores <span class="op">-</span> OLTC).</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a><span class="co">### Responsabilidades y actuaciones</span></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a><span class="co">#### Del Operador del Sistema (REE)</span></span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Planificar la operación<span class="op">:**</span> Realizar estudios de flujos de cargas para prever que las tensiones se mantendrán en los rangos admisibles.</span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Operar en tiempo real<span class="op">:**</span> Modificar la consigna de tensión de los generadores (a través del control de tensión), conectar<span class="op">/</span>reactivar bancos de condensadores<span class="op">/</span>reactancias, o cambiar la configuración de la red para mantener la tensión dentro de los límites del <span class="op">**</span>Artículo <span class="fl">3.1</span><span class="op">**</span>.</span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Gestionar la potencia reactiva<span class="op">:**</span> La tensión está intrínsecamente ligada al balance de energía reactiva. Si la tensión sube, hay exceso de reactiva; si baja, hay déficit.</span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Coordinar con los titulares de red<span class="op">:**</span> Informar de las necesidades de consignas de tensión.</span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a><span class="co">#### De los titulares de red (generadores, consumidores, distribuidores)</span></span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Mantener la tensión en el punto de conexión<span class="op">**</span> dentro de los límites del P.O. <span class="fl">1.3</span>, siempre que sea técnicamente posible y sin perjuicio de su seguridad.</span>
+<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Disponer de equipos de regulación de tensión<span class="op">**</span> (ej<span class="op">:</span> AVR en generadores, cambiadores de tomas en transformadores) y ponerlos a disposición del sistema.</span>
+<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Comunicar incidencias<span class="op">:**</span> Si su instalación no puede mantener la tensión dentro de los márgenes, deben comunicarlo a REE.</span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a><span class="co">### Interacción con otros procedimientos de operación</span></span>
+<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a>El P.O. <span class="fl">1.3</span> no actúa solo. Para un experto en mercados, es vital entender su interconexión<span class="op">:</span></span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>P.O. <span class="fl">7.2</span> (Control de Tensión de la Red de Transporte)<span class="op">:**</span> Desarrolla <span class="op">*</span>cómo<span class="op">*</span> se controla la tensión (mediante la consigna de los generadores, el mantenimiento de la reserva de reactiva, etc.). Mientras el P.O. <span class="fl">1.3</span> dice <span class="op">*</span>cuánto<span class="op">*</span> es admisible, el P.O. <span class="fl">7.2</span> dice <span class="op">*</span>cómo se consigue<span class="op">*</span>.</span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>P.O. <span class="fl">3.1</span> (Programación de la Generación)<span class="op">:**</span> La necesidad de mantener la tensión puede forzar a ciertas unidades a estar acopladas (generando o consumiendo reactiva) aunque no sean económicas en el mercado diario. Esto genera <span class="op">**</span>restricciones técnicas por tensión<span class="op">**</span> (servicios complementarios).</span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>P.O. <span class="fl">9.0</span> (Servicios de Balance)<span class="op">:**</span> La regulación de tensión (potencia reactiva) es un servicio de balance no frecuencial. Los generadores son remunerados por ello.</span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a><span class="co">### Aplicación práctica para un "energy quant"</span></span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-271"><a href="#cb2-271" aria-hidden="true" tabindex="-1"></a>¿Cómo impacta esto en la optimización de activos y en el mercado?</span>
+<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a><span class="co">#### En generación renovable (solar/eólica)</span></span>
+<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Obligación de hueco de tensión (FRT)<span class="op">:**</span> Aunque no está en este procedimiento (está en P.O. <span class="fl">12.2</span> y P.O. <span class="fl">12.3</span>), el P.O. <span class="fl">1.3</span> define los límites. Si una planta no puede soportar una bajada de tensión a <span class="fl">0</span>,<span class="fl">9</span> p.u. durante <span class="fl">1</span> hora (o a <span class="fl">0</span>,<span class="fl">0</span> durante unos instantes), debe desconectarse. Un <span class="op">*</span>quant<span class="op">*</span> debe modelar el riesgo de <span class="op">*</span>curtailment<span class="op">*</span> por tensión.</span>
+<span id="cb2-276"><a href="#cb2-276" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Potencia reactiva<span class="op">:**</span> Los inversores modernos pueden generar<span class="op">/</span>consumir reactiva. Un <span class="op">*</span>quant<span class="op">*</span> puede optimizar la consigna de reactiva no solo para cumplir el P.O. <span class="fl">1.3</span>, sino para maximizar la vida útil del inversor o incluso ofrecer servicios de control de tensión (si se abren mercados de reactiva).</span>
+<span id="cb2-277"><a href="#cb2-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a><span class="co">#### En baterías (BESS)</span></span>
+<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Soporte a la red<span class="op">:**</span> Las baterías, por su velocidad, son ideales para inyectar o absorber reactiva casi instantáneamente y ayudar a mantener la tensión dentro de los rangos del P.O. <span class="fl">1.3</span> (especialmente en redes con mucha solar, donde la tensión tiende a subir al mediodía).</span>
+<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Nuevo flujo de ingresos<span class="op">:**</span> En el futuro, el control de tensión podría ser un servicio remunerado. Un <span class="op">*</span>quant<span class="op">*</span> que entienda los límites del P.O. <span class="fl">1.3</span> puede valorar esa opción.</span>
+<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a><span class="co">#### En ciclos combinados (gas)</span></span>
+<span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Deben mantener su tensión en bornes dentro de los límites. Si la red está muy cargada (baja tensión), deberán generar más reactiva, lo que puede limitar su capacidad de generar activa (potencia aparente constante). Esto afecta a su oferta en el mercado.</span>
+<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a><span class="co">### Ejemplo numérico de aplicación</span></span>
+<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Escenario<span class="op">:**</span> Una planta solar conectada a un nudo de <span class="fl">220</span> kV. A mediodía, con alta generación y poca demanda <span class="kw">local</span>, la tensión en el nudo sube a <span class="op">**</span><span class="fl">1</span>,<span class="fl">06</span> p.u<span class="op">.**</span> (<span class="fl">233</span>,<span class="fl">2</span> kV).</span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Diagnóstico<span class="op">:**</span> Se supera el límite superior de <span class="fl">1</span>,<span class="fl">05</span> p.u. en régimen permanente (Art. <span class="fl">3.1</span>).</span>
+<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Actuación de REE<span class="op">:**</span> Ordenará a la planta solar reducir su generación de reactiva (si está inyectando) o incluso a consumir reactiva. Si no es suficiente, podría ordenar la desconexión de alguna línea o la reducción de potencia activa (curtailment por tensión) para aliviar el efecto Ferranti en la línea.</span>
+<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> <span class="op">**</span>Actuación del generador<span class="op">:**</span> Deberá ajustar su modo de control de tensión (pasar de control de <span class="op">*</span>cos phi<span class="op">*</span> constante a control de <span class="op">*</span>tensión constante<span class="op">*</span>) para absorber el exceso de reactiva y bajar la tensión a <span class="fl">1</span>,<span class="fl">05</span> p.u.</span>
+<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a><span class="co">### Conclusión</span></span>
+<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a>El <span class="op">**</span>P.O. <span class="fl">1.3</span><span class="op">**</span> es, aparentemente, una simple tabla de números, pero es la <span class="op">**</span>restricción física más inmediata<span class="op">**</span> que condiciona la operación del sistema. Para un <span class="op">*</span>Energy Quant<span class="op">*</span>, este procedimiento no es un documento legal lejano, sino una <span class="op">**</span>restricción de desigualdad (inequality constraint)<span class="op">**</span> en su modelo de optimización.</span>
+<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> Por ejemplo, si tu modelo de PPA ignora que el comprador puede tener que parar su fábrica porque REE le exige consumir reactiva para bajar la tensión, tu valoración del riesgo será incorrecta.</span>
+<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Dominar el P.O. <span class="fl">1.3</span> es dominar la primera capa de realidad física que subyace a los precios del mercado eléctrico<span class="op">.**</span></span>
+<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a><span class="co">## Logics y Comparaciones</span></span>
+<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a>Los booleanos son valores <span class="ss">`True`</span> o <span class="ss">`False`</span>.</span>
+<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a><span class="co">### Ejemplos</span></span>
+<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a><span class="op">::</span><span class="dt">: {#126bff60 .cell </span>execution_count<span class="op">=</span><span class="fl">2</span>}</span>
+<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a><span class="ss">``` {.python .cell-code}</span></span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a><span class="ss">print(100 &gt;= 50)</span></span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a><span class="ss">print(100 == 50)</span></span>
+<span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a><span class="ss">print(100 != 50)</span></span>
+<span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a><span class="ss">print("harry" == "hermoine")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
 False
 True
 False</code></pre>
 </div>
-</div>
+<p>:::</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -737,6 +762,7 @@ Tip
 </div>
 
 
+</section>
 </section>
 </section>
 
