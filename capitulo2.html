@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Control de flujo – Mi Libro Sobre Mercado Eléctrico</title>
+<title>4&nbsp; Procesos de Programación y Operación de Sistemas Eléctricos de Potencia – Mi Libro Sobre Mercado Eléctrico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,6 +106,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -119,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo2.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control de flujo</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./capitulo2.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Procesos de Programación y Operación de Sistemas Eléctricos de Potencia</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -168,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./capitulo2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control de flujo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Procesos de Programación y Operación de Sistemas Eléctricos de Potencia</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -179,7 +208,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie" id="toc-funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie" class="nav-link active" data-scroll-target="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie"><span class="header-section-number">4.1</span> Funcionamiento de los Mercados de Electricidad Gestionados por OMIE</a>
+  <ul class="collapse">
+  <li><a href="#el-mercado-diario-o-pool" id="toc-el-mercado-diario-o-pool" class="nav-link" data-scroll-target="#el-mercado-diario-o-pool"><span class="header-section-number">4.1.1</span> El Mercado Diario (o Pool)</a></li>
+  <li><a href="#los-mercados-intradiarios" id="toc-los-mercados-intradiarios" class="nav-link" data-scroll-target="#los-mercados-intradiarios"><span class="header-section-number">4.1.2</span> Los Mercados Intradiarios</a></li>
+  <li><a href="#intercambio-de-información-con-red-eléctrica-de-españa-ree" id="toc-intercambio-de-información-con-red-eléctrica-de-españa-ree" class="nav-link" data-scroll-target="#intercambio-de-información-con-red-eléctrica-de-españa-ree"><span class="header-section-number">4.1.3</span> Intercambio de Información con Red Eléctrica de España (REE)</a></li>
+  </ul></li>
+  <li><a href="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree" id="toc-funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree" class="nav-link" data-scroll-target="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree"><span class="header-section-number">4.2</span> Funcionamiento de los Mercados de Electricidad Gestionados por REE</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento-de-operación-3.1-ree" id="toc-procedimiento-de-operación-3.1-ree" class="nav-link" data-scroll-target="#procedimiento-de-operación-3.1-ree"><span class="header-section-number">4.2.1</span> Procedimiento de Operación 3.1 REE</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -190,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Control de flujo</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Procesos de Programación y Operación de Sistemas Eléctricos de Potencia</span></h1>
 </div>
 
 
@@ -207,7 +251,313 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="bac4e171" class="cell" data-execution_count="1">
+<section id="funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie"><span class="header-section-number">4.1</span> Funcionamiento de los Mercados de Electricidad Gestionados por OMIE</h2>
+<p>El Operador del Mercado Ibérico de Energía (OMIE) es el encargado de la gestión económica del mercado mayorista de electricidad en España y Portugal, conocido como MIBEL. Su función principal es actuar como contraparte y gestionar las plataformas donde se casan la oferta y la demanda de electricidad. Este sistema se articula en varios mercados con horizontes temporales distintos, todos ellos orientados a garantizar un suministro eficiente y en tiempo real. <strong>Los principales son el mercado diario y los mercados intradiarios</strong> (que incluyen subastas y el mercado continuo).</p>
+<section id="el-mercado-diario-o-pool" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="el-mercado-diario-o-pool"><span class="header-section-number">4.1.1</span> El Mercado Diario (o Pool)</h3>
+<p>Es el mercado principal y el primero en el tiempo. En él se negocia la mayor parte de la energía que se consumirá al día siguiente. Los agentes (generadores, comercializadoras, consumidores directos) presentan sus ofertas de venta y compra para cada una de las horas del día siguiente.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hora</th>
+<th style="text-align: left;">Evento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12:00</td>
+<td style="text-align: left;">Cierre sesión del mercado diario (OMIE)</td>
+</tr>
+</tbody>
+</table>
+<section id="funcionamiento" class="level4" data-number="4.1.1.1">
+<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="funcionamiento"><span class="header-section-number">4.1.1.1</span> Funcionamiento</h4>
+<p>Desde octubre de 2025, y en línea con la armonización europea, la negociación es <strong>cuarto-horaria</strong>, dividiendo el día en <strong>96 periodos de 15 minutos</strong>. Este cambio busca reflejar con mayor precisión la variabilidad de la generación renovable y ofrecer señales de precio más eficientes.</p>
+<p>El proceso es el siguiente:</p>
+<ol type="1">
+<li><p><strong>Presentación de Ofertas:</strong> Todos los días, los agentes del mercado (tanto de la zona española como portuguesa) envían a OMIE sus ofertas para cada uno de los 96 periodos del día siguiente. Las ofertas de venta (generación) especifican un precio mínimo al que están dispuestos a vender y una cantidad de energía. Las ofertas de compra (demanda) especifican el precio máximo que están dispuestos a pagar.</p></li>
+<li><p><strong>Cierre y Casación (Subasta Europea):</strong> La sesión del mercado diario se cierra a las <strong>12:00 horas (CET)</strong>. A partir de ese momento, OMIE, en su rol de NEMO (<em>Nominated Electricity Market Operator</em>), participa en el proceso de acoplamiento único diario (<em>Single Day-Ahead Coupling</em> o <strong>SDAC</strong>) junto con el resto de operadores europeos.</p></li>
+<li><p><strong>El Algoritmo EUPHEMIA:</strong> Se utiliza un algoritmo común para toda Europa llamado <strong>EUPHEMIA</strong>. Este algoritmo casa las ofertas de compra y venta de todos los países participantes de forma simultánea, teniendo en cuenta no solo el mérito económico (las ofertas más baratas para generar y las más caras para consumir), sino también la capacidad de las interconexiones internacionales. El resultado es un precio único para cada periodo en cada zona de oferta (como España y Portugal, que pueden tener precios diferentes si no hay capacidad de interconexión suficiente).</p></li>
+<li><p><strong>Publicación de Resultados:</strong> OMIE publica los precios y la energía casada para cada uno de los 96 periodos. El precio se determina en el punto de cruce entre la curva de oferta (agregación de todas las ofertas de venta, ordenadas de menor a mayor precio) y la curva de demanda (agregación de las ofertas de compra). Este precio se conoce como <strong>precio marginal</strong>, ya que todas las unidades de generación casadas cobran el precio de la última y más cara tecnología necesaria para cubrir la demanda.</p></li>
+<li><p>OMIE informa el resultado de este proceso a REE como ingrediente principal para la elaboración del Programa Diario Base de Funcionamiento (PDBF). El OS debe publicar el PDBF a las 13:30 horas de cada día.</p></li>
+</ol>
+</section>
+</section>
+<section id="los-mercados-intradiarios" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="los-mercados-intradiarios"><span class="header-section-number">4.1.2</span> Los Mercados Intradiarios</h3>
+<p>Una vez cerrado el mercado diario y conocido el programa de generación para el día siguiente, los agentes tienen la oportunidad de ajustar sus posiciones debido a imprevistos (fallos en una central, errores en la previsión meteorológica, cambios en la demanda, etc.). Para ello existen los mercados intradiarios, que operan más cerca del momento del consumo. Desde junio de 2024, el mercado intradiario europeo (SIDC) se compone de dos mecanismos: subastas intradiarias y el mercado continuo.</p>
+<section id="mercado-intradiario-por-subastas" class="level4" data-number="4.1.2.1">
+<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="mercado-intradiario-por-subastas"><span class="header-section-number">4.1.2.1</span> Mercado Intradiario por Subastas</h4>
+<p>Hasta junio de 2024, existían seis subastas regionales para el MIBEL. Actualmente, estas han sido sustituidas o complementadas por <strong>tres subastas intradiarias paneuropeas</strong> (<em>Intraday Auctions</em> o IDAs) que se realizan a lo largo del día (<strong>sesion 1, 2 y 3</strong>).</p>
+<p><strong>Sesiones 1, 2 y 3</strong></p>
+<p>Aunque la información detallada sobre los horarios exactos de apertura y cierre puede tener pequeñas variaciones en función de operaciones específicas, la estructura general es la siguiente:</p>
+<ul>
+<li><p>Sesión 1 (IDA 1): Ajuste inicial después del cierre del mercado diario antes de la entrega de energía; suele abrir a primera hora tras la publicación del mercado diario.</p></li>
+<li><p>Sesión 2 (IDA 2): Segunda oportunidad para ajustar las previsiones de producción o consumo antes de los periodos de entrega más cercanos.</p></li>
+<li><p>Sesión 3 (IDA 3): Última sesión de ajuste intradiario, permitiendo correcciones finales antes de la entrega de energía programada.</p></li>
+<li><p><strong>Funcionamiento:</strong> Funcionan de manera similar al mercado diario, pero con un horizonte más cercano a la entrega. Los agentes presentan ofertas y, a una hora fija, se realiza una subasta que casa la energía y asigna implícitamente la capacidad de las interconexiones.</p></li>
+<li><p><strong>Objetivo:</strong> Proporcionar puntos de liquidez y formación de precios varias veces al día, permitiendo a los agentes hacer ajustes significativos con la suficiente antelación.</p></li>
+</ul>
+<p>Los horarios de estas nuevas subastas son paneuropeos y están diseñados para cubrir las necesidades de ajuste hasta cerca del momento de la entrega. La información más reciente de REE indica que estas subastas han comenzado a operar, sustituyendo a las antiguas subastas regionales.</p>
+</section>
+<section id="mercado-intradiario-continuo" class="level4" data-number="4.1.2.2">
+<h4 data-number="4.1.2.2" class="anchored" data-anchor-id="mercado-intradiario-continuo"><span class="header-section-number">4.1.2.2</span> Mercado Intradiario Continuo</h4>
+<p>Es un mercado que opera de forma continua, 24 horas al día, los 7 días de la semana, y permite la negociación hasta poco antes de la entrega de la energía.</p>
+<ul>
+<li><strong>Funcionamiento:</strong> Los agentes introducen sus órdenes de compra y venta en un libro de órdenes común europeo. Cuando dos órdenes son compatibles en precio y cantidad, se casan automáticamente de forma inmediata.</li>
+<li><strong>Asignación de Capacidad:</strong> La característica clave es que la asignación de la capacidad de las interconexiones internacionales se realiza de forma <strong>implícita</strong>. Es decir, si un agente en España quiere comprar energía de un vendedor en Francia, el sistema verifica automáticamente si hay capacidad en la interconexión y, si la hay, casa la operación incluyendo el uso de esa capacidad. Esto permite una integración profunda del mercado europeo.</li>
+<li><strong>Horario de Cierre:</strong> La negociación en el mercado continuo está abierta hasta <strong>una hora antes</strong> del momento de la entrega de la energía. Esto lo convierte en la herramienta perfecta para realizar ajustes de último minuto.</li>
+</ul>
+</section>
+<section id="ejemplo-real-mercado-intradiario-continuo" class="level4" data-number="4.1.2.3">
+<h4 data-number="4.1.2.3" class="anchored" data-anchor-id="ejemplo-real-mercado-intradiario-continuo"><span class="header-section-number">4.1.2.3</span> Ejemplo Real (Mercado Intradiario Continuo)</h4>
+<p>Un gestor de un parque eólico ha vendido su producción para la hora 13:00 en el mercado diario basándose en una previsión meteorológica. A las 11:00 de la mañana (2 horas antes de la entrega), observa que el viento sopla con más fuerza de lo previsto y va a generar 50 MWh adicionales que no tiene vendidos. Para evitar tener que pagar por desviaciones, necesita vender ese excedente.</p>
+<ul>
+<li>Accede al mercado intradiario continuo y pone una orden de venta de 50 MWh para la hora 13:00 a un precio de 60 €/MWh.</li>
+<li>En ese mismo momento, una comercializadora prevé que tendrá un déficit para esa misma hora y está dispuesta a comprar energía a 62 €/MWh.</li>
+</ul>
+</section>
+</section>
+<section id="intercambio-de-información-con-red-eléctrica-de-españa-ree" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="intercambio-de-información-con-red-eléctrica-de-españa-ree"><span class="header-section-number">4.1.3</span> Intercambio de Información con Red Eléctrica de España (REE)</h3>
+<p>REE, como operador del sistema, es el responsable de la seguridad y la continuidad del suministro eléctrico. Su relación con OMIE es de coordinación constante, ya que el mercado económico y la operación física del sistema deben ir de la mano.</p>
+<p>El flujo de información sigue estos pasos:</p>
+<ol type="1">
+<li><p><strong>De OMIE a REE (Programas Base):</strong> Una vez que se cierra el mercado diario (12:00 h) envía información a REE y luego de cada una de las subastas intradiarias, OMIE envía a REE el <strong>Programa Horario Final (PHF)</strong> resultante de la casación. Este programa contiene la energía que, en principio, cada unidad de generación debe producir en cada periodo, según los resultados del mercado. Esto se conoce como el programa de operación base.</p></li>
+<li><p><strong>De REE a OMIE (Límites Técnicos):</strong> Antes de las casaciones, REE comunica a OMIE las <strong>restricciones técnicas</strong> de la red. Por ejemplo, si una línea de transporte no puede evacuar toda la energía que el mercado querría asignar a una zona, REE informa de la capacidad máxima de intercambio entre zonas o de los límites de generación en ciertas áreas. OMIE debe tener en cuenta estas restricciones en sus algoritmos de casación.</p></li>
+<li><p><strong>Gestión de las Restricciones Técnicas (Mercado de Ajuste):</strong> Tras recibir el programa de OMIE, REE lo analiza para verificar si es técnicamente viable. Si detecta que, para mantener la seguridad del sistema, es necesario aumentar o reducir la generación en ciertas puntos (por ejemplo, porque hay un nudo de la red congestionado), REE gestiona un mercado de <strong>restricciones técnicas</strong> (o servicios de ajuste). En este proceso, REE compra o vende energía para solucionar esos cuellos de botella, modificando el programa inicial de OMIE. Este nuevo programa, ya viable técnicamente, se convierte en el programa de operación real.</p></li>
+<li><p><strong>Liquidaciones:</strong> Finalmente, OMIE utiliza la información de REE sobre las energías realmente generadas y consumidas (la medida) para realizar las liquidaciones económicas definitivas a los agentes.</p></li>
+</ol>
+<p>En resumen, <strong>OMIE casa la oferta y la demanda económicas</strong> para crear un programa de generación, mientras que <strong>REE verifica la viabilidad física</strong> de ese programa y realiza los ajustes necesarios para garantizar la seguridad del suministro, informando de vuelta a OMIE para que la facturación sea correcta.</p>
+</section>
+</section>
+<section id="funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree"><span class="header-section-number">4.2</span> Funcionamiento de los Mercados de Electricidad Gestionados por REE</h2>
+<section id="procedimiento-de-operación-3.1-ree" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="procedimiento-de-operación-3.1-ree"><span class="header-section-number">4.2.1</span> Procedimiento de Operación 3.1 REE</h3>
+<p>El <strong>P.O. 3.1</strong> es el procedimiento que establece el <strong>proceso mediante el cual se programa la generación</strong> en el sistema eléctrico español para cubrir la demanda, respetando las restricciones técnicas y de seguridad del sistema. El P.O. 3.1 de REE establece una secuencia temporal de programas que van desde la casación del mercado hasta la operación en tiempo real.</p>
+<p><strong>Objetivo fundamental:</strong> Definir las reglas y secuencias para la elaboración de los programas de funcionamiento de las unidades de producción, incluyendo la gestión de las restricciones técnicas y la integración de los resultados del mercado diario e intradiario con las necesidades de seguridad del sistema.</p>
+<p>La programación se basa en los siguientes principios fundamentales:</p>
+<p>Prioridad económica del mercado:</p>
+<ul>
+<li>El resultado del Mercado Diario constituye el punto de partida.</li>
+</ul>
+<p>Seguridad del sistema:</p>
+<ul>
+<li>El OS puede modificar programas por restricciones técnicas.</li>
+</ul>
+<p>Coordinación europea:</p>
+<ul>
+<li>Intercambios internacionales y acoplamiento de mercados.</li>
+</ul>
+<p>Transparencia y trazabilidad:</p>
+<ul>
+<li>Todos los programas tienen versiones sucesivas (PDBF, PVP, PHF, etc.).</li>
+</ul>
+<p>El P.O. 3.1 define:</p>
+<ul>
+<li><p>Las fases cronológicas de programación</p></li>
+<li><p>Las responsabilidades de los agentes</p></li>
+<li><p>Los intercambios de información</p></li>
+<li><p>Los criterios para la viabilidad técnica del sistema</p></li>
+</ul>
+<p>Este procedimiento conecta:</p>
+<ul>
+<li><p>Mercados gestionados por OMIE (Mercado Diario (MD), Mercado Intradiario (MI))</p></li>
+<li><p>Servicios de ajuste (balance) gestionados por REE (secundaria, terciaria, restricciones, etc.)</p></li>
+<li><p>Restricciones técnicas (gestionado por REE)</p></li>
+<li><p>Programación final segura del sistema</p></li>
+<li><p>Liquidación de desvíos</p></li>
+</ul>
+<section id="programa-diario-base-de-funcionamiento-pdbf" class="level4" data-number="4.2.1.1">
+<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="programa-diario-base-de-funcionamiento-pdbf"><span class="header-section-number">4.2.1.1</span> Programa Diario Base de Funcionamiento (PDBF)</h4>
+<p>El PDBF es el primer programa físico provisional del día D y se publica aproximadamente a las (13:08), luego de unos 10 o 15 minutos de la publicación del PDBC (12:50 - 13:00 h).</p>
+<p>El OS establece el Programa Diario Base de Funcionamiento (PDBF) a partir de: - Las nominaciones válidas de los programas correspondientes a la ejecución de contratos bilaterales con entrega física realizadas, tanto antes como después del mercado diario, de acuerdo con lo establecido en este procedimiento de operación. - La información recibida del operador del mercado relativa a los programas de energía resultantes de la casación de las ofertas presentadas al mercado diario de producción (PDBC).</p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>Nota –&gt; Antes de la hora límite establecida para este proceso de intercambio de información, el OS recibirá del OM la información referente al resultado de la casación de ofertas en el mercado diario de producción correspondientes a unidades de oferta del sistema eléctrico español, con los programas de energía contratados en el mercado diario, incluidos, en su caso, los programas de energíaderivados de la integración en el mercado de las contrataciones establecidas en el mercado a plazo con entrega física de la energía, el orden de mérito de las ofertas de compra y venta de energía resultante de la casación de ofertas en dicha sesión del mercado diario, y todas las ofertas presentadas a dicha sesión. Asimismo, el OS recibirá del OM la información relativa al precio marginal del mercado diario correspondiente a las zonas de oferta de España, Portugal y Francia y los valores de los programas de intercambio a través de las interconexiones entre España y Francia y entre España y Portugal, así como en las interconexiones internacionales no comunitarias.</p>
+</blockquote>
+</blockquote>
+<p>No olvides, el PDBF Se construye a partir del resultado del Mercado Diario gestionado y comunicado por OMIE (PDBC) y la información de ejecución de contratos bilaterales con entrega física comunicada de acuerdo a lo establecido en el presente procedimiento de operación.</p>
+<p>Incluye:</p>
+<ul>
+<li><p>Energía casada por unidad</p></li>
+<li><p>Programas de intercambio internacional</p></li>
+<li><p>Programas de bombeo</p></li>
+<li><p>Programas de demanda</p></li>
+</ul>
+<p>El OS pondrá a disposición de todos los Sujetos del Mercado, y del OM, el Programa Diario Base de Funcionamiento (PDBF) de las unidades de programación del sistema eléctrico español correspondiente a la programación del día siguiente. A partir de la puesta a disposición del Programa Diario Base de Funcionamiento (PDBF), los SM dispondrán de un período máximo de 30 minutos para formular posibles reclamaciones al OS por incidencias y anomalías.</p>
+<p>El saldo neto de todas las transacciones asociadas a las unidades de programación genéricas de un SM en el PDBF deberá ser nulo.</p>
+<p><strong>Plazos establecidos en el procedimiento</strong> (según modificación de 2026):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Concepto</th>
+<th style="text-align: left;">Plazo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Publicación del PDBF por el Operador del Sistema</td>
+<td style="text-align: left;"><strong>15 minutos</strong> tras la recepción de resultados</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Envío de nominaciones de programa por los participantes</td>
+<td style="text-align: left;"><strong>10 minutos</strong> tras la publicación del PDBF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Envío de desgloses, potencias hidráulicas y caudales</td>
+<td style="text-align: left;">Desde resultados del diario hasta <strong>10 minutos tras PDBF</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>Respecto a las nominaciones tras el PDBF. El OS recibirá (i) Nominaciones de los programas asociados a contratos bilaterales (ii) Nominaciones de los programas contratados en el mercado diario mediante unidades de oferta (UO) que tienen asociadas dos o más unidades de programación (UP) –&gt; Programa de energía gestionado en el mercado diario de producción para cada una de las unidades de programación (UP) que componen dicha unidad de oferta (UO).</p>
+</blockquote>
+</blockquote>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>Comunicación de desgloses de UP en unidades físicas (UF). Antes de la hora límite establecida para los intercambios de información, los sujetos titulares (o sus representantes) facilitarán al OS la información correspondiente a los desgloses del programa de las unidades de programación por unidad física y, en caso de que así sea de aplicación, por unidades de producción equivalentes de acuerdo con los criterios de desglose de programas que haya establecido el OS de forma específica para dicha unidad de programación, al objeto de que esta información pueda ser tenida en cuenta en los análisis de seguridad del sistema.</p>
+</blockquote>
+</blockquote>
+</section>
+<section id="programa-diario-viable-provisional-pdvp-o-pdvd" class="level4" data-number="4.2.1.2">
+<h4 data-number="4.2.1.2" class="anchored" data-anchor-id="programa-diario-viable-provisional-pdvp-o-pdvd"><span class="header-section-number">4.2.1.2</span> Programa Diario Viable Provisional (PDVP o PDVD)</h4>
+<p>Se publica aproximadamente 1:15h después del PDBF.</p>
+<p><strong>Mercado de Restricciones técnicas</strong> –&gt; El OS abrirá el periodo de recepción de ofertas para el proceso de solución de restricciones técnicas del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF. El OS podrá prolongar este plazo de recepción de ofertas, sólo en casos excepcionales y previa comunicación a todos los SM a través de la página Web de Sujetos del eSIOS, comunicación en la que se indicará la nueva hora de cierre del período de recepción de ofertas, y el motivo de la prolongación del periodo de recepción de ofertas. &gt;&gt; El OS abrirá el periodo de recepción de ofertas para el proceso de solución de <strong>restricciones técnicas</strong> del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF.</p>
+<p>Teniendo en cuenta las mejores previsiones de demanda y de producción de origen eólico y solar en el sistema eléctrico peninsular español y la disponibilidad prevista de las instalaciones de red y de las unidades de producción, aplicará un análisis de seguridad sobre el Programa Diario Base de Funcionamiento (PDBF) para detectar las posibles <strong>restricciones técnicas</strong> y sus posibles soluciones, seleccionando aquéllas que, resolviendo la restricción con un margen de seguridad adecuado, impliquen un menor coste para el sistema. El OS procederá para ello a realizar las modificaciones de programa que sean precisas para la solución de las restricciones detectadas, y establecerá además las limitaciones de programa por seguridad que sean necesarias para evitar la aparición de nuevas restricciones técnicas en los procesos y mercados posteriores, de acuerdo con lo fijado en el procedimiento de operación de restricciones técnicas. El programa PDVP de las unidades de programación localizadas en el sistema eléctrico peninsular español resultante de este proceso será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información.</p>
+<p>REE analiza el PDBF para verificar:</p>
+<ul>
+<li><p>Límites térmicos de red</p></li>
+<li><p>Límites de tensión</p></li>
+<li><p>Flujos internacionales</p></li>
+<li><p>Criterio N-1</p></li>
+<li><p>Congestiones estructurales</p></li>
+</ul>
+<p>Si detecta problemas:</p>
+<ul>
+<li><p>Aplica el Proceso de Resolución de Restricciones Técnicas (PRRT)</p></li>
+<li><p>Puede redespachar unidades</p></li>
+<li><p>Puede modificar intercambios</p></li>
+</ul>
+<p>El resultado es el:</p>
+<ul>
+<li>Programa Diario Viable (PDVD)</li>
+</ul>
+<p>El <strong>Programa Diario Viable Provisional (PDVP)</strong> se publica tras resolver las restricciones técnicas del PDBF. Incorpora la solución completa de las restricciones técnicas que garantizan la viabilidad de la programación desde el punto de vista de la seguridad del sistema. será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información antes de transcurridas 75 minutos tras la publicación del PDBF, de acuerdo con lo fijado en el procedimiento de operación por el que se establecen los intercambios de información con el OS. <strong>Está por confirmar a qué hora se publica el PDVP</strong></p>
+<p><strong>Características:</strong> - Incluye la asignación de restricciones técnicas por criterios de seguridad - Considera limitaciones de la red de transporte - Puede incorporar la programación de grupos térmicos por falta de reserva a subir</p>
+<p>Recuerda que tras el Mercado Diario, se celebran sesiones intradiarias donde se actualizan previsiones de demanda y renovables y se ajustan posiciones.</p>
+<p>Tras cada sesión intradiaria: Se genera un nuevo programa viable. El proceso continúa con sucesivas actualizaciones a través de los mercados intradiarios y la gestión en tiempo real, hasta llegar al Programa Horario Final (PHF) que sirve de base para la operación.</p>
+<p><strong>Tras cada sesión intradiaria:</strong></p>
+<ul>
+<li><p>Se recalculan restricciones</p></li>
+<li><p>Se genera un nuevo programa viable</p></li>
+</ul>
+</section>
+<section id="programa-horario-final-phf" class="level4" data-number="4.2.1.3">
+<h4 data-number="4.2.1.3" class="anchored" data-anchor-id="programa-horario-final-phf"><span class="header-section-number">4.2.1.3</span> Programa Horario Final (PHF)</h4>
+<p>Es el programa firme tras:</p>
+<ul>
+<li><p>Mercado Diario</p></li>
+<li><p>Restricciones</p></li>
+<li><p>Intradiarios</p></li>
+<li><p>Nuevas restricciones</p></li>
+</ul>
+<p>Es la referencia base para:</p>
+<ul>
+<li><p>Seguimiento en tiempo real</p></li>
+<li><p>Cálculo de desvíos</p></li>
+</ul>
+</section>
+<section id="programación-en-tiempo-real-p48" class="level4" data-number="4.2.1.4">
+<h4 data-number="4.2.1.4" class="anchored" data-anchor-id="programación-en-tiempo-real-p48"><span class="header-section-number">4.2.1.4</span> Programación en tiempo real (P48)</h4>
+<p>Una vez iniciado el día de operación:</p>
+<p>REE realiza:</p>
+<ul>
+<li><p>Seguimiento continuo generación–demanda</p></li>
+<li><p>Activación de servicios de ajuste</p></li>
+<li><p>Supervisión de desvíos</p></li>
+</ul>
+<p>Si aparecen desviaciones:</p>
+<ul>
+<li><p>Activa regulación secundaria</p></li>
+<li><p>Activa regulación terciaria</p></li>
+<li><p>Puede aplicar medidas excepcionales</p></li>
+</ul>
+</section>
+<section id="servicios-de-ajuste" class="level4" data-number="4.2.1.5">
+<h4 data-number="4.2.1.5" class="anchored" data-anchor-id="servicios-de-ajuste"><span class="header-section-number">4.2.1.5</span> Servicios de Ajuste</h4>
+<p>El P.O. 3.1 coordina la programación con:</p>
+<p><strong>Regulación secundaria (aFRR)</strong></p>
+<ul>
+<li><p>Control automático frecuencia-potencia</p></li>
+<li><p>Activación continua</p></li>
+<li><p>Reserva previamente asignada</p></li>
+</ul>
+<p><strong>Regulación terciaria (mFRR)</strong></p>
+<ul>
+<li><p>Activación manual</p></li>
+<li><p>Corrección de desvíos estructurales</p></li>
+</ul>
+<p><strong>Restricciones técnicas en tiempo real</strong></p>
+<ul>
+<li><p>Redispatch por seguridad</p></li>
+<li><p>Separado del mercado económico</p></li>
+</ul>
+</section>
+<section id="gestión-de-desvíos" class="level4" data-number="4.2.1.6">
+<h4 data-number="4.2.1.6" class="anchored" data-anchor-id="gestión-de-desvíos"><span class="header-section-number">4.2.1.6</span> Gestión de desvíos</h4>
+<p>El programa final (PHF) es la referencia para medir:</p>
+<p><span class="math display">\[ Desvio = MedidaReal - ProgramaFinal\]</span></p>
+</section>
+<section id="esquema-resumen-del-flujo-operativo" class="level4" data-number="4.2.1.7">
+<h4 data-number="4.2.1.7" class="anchored" data-anchor-id="esquema-resumen-del-flujo-operativo"><span class="header-section-number">4.2.1.7</span> Esquema resumen del flujo operativo</h4>
+<p>Mercado Diario (OMIE) ↓ Programa Diario Base (PDBF) ↓ Análisis de Restricciones ↓ Programa Diario Viable (PDV) ↓ Mercados Intradiarios ↓ Programa Horario Final (PHF) ↓ Tiempo Real (Servicios de Ajuste) ↓ Medida real ↓ Cálculo de desvíos</p>
+</section>
+<section id="interacción-con-otros-procedimientos-de-operación" class="level4" data-number="4.2.1.8">
+<h4 data-number="4.2.1.8" class="anchored" data-anchor-id="interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">4.2.1.8</span> Interacción con otros procedimientos de operación</h4>
+<p>El P.O. 3.1 actúa como eje central del proceso de programación y se relaciona intensamente con:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Procedimiento</th>
+<th style="text-align: left;">Relación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>P.O. 3.2 (Restricciones técnicas)</strong></td>
+<td style="text-align: left;">Desarrolla el proceso de solución de restricciones técnicas al PDBF, incluyendo la programación por falta de reserva a subir</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>P.O. 3.6 (Indisponibilidades)</strong></td>
+<td style="text-align: left;">Establece la comunicación y tratamiento de indisponibilidades de unidades</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>P.O. 7.4 (Control de tensión)</strong></td>
+<td style="text-align: left;">Define el servicio de control de tensión y su retribución</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>P.O. 9.1 (Intercambios de información)</strong></td>
+<td style="text-align: left;">Regula los intercambios relativos al proceso de programación</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>P.O. 14.4 (Liquidaciones)</strong></td>
+<td style="text-align: left;">Establece los derechos de cobro y obligaciones de pago por servicios de ajuste</td>
+</tr>
+</tbody>
+</table>
+<div id="5a81130e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
@@ -220,6 +570,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
