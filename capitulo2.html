@@ -554,27 +554,26 @@ window.Quarto = {
 </section>
 <section id="esquema-resumen-del-flujo-operativo" class="level4" data-number="4.1.2.8">
 <h4 data-number="4.1.2.8" class="anchored" data-anchor-id="esquema-resumen-del-flujo-operativo"><span class="header-section-number">4.1.2.8</span> Esquema resumen del flujo operativo</h4>
-<div class="cell" data-layout-align="default">
+<div class="cell" data-fig-width="6" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Mercado Diario (OMIE)] --&gt; B[Programa Diario Base (PDBF)]
-    B --&gt; C[Análisis de Restricciones]
-    C --&gt; D[Programa Diario Viable (PDV)]
-    D --&gt; E[Mercados Intradiarios]
-    E --&gt; F[Programa Horario Final (PHF)]
-    F --&gt; G[Tiempo Real (Servicios de Ajuste)]
-    G --&gt; H[Medida real]
-    H --&gt; I[Cálculo de desvíos]
+    A["Mercado Diario (OMIE)"] --&gt; B["Programa Diario Base (PDBF)"]
+    B --&gt; C["Análisis de Restricciones"]
+    C --&gt; D["Programa Diario Viable (PDV)"]
+    D --&gt; E["Mercados Intradiarios"]
+    E --&gt; F["Programa Horario Final (PHF)"]
+    F --&gt; G["Tiempo Real (Servicios de Ajuste)"]
+    G --&gt; H["Medida real"]
+    H --&gt; I["Cálculo de desvíos"]
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>Mercado Diario (OMIE) ↓ Programa Diario Base (PDBF) ↓ Análisis de Restricciones ↓ Programa Diario Viable (PDV) ↓ Mercados Intradiarios ↓ Programa Horario Final (PHF) ↓ Tiempo Real (Servicios de Ajuste) ↓ Medida real ↓ Cálculo de desvíos</p>
 </section>
 <section id="interacción-con-otros-procedimientos-de-operación" class="level4" data-number="4.1.2.9">
 <h4 data-number="4.1.2.9" class="anchored" data-anchor-id="interacción-con-otros-procedimientos-de-operación"><span class="header-section-number">4.1.2.9</span> Interacción con otros procedimientos de operación</h4>
@@ -1148,7 +1147,7 @@ window.Quarto = {
 <li><p><strong>Visión integrada:</strong> La optimización no debe ser por mercado individual, sino considerando el efecto conjunto (diario + intradiario + balance + desvíos) para maximizar el beneficio neto.</p></li>
 </ol>
 <hr>
-<div id="74d70875" class="cell" data-execution_count="1">
+<div id="715f4ce1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
