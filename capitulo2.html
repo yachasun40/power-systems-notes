@@ -105,6 +105,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -307,7 +310,7 @@ window.Quarto = {
 <section id="mercado-intradiario-por-subastas" class="level5" data-number="4.1.1.2.1">
 <h5 data-number="4.1.1.2.1" class="anchored" data-anchor-id="mercado-intradiario-por-subastas"><span class="header-section-number">4.1.1.2.1</span> Mercado Intradiario por Subastas</h5>
 <p>Hasta junio de 2024, existían seis subastas regionales para el MIBEL. Actualmente, estas han sido sustituidas o complementadas por <strong>tres subastas intradiarias paneuropeas</strong> (<em>Intraday Auctions</em> o IDAs) que se realizan a lo largo del día (<strong>sesion 1, 2 y 3</strong>).</p>
-<p><strong>Sesiones 1, 2 y 3</strong></p>
+<p><font color="F527C5">Sesiones 1, 2 y 3</font></p>
 <p>Aunque la información detallada sobre los horarios exactos de apertura y cierre puede tener pequeñas variaciones en función de operaciones específicas, la estructura general es la siguiente:</p>
 <ul>
 <li><p>Sesión 1 (IDA 1): Ajuste inicial después del cierre del mercado diario antes de la entrega de energía; suele abrir a primera hora tras la publicación del mercado diario.</p></li>
@@ -457,8 +460,14 @@ window.Quarto = {
 <section id="programa-diario-viable-provisional-pdvp-o-pdvd" class="level4" data-number="4.1.2.3">
 <h4 data-number="4.1.2.3" class="anchored" data-anchor-id="programa-diario-viable-provisional-pdvp-o-pdvd"><span class="header-section-number">4.1.2.3</span> Programa Diario Viable Provisional (PDVP o PDVD)</h4>
 <p>Se publica aproximadamente 1:15h después del PDBF.</p>
-<p><strong>Mercado de Restricciones técnicas</strong> –&gt; El OS abrirá el periodo de recepción de ofertas para el proceso de solución de restricciones técnicas del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF. El OS podrá prolongar este plazo de recepción de ofertas, sólo en casos excepcionales y previa comunicación a todos los SM a través de la página Web de Sujetos del eSIOS, comunicación en la que se indicará la nueva hora de cierre del período de recepción de ofertas, y el motivo de la prolongación del periodo de recepción de ofertas. &gt;&gt; El OS abrirá el periodo de recepción de ofertas para el proceso de solución de <strong>restricciones técnicas</strong> del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF.</p>
-<p>Teniendo en cuenta las mejores previsiones de demanda y de producción de origen eólico y solar en el sistema eléctrico peninsular español y la disponibilidad prevista de las instalaciones de red y de las unidades de producción, aplicará un análisis de seguridad sobre el Programa Diario Base de Funcionamiento (PDBF) para detectar las posibles <strong>restricciones técnicas</strong> y sus posibles soluciones, seleccionando aquéllas que, resolviendo la restricción con un margen de seguridad adecuado, impliquen un menor coste para el sistema. El OS procederá para ello a realizar las modificaciones de programa que sean precisas para la solución de las restricciones detectadas, y establecerá además las limitaciones de programa por seguridad que sean necesarias para evitar la aparición de nuevas restricciones técnicas en los procesos y mercados posteriores, de acuerdo con lo fijado en el procedimiento de operación de restricciones técnicas. El programa PDVP de las unidades de programación localizadas en el sistema eléctrico peninsular español resultante de este proceso será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información.</p>
+<p>Teniendo en cuenta las mejores previsiones de demanda y de producción de origen eólico y solar en el sistema eléctrico peninsular español y la disponibilidad prevista de las instalaciones de red y de las unidades de producción, aplicará un análisis de seguridad sobre el Programa Diario Base de Funcionamiento (PDBF) para detectar las posibles <strong>restricciones técnicas</strong> y sus posibles soluciones, seleccionando aquéllas que, resolviendo la restricción con un margen de seguridad adecuado, impliquen un menor coste para el sistema. El OS procederá para ello a realizar las modificaciones de programa que sean precisas para la solución de las restricciones detectadas, y establecerá además las limitaciones de programa por seguridad que sean necesarias para evitar la aparición de nuevas restricciones técnicas en los procesos y mercados posteriores, de acuerdo con lo fijado en el procedimiento de operación de restricciones técnicas.</p>
+<p><strong>Mercado de Restricciones técnicas</strong> –&gt; El OS abrirá el periodo de recepción de ofertas para el proceso de solución de restricciones técnicas del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF. El OS podrá prolongar este plazo de recepción de ofertas, sólo en casos excepcionales y previa comunicación a todos los SM a través de la página Web de Sujetos del eSIOS, comunicación en la que se indicará la nueva hora de cierre del período de recepción de ofertas, y el motivo de la prolongación del periodo de recepción de ofertas.</p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>El OS abrirá el periodo de recepción de ofertas para el proceso de solución de <strong>restricciones técnicas</strong> del PDBF a las 12:00 horas y se mantendrá abierto hasta 15 minutos después de la publicación del PDBF.</p>
+</blockquote>
+</blockquote>
+<p>El programa PDVP de las unidades de programación localizadas en el sistema eléctrico peninsular español resultante de este proceso será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información.</p>
 <p>REE analiza el PDBF para verificar:</p>
 <ul>
 <li><p>Límites térmicos de red</p></li>
@@ -477,7 +486,7 @@ window.Quarto = {
 <ul>
 <li>Programa Diario Viable (PDVD)</li>
 </ul>
-<p>El <strong>Programa Diario Viable Provisional (PDVP)</strong> se publica tras resolver las restricciones técnicas del PDBF. Incorpora la solución completa de las restricciones técnicas que garantizan la viabilidad de la programación desde el punto de vista de la seguridad del sistema. será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información antes de transcurridas 75 minutos tras la publicación del PDBF, de acuerdo con lo fijado en el procedimiento de operación por el que se establecen los intercambios de información con el OS. <strong>Está por confirmar a qué hora se publica el PDVP</strong></p>
+<p>El <strong>Programa Diario Viable Provisional (PDVP)</strong> se publica tras resolver las restricciones técnicas del PDBF. Incorpora la solución completa de las restricciones técnicas que garantizan la viabilidad de la programación desde el punto de vista de la seguridad del sistema. será publicado por el OS no más tarde de la hora límite establecida para los intercambios de información antes de transcurridas 75 minutos tras la publicación del PDBF, de acuerdo con lo fijado en el procedimiento de operación por el que se establecen los intercambios de información con el OS.</p>
 <p><strong>Características:</strong> - Incluye la asignación de restricciones técnicas por criterios de seguridad - Considera limitaciones de la red de transporte - Puede incorporar la programación de grupos térmicos por falta de reserva a subir</p>
 <p>Recuerda que tras el Mercado Diario, se celebran sesiones intradiarias donde se actualizan previsiones de demanda y renovables y se ajustan posiciones.</p>
 <p>Tras cada sesión intradiaria: Se genera un nuevo programa viable. El proceso continúa con sucesivas actualizaciones a través de los mercados intradiarios y la gestión en tiempo real, hasta llegar al Programa Horario Final (PHF) que sirve de base para la operación.</p>
@@ -545,6 +554,26 @@ window.Quarto = {
 </section>
 <section id="esquema-resumen-del-flujo-operativo" class="level4" data-number="4.1.2.8">
 <h4 data-number="4.1.2.8" class="anchored" data-anchor-id="esquema-resumen-del-flujo-operativo"><span class="header-section-number">4.1.2.8</span> Esquema resumen del flujo operativo</h4>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Mercado Diario (OMIE)] --&gt; B[Programa Diario Base (PDBF)]
+    B --&gt; C[Análisis de Restricciones]
+    C --&gt; D[Programa Diario Viable (PDV)]
+    D --&gt; E[Mercados Intradiarios]
+    E --&gt; F[Programa Horario Final (PHF)]
+    F --&gt; G[Tiempo Real (Servicios de Ajuste)]
+    G --&gt; H[Medida real]
+    H --&gt; I[Cálculo de desvíos]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Mercado Diario (OMIE) ↓ Programa Diario Base (PDBF) ↓ Análisis de Restricciones ↓ Programa Diario Viable (PDV) ↓ Mercados Intradiarios ↓ Programa Horario Final (PHF) ↓ Tiempo Real (Servicios de Ajuste) ↓ Medida real ↓ Cálculo de desvíos</p>
 </section>
 <section id="interacción-con-otros-procedimientos-de-operación" class="level4" data-number="4.1.2.9">
@@ -1119,7 +1148,7 @@ window.Quarto = {
 <li><p><strong>Visión integrada:</strong> La optimización no debe ser por mercado individual, sino considerando el efecto conjunto (diario + intradiario + balance + desvíos) para maximizar el beneficio neto.</p></li>
 </ol>
 <hr>
-<div id="a1ac8cf5" class="cell" data-execution_count="1">
+<div id="74d70875" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
