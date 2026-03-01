@@ -231,7 +231,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie" id="toc-funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie" class="nav-link" data-scroll-target="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-omie"><span class="header-section-number">4.1.1</span> Funcionamiento de los Mercados de Electricidad Gestionados por OMIE</a></li>
   <li><a href="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree" id="toc-funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree" class="nav-link" data-scroll-target="#funcionamiento-de-los-mercados-de-electricidad-gestionados-por-ree"><span class="header-section-number">4.1.2</span> Funcionamiento de los Mercados de Electricidad Gestionados por REE</a></li>
-  <li><a href="#participación-en-el-mercado-eléctrico" id="toc-participación-en-el-mercado-eléctrico" class="nav-link" data-scroll-target="#participación-en-el-mercado-eléctrico"><span class="header-section-number">4.1.3</span> Participación en el Mercado Eléctrico</a></li>
+  <li><a href="#ejemplo-de-participación-en-el-mercado-eléctrico" id="toc-ejemplo-de-participación-en-el-mercado-eléctrico" class="nav-link" data-scroll-target="#ejemplo-de-participación-en-el-mercado-eléctrico"><span class="header-section-number">4.1.3</span> Ejemplo de Participación en el Mercado Eléctrico</a></li>
+  <li><a href="#ejemplo-ilustrativo-del-proceso-de-programación-y-operación-de-ree" id="toc-ejemplo-ilustrativo-del-proceso-de-programación-y-operación-de-ree" class="nav-link" data-scroll-target="#ejemplo-ilustrativo-del-proceso-de-programación-y-operación-de-ree"><span class="header-section-number">4.1.4</span> Ejemplo ilustrativo del proceso de programación y operación de REE</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -614,8 +615,8 @@ window.Quarto = {
 </table>
 </section>
 </section>
-<section id="participación-en-el-mercado-eléctrico" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="participación-en-el-mercado-eléctrico"><span class="header-section-number">4.1.3</span> Participación en el Mercado Eléctrico</h3>
+<section id="ejemplo-de-participación-en-el-mercado-eléctrico" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="ejemplo-de-participación-en-el-mercado-eléctrico"><span class="header-section-number">4.1.3</span> Ejemplo de Participación en el Mercado Eléctrico</h3>
 <p>Esta guía desarrolla ejemplos prácticos completos del proceso de participación en el mercado eléctrico español para una <strong>planta fotovoltaica de 50 MW</strong> y una <strong>planta eólica de 50 MW</strong>. A través de casos numéricos detallados, recorreremos todo el proceso: desde la presentación de ofertas en el mercado diario hasta la liquidación final, pasando por los distintos mecanismos de ajuste. Asumiremos que están en el sistema peninsular gestionado por Red Eléctrica de España (REE) como operador del sistema y que el mercado es gestionado por OMIE.</p>
 <p>El mercado mayorista de electricidad en España (MIBEL) se estructura en: - <strong>Mercado diario</strong> - <strong>Mercados intradiarios</strong> (sesiones de subastas y continuo) - <strong>Servicios de ajuste y balance</strong> (restricciones técnicas, secundaria, terciaria) - <strong>Mercados no organizados</strong></p>
 <section id="caso-base-características-de-las-instalaciones" class="level4" data-number="4.1.3.1">
@@ -1147,7 +1148,671 @@ window.Quarto = {
 <li><p><strong>Visión integrada:</strong> La optimización no debe ser por mercado individual, sino considerando el efecto conjunto (diario + intradiario + balance + desvíos) para maximizar el beneficio neto.</p></li>
 </ol>
 <hr>
-<div id="715f4ce1" class="cell" data-execution_count="1">
+</section>
+</section>
+<section id="ejemplo-ilustrativo-del-proceso-de-programación-y-operación-de-ree" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="ejemplo-ilustrativo-del-proceso-de-programación-y-operación-de-ree"><span class="header-section-number">4.1.4</span> Ejemplo ilustrativo del proceso de programación y operación de REE</h3>
+<p>Realizaremos el seguimiento de un ciclo combinado de 400 MW a lo largo de este ejemplo.</p>
+<section id="introducción" class="level4" data-number="4.1.4.1">
+<h4 data-number="4.1.4.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">4.1.4.1</span> Introducción</h4>
+<p>Este ejemplo ilustra paso a paso todo el proceso secuencial que sigue Red Eléctrica de España (REE) como Operador del Sistema para programar y operar el sistema eléctrico, tomando como referencia un <strong>ciclo combinado de 400 MW</strong> y un sistema simplificado con otras tecnologías. Recorreremos desde la configuración inicial hasta el programa en tiempo real, incluyendo restricciones técnicas y servicios de ajuste.</p>
+<p>El proceso completo incluye los siguientes programas: - <strong>PDBC</strong>: Programa Diario Base de Casación (OMIE) - <strong>PDBF</strong>: Programa Diario Base de Funcionamiento (REE) - <strong>PDVP</strong>: Programa Diario Viable Provisional - <strong>PIBCI</strong>: Programa Intradiario Base de Casación Inicial (OMIE) - <strong>PIBCA</strong>: Programa Intradiario Base de Casación Adicional - <strong>PHF</strong>: Programa Horario Final - <strong>P48</strong>: Programa de 48 períodos semihorarios (tiempo real)</p>
+<hr>
+</section>
+<section id="sistema-eléctrico-de-ejemplo" class="level4" data-number="4.1.4.2">
+<h4 data-number="4.1.4.2" class="anchored" data-anchor-id="sistema-eléctrico-de-ejemplo"><span class="header-section-number">4.1.4.2</span> Sistema eléctrico de ejemplo</h4>
+<section id="parque-generador-simplificado" class="level5" data-number="4.1.4.2.1">
+<h5 data-number="4.1.4.2.1" class="anchored" data-anchor-id="parque-generador-simplificado"><span class="header-section-number">4.1.4.2.1</span> Parque generador simplificado</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: left;">Tecnología</th>
+<th style="text-align: center;">Potencia (MW)</th>
+<th style="text-align: center;">Coste variable (€/MWh)</th>
+<th style="text-align: left;">Situación inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>CC-1</strong></td>
+<td style="text-align: left;">Ciclo combinado</td>
+<td style="text-align: center;">400</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: left;">Disponible</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>CAR-1</strong></td>
+<td style="text-align: left;">Carbón</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: left;">Disponible</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>NUC-1</strong></td>
+<td style="text-align: left;">Nuclear</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Disponible (base)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>EOL-1</strong></td>
+<td style="text-align: left;">Eólica</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Previsión variable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>HID-1</strong></td>
+<td style="text-align: left;">Hidráulica</td>
+<td style="text-align: center;">200</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Embalse regulable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>FV-1</strong></td>
+<td style="text-align: left;">Fotovoltaica</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">Previsión diurna</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="demanda-prevista-para-el-día-d-ejemplo-hora-punta-2000" class="level5" data-number="4.1.4.2.2">
+<h5 data-number="4.1.4.2.2" class="anchored" data-anchor-id="demanda-prevista-para-el-día-d-ejemplo-hora-punta-2000"><span class="header-section-number">4.1.4.2.2</span> Demanda prevista para el día D (ejemplo hora punta 20:00)</h5>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hora</th>
+<th style="text-align: center;">Demanda (MW)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">20:00</td>
+<td style="text-align: center;">1850</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="fase-1-mercado-diario-día-d-1" class="level4" data-number="4.1.4.3">
+<h4 data-number="4.1.4.3" class="anchored" data-anchor-id="fase-1-mercado-diario-día-d-1"><span class="header-section-number">4.1.4.3</span> Fase 1: Mercado diario (Día D-1)</h4>
+<section id="ofertas-presentadas-a-omie-cierre-1200h-d-1-citation1" class="level5" data-number="4.1.4.3.1">
+<h5 data-number="4.1.4.3.1" class="anchored" data-anchor-id="ofertas-presentadas-a-omie-cierre-1200h-d-1-citation1"><span class="header-section-number">4.1.4.3.1</span> Ofertas presentadas a OMIE (cierre 12:00h D-1) [citation:1]</h5>
+<p><strong>Unidad CC-1 (ciclo combinado):</strong> - Oferta: 400 MW a 52 €/MWh (mínimo técnico 150 MW)</p>
+<p><strong>Resto de unidades (simplificado para el ejemplo):</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: center;">Oferta (MW)</th>
+<th style="text-align: center;">Precio (€/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUC-1</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CAR-1</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EOL-1</td>
+<td style="text-align: center;">250 (previsión)</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FV-1</td>
+<td style="text-align: center;">120 (previsión)</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HID-1</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="casación-del-mercado-diario-pdbc" class="level5" data-number="4.1.4.3.2">
+<h5 data-number="4.1.4.3.2" class="anchored" data-anchor-id="casación-del-mercado-diario-pdbc"><span class="header-section-number">4.1.4.3.2</span> Casación del mercado diario (PDBC)</h5>
+<p><strong>Resultado de la casación para hora 20:00:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Orden de mérito</th>
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: right;">Oferta (MW)</th>
+<th style="text-align: right;">Precio (€/MWh)</th>
+<th style="text-align: right;">Aceptado (MW)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">FV-1</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">EOL-1</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">NUC-1</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">HID-1</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">CAR-1</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">330</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>6</strong></td>
+<td style="text-align: left;"><strong>CC-1</strong></td>
+<td style="text-align: right;"><strong>400</strong></td>
+<td style="text-align: right;"><strong>52</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>1850</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Precio marginal:</strong> 42 €/MWh (última oferta aceptada: CAR-1)</p>
+<p><strong>Programa Diario Base de Casación (PDBC):</strong> Nuestro ciclo combinado <strong>no ha entrado</strong> en mercado diario. Programa = 0 MW para hora 20:00.</p>
+<hr>
+</section>
+</section>
+<section id="fase-2-análisis-de-viabilidad-y-restricciones-técnicas" class="level4" data-number="4.1.4.4">
+<h4 data-number="4.1.4.4" class="anchored" data-anchor-id="fase-2-análisis-de-viabilidad-y-restricciones-técnicas"><span class="header-section-number">4.1.4.4</span> Fase 2: Análisis de viabilidad y restricciones técnicas</h4>
+<p><font color="F527C5">Preparación del PDBF por REE</font></p>
+<p>A las 12:15h aproximadamente, OMIE envía el PDBC al Operador del Sistema (REE).</p>
+<section id="detección-de-restricción-técnica" class="level5" data-number="4.1.4.4.1">
+<h5 data-number="4.1.4.4.1" class="anchored" data-anchor-id="detección-de-restricción-técnica"><span class="header-section-number">4.1.4.4.1</span> Detección de restricción técnica</h5>
+<p>REE ejecuta sus modelos de flujos de red y detecta [citation:2]:</p>
+<p><strong>Problema:</strong> En la zona norte (donde se ubican CAR-1 y parte de la eólica), la línea de evacuación de 400 kV tiene un límite de 1500 MW. Con la programación actual: - Generación en zona norte: NUC-1 (1000) + CAR-1 (330) + EOL-1 (150 de los 250 están en zona norte) = <strong>1480 MW</strong> - <strong>Margen:</strong> Solo 20 MW hasta el límite. Ante una contingencia (caída de la línea), se produciría sobrecarga.</p>
+<p><strong>Restricción identificada:</strong> Reducir generación en zona norte en al menos <strong>50 MW</strong> y sustituirla por generación en zona centro-sur.</p>
+</section>
+<section id="proceso-de-ofertas-para-restricciones-técnicas" class="level5" data-number="4.1.4.4.2">
+<h5 data-number="4.1.4.4.2" class="anchored" data-anchor-id="proceso-de-ofertas-para-restricciones-técnicas"><span class="header-section-number">4.1.4.4.2</span> Proceso de ofertas para restricciones técnicas</h5>
+<p>REE abre un proceso de ofertas para: - <strong>Energía a bajar</strong> (reducción) en zona norte - <strong>Energía a subir</strong> (incremento) en zona centro-sur</p>
+<p><strong>Nuestro CC-1 (ubicado en zona centro-sur) puede ofertar:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Cantidad (MW)</th>
+<th style="text-align: center;">Precio (€/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Energía a subir</td>
+<td style="text-align: center;">400</td>
+<td style="text-align: center;">55</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ofertas recibidas:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Zona</th>
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">MW</th>
+<th style="text-align: center;">Precio (€/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Norte</td>
+<td style="text-align: left;">CAR-1</td>
+<td style="text-align: center;">Bajar</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">40 (compensación solicitada)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centro</td>
+<td style="text-align: left;">CC-1</td>
+<td style="text-align: center;">Subir</td>
+<td style="text-align: center;">400</td>
+<td style="text-align: center;">55</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Centro</td>
+<td style="text-align: left;">HID-1</td>
+<td style="text-align: center;">Subir</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">60</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="resolución-de-restricciones-casación" class="level5" data-number="4.1.4.4.3">
+<h5 data-number="4.1.4.4.3" class="anchored" data-anchor-id="resolución-de-restricciones-casación"><span class="header-section-number">4.1.4.4.3</span> Resolución de restricciones (casación)</h5>
+<p>REE selecciona la combinación más económica: - <strong>Acepta reducción de CAR-1:</strong> 50 MW a 40 €/MWh (coste: 50 × 40 = 2.000 €) - <strong>Acepta subida de CC-1:</strong> 50 MW a 55 €/MWh (coste: 50 × 55 = 2.750 €)</p>
+<p><strong>Coste total de la restricción:</strong> 4.750 € (se liquidará vía peajes)</p>
+</section>
+<section id="programa-diario-viable-provisional-pdvp" class="level5" data-number="4.1.4.4.4">
+<h5 data-number="4.1.4.4.4" class="anchored" data-anchor-id="programa-diario-viable-provisional-pdvp"><span class="header-section-number">4.1.4.4.4</span> Programa Diario Viable Provisional (PDVP)</h5>
+<p>Nuevo programa para hora 20:00:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Unidad</th>
+<th style="text-align: center;">Programa anterior (MW)</th>
+<th style="text-align: center;">Ajuste</th>
+<th style="text-align: center;">Nuevo programa (MW)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CAR-1</td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;">-50</td>
+<td style="text-align: center;">280</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>CC-1</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>+50</strong></td>
+<td style="text-align: center;"><strong>50</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Resto</td>
+<td style="text-align: center;">1520</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1520</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: center;"><strong>1850</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>1850</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PDVP publicado:</strong> Nuestro ciclo combinado tiene <strong>50 MW programados</strong> por restricciones técnicas.</p>
+<hr>
+</section>
+</section>
+<section id="fase-3-servicios-complementarios-mercados-de-ajuste" class="level4" data-number="4.1.4.5">
+<h4 data-number="4.1.4.5" class="anchored" data-anchor-id="fase-3-servicios-complementarios-mercados-de-ajuste"><span class="header-section-number">4.1.4.5</span> Fase 3: Servicios complementarios (mercados de ajuste)</h4>
+<section id="mercado-de-banda-secundaria" class="level5" data-number="4.1.4.5.1">
+<h5 data-number="4.1.4.5.1" class="anchored" data-anchor-id="mercado-de-banda-secundaria"><span class="header-section-number">4.1.4.5.1</span> Mercado de banda secundaria</h5>
+<p>REE determina necesidad de <strong>reserva de regulación secundaria</strong>: 300 MW de banda (150 MW a subir + 150 MW a bajar).</p>
+<p><strong>Nuestro CC-1 puede ofertar banda:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Concepto</th>
+<th style="text-align: center;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Banda a subir ofertada</td>
+<td style="text-align: center;">50 MW</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Banda a bajar ofertada</td>
+<td style="text-align: center;">30 MW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Precio de disponibilidad</td>
+<td style="text-align: center;">8 €/MW por hora</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resultado de la asignación</strong> (criterio mínimo coste): - Banda a subir asignada a CC-1: <strong>30 MW</strong> (parcial) - Banda a bajar asignada a CC-1: <strong>20 MW</strong> (parcial)</p>
+<p><strong>Retribución por disponibilidad para hora 20:00:</strong> - Banda total asignada: 50 MW × 8 €/MW = <strong>400 €</strong> (solo por estar disponible)</p>
+</section>
+<section id="mercado-de-energía-terciaria" class="level5" data-number="4.1.4.5.2">
+<h5 data-number="4.1.4.5.2" class="anchored" data-anchor-id="mercado-de-energía-terciaria"><span class="header-section-number">4.1.4.5.2</span> Mercado de energía terciaria</h5>
+<p>Además, CC-1 debe ofrecer toda su capacidad excedentaria para regulación terciaria (obligatorio para unidades que pueden variar en &lt;15 min):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Capacidad (MW)</th>
+<th style="text-align: center;">Precio (€/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Terciaria a subir</td>
+<td style="text-align: center;">320 (400 - 50 - 30)</td>
+<td style="text-align: center;">65</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Terciaria a bajar</td>
+<td style="text-align: center;">50 (mínimo técnico)</td>
+<td style="text-align: center;">30</td>
+</tr>
+</tbody>
+</table>
+<p><em>Nota: 50 MW programados + 30 MW banda a subir comprometida = 80 MW base; el resto hasta 400 son 320 MW disponibles para terciaria.</em></p>
+<hr>
+</section>
+</section>
+<section id="fase-4-mercados-intradiarios" class="level4" data-number="4.1.4.6">
+<h4 data-number="4.1.4.6" class="anchored" data-anchor-id="fase-4-mercados-intradiarios"><span class="header-section-number">4.1.4.6</span> Fase 4: Mercados intradiarios</h4>
+<section id="sesión-intradiaria-1-d-1-1730-2000h" class="level5" data-number="4.1.4.6.1">
+<h5 data-number="4.1.4.6.1" class="anchored" data-anchor-id="sesión-intradiaria-1-d-1-1730-2000h"><span class="header-section-number">4.1.4.6.1</span> Sesión intradiaria 1 (D-1, 17:30-20:00h)</h5>
+<p><strong>Contexto:</strong> Mejora la previsión eólica. Nuestro CC-1 decide ajustar posición.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Acción</th>
+<th style="text-align: center;">Hora</th>
+<th style="text-align: center;">MW</th>
+<th style="text-align: center;">Precio oferta (€/MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Venta en intradiario</td>
+<td style="text-align: center;">20:00</td>
+<td style="text-align: center;">+20</td>
+<td style="text-align: center;">60</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resultado casación intradiaria:</strong> - Precio marginal: 58 €/MWh - Venta aceptada: 20 MW</p>
+<p><strong>Nuevo programa acumulado (PIBCI):</strong> 50 (PDVP) + 20 = <strong>70 MW</strong></p>
+</section>
+<section id="sesión-intradiaria-3-d-0900-1400h" class="level5" data-number="4.1.4.6.2">
+<h5 data-number="4.1.4.6.2" class="anchored" data-anchor-id="sesión-intradiaria-3-d-0900-1400h"><span class="header-section-number">4.1.4.6.2</span> Sesión intradiaria 3 (D, 09:00-14:00h)</h5>
+<p><strong>Contexto:</strong> Demanda real será superior a la prevista. CC-1 vende 30 MW adicionales a 62 €/MWh.</p>
+<p><strong>PIBCA:</strong> 70 + 30 = <strong>100 MW</strong></p>
+<hr>
+</section>
+</section>
+<section id="fase-5-operación-en-tiempo-real" class="level4" data-number="4.1.4.7">
+<h4 data-number="4.1.4.7" class="anchored" data-anchor-id="fase-5-operación-en-tiempo-real"><span class="header-section-number">4.1.4.7</span> Fase 5: Operación en tiempo real</h4>
+<section id="programa-horario-final-phf-1" class="level5" data-number="4.1.4.7.1">
+<h5 data-number="4.1.4.7.1" class="anchored" data-anchor-id="programa-horario-final-phf-1"><span class="header-section-number">4.1.4.7.1</span> Programa Horario Final (PHF)</h5>
+<p>Antes de la hora H-1, se consolida el programa definitivo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Fuente</th>
+<th style="text-align: center;">MW</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PDVP (restricciones)</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intradiario sesión 1</td>
+<td style="text-align: center;">+20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Intradiario sesión 3</td>
+<td style="text-align: center;">+30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>PHF</strong></td>
+<td style="text-align: center;"><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="programa-de-48-períodos-p48" class="level5" data-number="4.1.4.7.2">
+<h5 data-number="4.1.4.7.2" class="anchored" data-anchor-id="programa-de-48-períodos-p48"><span class="header-section-number">4.1.4.7.2</span> Programa de 48 períodos (P48)</h5>
+<p>El sistema pasa a operar en períodos semihorarios. Para las 20:00-20:30 y 20:30-21:00:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Período</th>
+<th style="text-align: center;">Programa (MW)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">20:00-20:30 (período 41)</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20:30-21:00 (período 42)</td>
+<td style="text-align: center;">100</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="activaciones-en-tiempo-real" class="level5" data-number="4.1.4.7.3">
+<h5 data-number="4.1.4.7.3" class="anchored" data-anchor-id="activaciones-en-tiempo-real"><span class="header-section-number">4.1.4.7.3</span> Activaciones en tiempo real</h5>
+<p><strong>Situación a las 20:15:</strong> Demanda superior a la prevista, frecuencia baja. REE activa reserva terciaria.</p>
+<p><strong>Nuestro CC-1 recibe orden:</strong> - Subir 50 MW adicionales (de 100 a 150 MW) - Precio de activación: 70 €/MWh (marginal de la hora)</p>
+<p><strong>Generación real:</strong> 150 MW en período 20:00-20:30 (últimos 15 minutos)</p>
+<hr>
+</section>
+</section>
+<section id="cálculo-de-desvíos-y-liquidación" class="level4" data-number="4.1.4.8">
+<h4 data-number="4.1.4.8" class="anchored" data-anchor-id="cálculo-de-desvíos-y-liquidación"><span class="header-section-number">4.1.4.8</span> Cálculo de desvíos y liquidación</h4>
+<section id="cálculo-del-desvío" class="level5" data-number="4.1.4.8.1">
+<h5 data-number="4.1.4.8.1" class="anchored" data-anchor-id="cálculo-del-desvío"><span class="header-section-number">4.1.4.8.1</span> Cálculo del desvío</h5>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Período 20:00-20:30</th>
+<th style="text-align: center;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Programa final (PHF)</td>
+<td style="text-align: center;">100 MW</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Generación real</td>
+<td style="text-align: center;">150 MW</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Desvío</strong></td>
+<td style="text-align: center;"><strong>+50 MW</strong> (generación superior)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="liquidación-de-la-hora-2000" class="level5" data-number="4.1.4.8.2">
+<h5 data-number="4.1.4.8.2" class="anchored" data-anchor-id="liquidación-de-la-hora-2000"><span class="header-section-number">4.1.4.8.2</span> Liquidación de la hora 20:00</h5>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Concepto</th>
+<th style="text-align: center;">Cantidad (MWh)</th>
+<th style="text-align: center;">Precio (€/MWh)</th>
+<th style="text-align: center;">Importe (€)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Mercado diario</strong></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Restricciones técnicas</strong></td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">2.750</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Intradiario sesión 1</strong></td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">1.160</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Intradiario sesión 3</strong></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">1.860</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Terciaria activada</strong></td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">3.500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Desvío</strong></td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">Precio desvío (ej: 68)</td>
+<td style="text-align: center;">3.400</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: center;"><strong>200</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>12.670</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Además, ingresos por disponibilidad:</strong> - Banda secundaria: 50 MW × 8 € = <strong>400 €</strong></p>
+<p><strong>LIQUIDACIÓN TOTAL HORA 20:00 = 13.070 €</strong></p>
+<hr>
+</section>
+<section id="resumen-de-programas-sucesivos-para-cc-1-hora-2000" class="level5" data-number="4.1.4.8.3">
+<h5 data-number="4.1.4.8.3" class="anchored" data-anchor-id="resumen-de-programas-sucesivos-para-cc-1-hora-2000"><span class="header-section-number">4.1.4.8.3</span> Resumen de programas sucesivos para CC-1 (hora 20:00)</h5>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Programa</th>
+<th style="text-align: center;">Abreviatura</th>
+<th style="text-align: center;">MW</th>
+<th style="text-align: left;">Momento de obtención</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Programa Diario Base de Casación</td>
+<td style="text-align: center;">PDBC</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">D-1 12:30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Programa Diario Base de Funcionamiento</td>
+<td style="text-align: center;">PDBF</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: left;">D-1 12:45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Programa Diario Viable Provisional</strong></td>
+<td style="text-align: center;"><strong>PDVP</strong></td>
+<td style="text-align: center;"><strong>50</strong></td>
+<td style="text-align: left;"><strong>D-1 tarde (post restricciones)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Programa Intradiario Base de Casación Inicial</td>
+<td style="text-align: center;">PIBCI</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: left;">D-1 20:30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Programa Intradiario Base de Casación Adicional</td>
+<td style="text-align: center;">PIBCA</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: left;">D 14:30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Programa Horario Final</td>
+<td style="text-align: center;">PHF</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: left;">Antes de H-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Programa 48 períodos</td>
+<td style="text-align: center;">P48</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: left;">En hora H-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Generación real</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>150</strong></td>
+<td style="text-align: left;"><strong>Tiempo real</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="conclusiones-del-ejemplo" class="level4" data-number="4.1.4.9">
+<h4 data-number="4.1.4.9" class="anchored" data-anchor-id="conclusiones-del-ejemplo"><span class="header-section-number">4.1.4.9</span> Conclusiones del ejemplo</h4>
+<ol type="1">
+<li><p><strong>El programa final es el resultado de múltiples iteraciones</strong>: Desde el mercado diario (0 MW) hasta la generación real (150 MW), nuestro ciclo combinado ha modificado su posición seis veces.</p></li>
+<li><p><strong>Las restricciones técnicas pueden obligar a generar aunque no se tenga precio competitivo</strong>: CC-1 entró por restricciones (50 MW) a pesar de tener precio superior al marginal diario [citation:2].</p></li>
+<li><p><strong>Los mercados intradiarios permiten ajustar posición</strong>: Las sesiones 1 y 3 añadieron 50 MW adicionales antes de tiempo real [citation:1].</p></li>
+<li><p><strong>Los servicios de ajuste aportan ingresos significativos</strong>: Terciaria activada (3.500 €) y disponibilidad secundaria (400 €) representan el 30% de los ingresos totales.</p></li>
+<li><p><strong>El desvío puede ser positivo si se responde a necesidades del sistema</strong>: La activación en tiempo real se liquidó a precio superior al de mercado.</p></li>
+</ol>
+<hr>
+</section>
+<section id="referencias-normativas" class="level4" data-number="4.1.4.10">
+<h4 data-number="4.1.4.10" class="anchored" data-anchor-id="referencias-normativas"><span class="header-section-number">4.1.4.10</span> Referencias normativas</h4>
+<ul>
+<li><strong>P.O. 3.1</strong>: Programación de la generación [citation:1]</li>
+<li><strong>P.O. 3.2</strong>: Restricciones técnicas [citation:2]</li>
+<li><strong>P.O. 1.5</strong>: Establecimiento de reserva para regulación frecuencia/potencia [citation:2]</li>
+<li><strong>P.O. 7.3</strong>: Regulación terciaria [citation:2]</li>
+<li><strong>Reglas OMIE</strong>: Mercados diario e intradiario [citation:1]</li>
+</ul>
+<p>Este ejemplo muestra la complejidad del proceso secuencial español, donde un mismo activo puede participar en hasta siete mecanismos diferentes para una misma hora de programación.</p>
+<div id="35ceba78" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
